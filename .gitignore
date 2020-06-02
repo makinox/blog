@@ -55,6 +55,7 @@ typings/
 .env*
 
 # gatsby files
+.firebase/
 .cache/
 public
 
