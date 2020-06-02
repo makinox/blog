@@ -1,12 +1,14 @@
 import React from 'react';
-// import { Link } from 'gatsby';
-import { SEO, Navbar } from '../components/';
-// import { Navbar } from '../container/';
+import { SEO, Navbar, LayoutContainer } from '../components/';
+import { Main } from '../container/';
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <Navbar />
+    <LayoutContainer>
+      <Navbar />
+      <Main />
+    </LayoutContainer>
   </>
 );
 

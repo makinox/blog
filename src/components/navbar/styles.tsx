@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { IoIosMenu } from 'react-icons/io';
 
 export const Nav = styled.nav`
   display: grid;
@@ -9,12 +8,6 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 10px;
 `;
-
-// export const Icon = styled(IoIosMenu)`
-//   display: flex;
-//   cursor: pointer;
-//   font-size: 30px;
-// `;
 
 export const Logo = styled.img`
   cursor: pointer;
@@ -33,7 +26,7 @@ export const Input = styled.input`
   margin: 0 2vw;
   padding: 10px;
   border-radius: 10px;
-  background-color: #f8f8f8;
+  background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(255, 255, 255, 1) 100%);
   font-size: 14px;
 
   &:focus {

@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo/Cereno.svg" }) {
+      placeholderImage: file(relativePath: { eq: "logo/Blog.svg" }) {
         publicURL
       }
     }

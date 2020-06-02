@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog | Jesús Bossa`,
+    title: `Blog - Jesús Bossa`,
     description: `Un blog para compartir contenido.`,
     author: `Jesús Bossa`,
   },
@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/logo/B.svg`,
       },
     },
   ],

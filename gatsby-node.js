@@ -7,11 +7,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     // console.log({ type: node.internal.type, internal: node.internal, rel: getNode(node.parent).relativePath })
 
     const slug = createFilePath({ node, getNode, basePath: `pages` });
-    console.log(slug.split('/'));
+    // console.log(slug.split('/'));
     actions.createNodeField({
       node,
       name: `slug`,
-      value: `article/p=${slug.split('/')[1]}`,
+      value: `article/${slug.split('/')[1]}`,
     });
   }
 };
