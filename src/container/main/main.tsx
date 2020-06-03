@@ -14,7 +14,13 @@ export default () => {
             frontmatter {
               title
               date
-              timage
+              timage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             timeToRead
             excerpt
@@ -23,10 +29,8 @@ export default () => {
       }
     }
   `);
-
   return (
     <PostList>
-      {console.log(posts.allMarkdownRemark.edges)}
       {posts.allMarkdownRemark.edges.map((el, idx) => (
         <PostCard data={el} key={idx} />
       ))}
