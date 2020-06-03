@@ -35,5 +35,13 @@ module.exports = {
         icon: `src/images/logo/B.svg`,
       },
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ['Open Sans', 'Cabin'],
+        },
+      },
+    },
   ],
 };

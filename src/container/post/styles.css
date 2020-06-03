@@ -1,0 +1,17 @@
+.pan p {
+  color: #292b2e;
+  line-height: 32px;
+  margin-top: 2em;
+  font-size: 21px;
+  letter-spacing: -0.003em;
+  margin-bottom: -0.46em;
+}
+
+.pan a {
+  color: green;
+}
+
+.pan div p {
+  display: flex;
+  flex-direction: column;
+}
