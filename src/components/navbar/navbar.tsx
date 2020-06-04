@@ -1,6 +1,7 @@
-import React from 'react';
-import { Nav, InputContainer, Input, Logo, LogoWrapper } from './styles';
+import React, { useContext } from 'react';
+import { BlogContext } from '../../utils/context/context';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Nav, InputContainer, Input, Logo, LogoWrapper } from './styles';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -10,7 +11,9 @@ export default () => {
       }
     }
   `);
+  const { changeTheme } = useContext(BlogContext);
   const handleInput = e => console.log(e.target.value);
+  const handleTheme = () => changeTheme();
 
   return (
     <Nav>
@@ -20,6 +23,9 @@ export default () => {
       <InputContainer>
         <Input placeholder="Buscar" type="text" onChange={handleInput} />
       </InputContainer>
+      <div onClick={handleTheme}>
+        <span>x</span>
+      </div>
     </Nav>
   );
 };

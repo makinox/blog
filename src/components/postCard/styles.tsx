@@ -6,7 +6,7 @@ export const PostCard = styled(Link)`
   text-decoration: none;
   margin: 20px 10%;
   border-radius: 20px;
-  color: #000;
+  color: var(--textColor);
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.06);
 `;
 

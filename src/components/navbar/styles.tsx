@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 export const Nav = styled.nav`
   display: grid;
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 1fr 8fr 1fr;
   justify-content: center;
   justify-items: center;
   align-items: center;

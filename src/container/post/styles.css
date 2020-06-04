@@ -1,5 +1,5 @@
 .pan p {
-  color: #292b2e;
+  color: var(--textSecondaryColor);
   line-height: 32px;
   margin-top: 2em;
   font-size: 18px;
@@ -7,9 +7,10 @@
   margin-bottom: -0.46em;
 }
 
-/* .pan a {
-  color: green;
-} */
+.pan a {
+  color: var(--linkColor);
+  text-decoration: none;
+}
 
 .pan div p {
   display: flex;
@@ -29,11 +30,12 @@
   width: 100%;
   font-size: 14px;
   color: #6a737d;
-  border-bottom: 1px solid #dfe2e5;
+  border-bottom: 1px solid var(--textTercColor);
 }
 
 .pan blockquote {
-  border-left: 0.25em solid #dfe2e5;
+  border-left: 0.25em solid var(--textTercColor);
+  background-color: var(--backgroundSecondaryColor);
   color: #6a737d;
   margin: 0;
   padding: 0 1em;
