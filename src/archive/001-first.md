@@ -15,9 +15,10 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias numquam labo
 
 It's very easy to make some words **bold** and other words _italic_ with Markdown. You can even [link to Google!](http://google.com)
 
+![GitHub Logo](../images/archive/image_001-first.jpg)
+
 <div>
 
-![GitHub Logo](https://i.picsum.photos/id/1003/700/200.jpg 'Image')
 _Github Logo_
 
 </div>
@@ -95,4 +96,4 @@ Asterisks
 
 Underscores
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
+<iframe width="700" height="400" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>

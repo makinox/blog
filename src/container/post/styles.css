@@ -16,7 +16,17 @@
   flex-direction: column;
 }
 
+.pan .gatsby-resp-image-wrapper img {
+  border-radius: 5px;
+}
+
+.pan div p {
+  margin: 10px 0;
+}
+
 .pan div p em {
+  display: inline-block;
+  width: 100%;
   font-size: 16px;
   color: #6a737d;
   border-bottom: 1px solid #dfe2e5;
@@ -33,4 +43,8 @@
 .pan blockquote p {
   color: #6a737d;
   font-size: 16px;
+}
+
+.pan iframe {
+  border-radius: 5px;
 }
