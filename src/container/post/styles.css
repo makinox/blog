@@ -2,8 +2,8 @@
   color: #292b2e;
   line-height: 32px;
   margin-top: 2em;
-  font-size: 21px;
-  letter-spacing: -0.003em;
+  font-size: 18px;
+  /* letter-spacing: -0.003em; */
   margin-bottom: -0.46em;
 }
 
@@ -18,6 +18,19 @@
 
 .pan div p em {
   font-size: 16px;
-  color: #767676;
-  border-bottom: 1px solid #d1d1d1;
+  color: #6a737d;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.pan blockquote {
+  border-left: 0.25em solid #dfe2e5;
+  color: #6a737d;
+  font-size: 16px;
+  margin: 0;
+  padding: 0 1em;
+}
+
+.pan blockquote p {
+  color: #6a737d;
+  font-size: 16px;
 }
