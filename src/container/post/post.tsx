@@ -2,12 +2,13 @@ import React from 'react';
 import './styles.css';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer } from '../../components';
+import { Navbar, LayoutContainer, PostContainer, SEO } from '../../components';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
   return (
     <>
+      <SEO title={post.frontmatter.title} />
       <LayoutContainer>
         <Navbar />
       </LayoutContainer>
