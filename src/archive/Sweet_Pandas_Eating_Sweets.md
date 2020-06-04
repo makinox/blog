@@ -1,7 +1,7 @@
 ---
 title: 'Sweet Pandas Eating Sweets'
 date: '2020-06-03'
-timage: '../images/archive/001/a.jpg'
+timage: '../images/archive/001/0.png'
 ---
 
 ##Pandas
@@ -15,7 +15,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos alias numquam labo
 
 It's very easy to make some words **bold** and other words _italic_ with Markdown. You can even [link to Google!](http://google.com)
 
-![GitHub Logo](../images/archive/001/1.jpg)
+![GitHub Logo](../images/archive/001/1.png)
 
 <div>
 
@@ -41,11 +41,27 @@ function fancyAlert(arg) {
 }
 ```
 
-![GitHub Logo](../images/archive/001/2.jpg)
+![Imagen: Jesús Bossa (Makinoxx)](../images/archive/001/1.png)
 
 <div>
 
-_Github Logo_
+_Imagen: Jesús Bossa (Makinoxx)_
+
+</div>
+
+![Imagen: Jesús Bossa (Makinoxx)](../images/archive/001/2.png)
+
+<div>
+
+_Imagen: Jesús Bossa (Makinoxx)_
+
+</div>
+
+![Imagen: Jesús Bossa (Makinoxx)](../images/archive/001/3.png)
+
+<div>
+
+_Imagen: Jesús Bossa (Makinoxx)_
 
 </div>
 
