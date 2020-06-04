@@ -32,7 +32,7 @@ export const query = graphql`
         timage {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 400) {
+            fluid(maxWidth: 1200, maxHeight: 470) {
               ...GatsbyImageSharpFluid
             }
           }

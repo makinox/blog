@@ -7,9 +7,9 @@
   margin-bottom: -0.46em;
 }
 
-.pan a {
+/* .pan a {
   color: green;
-}
+} */
 
 .pan div p {
   display: flex;
@@ -35,7 +35,6 @@
 .pan blockquote {
   border-left: 0.25em solid #dfe2e5;
   color: #6a737d;
-  font-size: 16px;
   margin: 0;
   padding: 0 1em;
 }
@@ -47,4 +46,15 @@
 
 .pan iframe {
   border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .pan p {
+    font-size: 16px;
+  }
+
+  .pan div p em,
+  .pan blockquote p {
+    font-size: 14px;
+  }
 }
