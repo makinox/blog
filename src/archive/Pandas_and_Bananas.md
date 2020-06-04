@@ -1,6 +1,6 @@
 ---
 title: 'Pandas and Bananas'
-date: '2017-08-21'
+date: '2020-06-04'
 timage: '../images/archive/002/a.jpg'
 ---
 
