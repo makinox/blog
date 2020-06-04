@@ -1,18 +1,25 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import './styles.css';
-import { Navbar, LayoutContainer } from '../../components';
+import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
+import { Navbar, LayoutContainer, PostContainer } from '../../components';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
   return (
-    <LayoutContainer>
-      <Navbar />
-      <div>
+    <>
+      <LayoutContainer>
+        <Navbar />
+      </LayoutContainer>
+      <>
+        {console.log(post.frontmatter)}
+        <Img fluid={post.frontmatter.timage.childImageSharp.fluid} />
+      </>
+      <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
-    </LayoutContainer>
+      </PostContainer>
+    </>
   );
 }
 
@@ -22,6 +29,14 @@ export const query = graphql`
       html
       frontmatter {
         title
+        timage {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 1200, maxHeight: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

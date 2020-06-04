@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, InputContainer, Input, Logo } from './styles';
+import { Nav, InputContainer, Input, Logo, LogoWrapper } from './styles';
 import { useStaticQuery, graphql } from 'gatsby';
 
 export default () => {
@@ -14,9 +14,9 @@ export default () => {
 
   return (
     <Nav>
-      <div>
+      <LogoWrapper to="/">
         <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
-      </div>
+      </LogoWrapper>
       <InputContainer>
         <Input placeholder="Buscar" type="text" onChange={handleInput} />
       </InputContainer>

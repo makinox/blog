@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const Nav = styled.nav`
   display: grid;
@@ -12,6 +13,10 @@ export const Nav = styled.nav`
 export const Logo = styled.img`
   cursor: pointer;
   width: 110px;
+`;
+
+export const LogoWrapper = styled(Link)`
+  text-decoration: none;
 `;
 
 export const InputContainer = styled.div`

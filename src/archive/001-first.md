@@ -50,4 +50,4 @@ function fancyAlert(arg) {
 | Content from cell 1         | Content from cell 2          |
 | Content in the first column | Content in the second column |
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
