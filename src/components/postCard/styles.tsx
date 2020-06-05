@@ -4,10 +4,10 @@ import { Link } from 'gatsby';
 
 export const PostCard = styled(Link)`
   text-decoration: none;
-  margin: 20px 10%;
-  border-radius: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
   color: var(--textColor);
-  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const PostCardImageContainer = styled.div`
@@ -17,8 +17,8 @@ export const PostCardImageContainer = styled.div`
 export const PostCardImage = styled(Img)`
   object-fit: cover;
   width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 `;

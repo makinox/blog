@@ -19,6 +19,7 @@
 
 .pan .gatsby-resp-image-wrapper img {
   border-radius: 5px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
 .pan div p {

@@ -38,3 +38,8 @@ export const Input = styled.input`
     outline: none;
   }
 `;
+
+export const ThemeButton = styled.span`
+  cursor: pointer;
+  padding: 10px;
+`;
