@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer, SEO } from '../../components';
+import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter } from '../../components';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
@@ -20,6 +20,7 @@ export default function BlogPost({ data }) {
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
       </PostContainer>
+      <PostFooter />
     </>
   );
 }
