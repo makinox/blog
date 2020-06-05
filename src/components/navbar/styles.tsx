@@ -1,13 +1,30 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
-export const Nav = styled.nav`
+interface ItemProps {
+  readonly activate: boolean;
+}
+
+export const Nav = styled.nav<ItemProps>`
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   justify-content: center;
   justify-items: center;
   align-items: center;
   padding: 10px;
+
+  ${props =>
+    props.activate &&
+    css`
+       {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: var(--backgroundColor);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+    `}
 `;
 
 export const Logo = styled.img`
