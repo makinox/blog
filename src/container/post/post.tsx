@@ -34,6 +34,7 @@ export const query = graphql`
         title
         author
         authorDescription
+        tags
         authorImage {
           childImageSharp {
             fixed(width: 100, height: 100) {
