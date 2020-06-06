@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://cereno.jesusbossa.dev',
-        sitemap: 'https://cereno.jesusbossa.dev/sitemap.xml',
+        host: 'https://blog.jesusbossa.dev',
+        sitemap: 'https://blog.jesusbossa.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
