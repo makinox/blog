@@ -3,6 +3,7 @@ module.exports = {
     title: `Blog - Jesús Bossa`,
     description: `Un blog para compartir reviews de videojuegos.`,
     author: `Jesús Bossa`,
+    siteUrl: 'https://blog.jesusbossa.dev/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
