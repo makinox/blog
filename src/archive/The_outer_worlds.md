@@ -4,6 +4,7 @@ date: '2020-06-03'
 timage: '../images/archive/001/0.png'
 author: 'Jesús Bossa'
 authorImage: '../images/author/photo.jpeg'
+authorDescription: 'Ingeniero de software, intentando crear cosas geniales.'
 ---
 
 Muchas veces debemos empezar a escribir cosas que no tienen sentido pero qeu sin embargo con ellas debemos empezar acontar nuestra historia;
