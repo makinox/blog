@@ -102,7 +102,7 @@ module.exports = {
       options: {
         showSpinner: false,
         trickle: false,
-        minimum: 0.4,
+        // minimum: 0.4,
       },
     },
   ],
