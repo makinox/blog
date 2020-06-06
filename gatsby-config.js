@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Blog - Jesús Bossa`,
-    description: `Un blog para compartir contenido.`,
+    description: `Un blog para compartir reviews de videojuegos.`,
     author: `Jesús Bossa`,
   },
   plugins: [
@@ -16,7 +16,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              quality: 10,
+              quality: 20,
             },
           },
           {
@@ -42,11 +42,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Blog - Jesús Bossa`,
+        short_name: `Blog - JB`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0087AA`,
+        theme_color: `#0087AA`,
         display: `minimal-ui`,
         icon: `src/images/logo/B.svg`,
       },
@@ -57,6 +57,43 @@ module.exports = {
         google: {
           families: ['Open Sans', 'Cabin'],
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://cereno.jesusbossa.dev',
+        sitemap: 'https://cereno.jesusbossa.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*'],
+        },
+        dontCacheBustURLsMatching: /(\.js$|\.css$|static\/)/,
+        runtimeCaching: [
+          {
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `CacheFirst`,
+          },
+          {
+            urlPattern: /^https?:.*\page-data\/.*\/page-data\.json/,
+            handler: `NetworkFirst`,
+          },
+          {
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `StaleWhileRevalidate`,
+          },
+          {
+            urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+            handler: `StaleWhileRevalidate`,
+          },
+        ],
+        skipWaiting: true,
+        clientsClaim: true,
       },
     },
   ],
