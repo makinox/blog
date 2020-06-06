@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
@@ -10,7 +10,7 @@ export const Footer = styled.a`
   text-decoration: none;
 `;
 
-export const BeFooter = styled.div`
+export const TagFooter = styled.div`
   margin: 10px 0;
 `;
 
@@ -22,6 +22,7 @@ export const FooterTags = styled(Link)`
   text-decoration: none;
   color: #6a737d;
   background-color: var(--backgroundSecondaryColor);
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.06);
 `;
 
 export const Image = styled(Img)`

@@ -1,15 +1,17 @@
 import React from 'react';
-import { Footer, Image, Subtitle, Title, Description, BeFooter, FooterTags } from './styles';
+import { ShareFooter } from '../../components';
+import { Footer, Image, Subtitle, Title, Description, TagFooter, FooterTags } from './styles';
 
 export default ({ data }) => (
   <>
-    <BeFooter>
+    <TagFooter>
       {data.tags.map((el, key) => (
         <FooterTags to="/" key={key}>
           {el}
         </FooterTags>
       ))}
-    </BeFooter>
+    </TagFooter>
+    <ShareFooter />
     <Footer href="https://jesusbossa.dev/" target="_blank">
       {console.log(data)}
       <div>
