@@ -6,7 +6,7 @@ export default ({ data }) => (
   <>
     <TagFooter>
       {data.tags.map((el, key) => (
-        <FooterTags to="/" key={key}>
+        <FooterTags to={`/tags/${el}`} key={key}>
           {el}
         </FooterTags>
       ))}

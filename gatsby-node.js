@@ -28,17 +28,35 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `);
-  // console.log(JSON.stringify(result, null, 4))
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error: Error while running GraphQL query.`);
+    return;
+  }
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     actions.createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/container/post/post.tsx`),
+      component: path.resolve(`./src/templates/post/post.tsx`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
+      },
+    });
+  });
+
+  result.data.tagsGroup.group.forEach(tag => {
+    actions.createPage({
+      path: `/tags/${tag.fieldValue.split(' ').join('-')}/`,
+      component: path.resolve(`./src/templates/tags/tags.tsx`),
+      context: {
+        tag: tag.fieldValue,
       },
     });
   });
