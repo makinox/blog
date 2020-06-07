@@ -1,20 +1,42 @@
 import React from 'react';
-// import lazy from '@loadable/component';
-// const Main = lazy(() => import('../container/main/main'));
-// const SEO = lazy(() => import('../components/seo/seo'));
-// const Navbar = lazy(() => import('../components/navbar/navbar'));
-// const LayoutContainer = lazy(() => import('../components/layoutContainer/layoutContainer'));
-import { SEO, Navbar, LayoutContainer } from '../components/';
-import { Main } from '../container/';
+import { SEO, Navbar, LayoutContainer, PostList } from '../components/';
+import { graphql } from 'gatsby';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" />
     <LayoutContainer>
       <Navbar />
-      <Main />
+      <PostList data={data.allMarkdownRemark.edges} />
     </LayoutContainer>
   </>
 );
 
 export default IndexPage;
+
+export const query = graphql`
+  query blogListQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            timage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          timeToRead
+          excerpt
+        }
+      }
+    }
+  }
+`;
