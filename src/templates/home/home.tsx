@@ -1,18 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
 
-export default function home({ data, pageContext }) {
-  const posts = data.allMarkdownRemark.edges;
-  console.log({ ...pageContext });
-  return (
-    <>
-      {posts.map(({ node }) => {
-        const title = node.fields.slug;
-        return <div key={node.fields.slug}>{title}</div>;
-      })}
-    </>
-  );
-}
+export default ({ data, pageContext }) => (
+  <>
+    <SEO title="Pan" />
+    <LayoutContainer>
+      <Navbar />
+      <PostList data={data.allMarkdownRemark.edges} />
+      <Pagination pag={pageContext} />
+    </LayoutContainer>
+  </>
+);
 
 export const query = graphql`
   query query($skip: Int!, $limit: Int!) {
@@ -24,7 +23,17 @@ export const query = graphql`
           }
           frontmatter {
             title
+            date
+            timage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
+          timeToRead
+          excerpt
         }
       }
     }

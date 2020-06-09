@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO, Navbar, LayoutContainer, PostList } from '../components/';
+import { SEO, Navbar, LayoutContainer, PostList, Pagination } from '../components/';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
@@ -8,6 +8,7 @@ const IndexPage = ({ data }) => (
     <LayoutContainer>
       <Navbar />
       <PostList data={data.allMarkdownRemark.edges} />
+      <Pagination pag={{ currentPage: 1, numPages: 200 }} />
     </LayoutContainer>
   </>
 );
@@ -16,7 +17,7 @@ export default IndexPage;
 
 export const query = graphql`
   query blogListQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 3) {
       edges {
         node {
           fields {
