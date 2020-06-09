@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter } from '../../components';
+import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer } from '../../components';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
+  const [modal, useModal] = useState(false);
+  const toggleModal = () => {
+    useModal(!modal);
+    console.log(modal);
+  };
   return (
     <>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -16,8 +21,15 @@ export default function BlogPost({ data }) {
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostFooter data={post.frontmatter} />
+        <PostFooter data={post.frontmatter} modalHandler={toggleModal} />
       </PostContainer>
+      {modal ? (
+        <ModalContainer full={true} modalHandler={toggleModal}>
+          <h1>holis</h1>
+        </ModalContainer>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

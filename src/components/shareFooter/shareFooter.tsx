@@ -11,13 +11,18 @@ import {
   LoveContainer,
 } from './styles';
 
-export default () => {
+export default ({ modalHandler }) => {
   const [love, useLove] = useState(26);
+
+  const loveHandler = () => {
+    modalHandler();
+    useLove(love + 1);
+  };
 
   return (
     <ShareFooter>
       <ThanksContainer>
-        <LoveContainer onClick={() => useLove(love + 1)}>
+        <LoveContainer onClick={loveHandler}>
           <LoveButton />
         </LoveContainer>
         <ThanksCounter>{love} Love</ThanksCounter>

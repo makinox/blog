@@ -6,4 +6,5 @@ export { default as Pagination } from '../components/pagination/pagination';
 export { default as PostFooter } from '../components/postFooter/postFooter';
 export { default as ShareFooter } from '../components/shareFooter/shareFooter';
 export { default as PostContainer } from '../components/postContainer/postContainer';
+export { default as ModalContainer } from '../components/modalContainer/ModalContainer';
 export { default as LayoutContainer } from '../components/layoutContainer/layoutContainer';

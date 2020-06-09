@@ -3,7 +3,7 @@ import { ShareFooter } from '../../components';
 import { Footer, Image, Subtitle, Title, Description, TagFooter } from './styles';
 import { FooterTags } from '../../utils/styles/re';
 
-export default ({ data }) => (
+export default ({ data, modalHandler }) => (
   <>
     <TagFooter>
       {data.tags.map((el, key) => (
@@ -12,9 +12,9 @@ export default ({ data }) => (
         </FooterTags>
       ))}
     </TagFooter>
-    <ShareFooter />
+    <ShareFooter modalHandler={modalHandler} />
     <Footer href="https://jesusbossa.dev/" target="_blank">
-      {console.log(data)}
+      {/* {console.log(data)} */}
       <div>
         <Image fixed={data.authorImage.childImageSharp.fixed} />
       </div>
