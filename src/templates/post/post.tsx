@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer } from '../../components';
+import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
@@ -13,7 +13,7 @@ export default function BlogPost({ data }) {
   };
   return (
     <>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO title={post.frontmatter.title} description={post.excerpt} image={post.frontmatter.timage.childImageSharp.fluid.src} />
       <LayoutContainer>
         <Navbar />
       </LayoutContainer>
@@ -25,7 +25,7 @@ export default function BlogPost({ data }) {
       </PostContainer>
       {modal ? (
         <ModalContainer full={true} modalHandler={toggleModal}>
-          <h1>holis</h1>
+          <ModalContent />
         </ModalContainer>
       ) : (
         <></>

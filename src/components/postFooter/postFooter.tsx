@@ -12,7 +12,7 @@ export default ({ data, modalHandler }) => (
         </FooterTags>
       ))}
     </TagFooter>
-    <ShareFooter modalHandler={modalHandler} />
+    <ShareFooter modalHandler={modalHandler} data={data} />
     <Footer href="https://jesusbossa.dev/" target="_blank">
       {/* {console.log(data)} */}
       <div>
