@@ -21,9 +21,7 @@ export const BlogProvider = ({ children }) => {
       linkColor: '#00a5b8',
     },
   };
-
   const [theme, setTheme] = useState(themes.dark);
-
   const changeTheme = () => {
     if (theme.backgroundColor === themes.light.backgroundColor) {
       setTheme(themes.dark);

@@ -9,9 +9,9 @@ export const PaginationSection = styled.section`
 `;
 
 export const PaginationButton = styled(Link)`
-  /* border: 1px solid #000; */
+  border: 1px solid var(--textTercColor);
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 20px;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1); */
 `;

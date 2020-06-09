@@ -16,8 +16,8 @@ const TagsPage = ({
         <h1 style={{ fontSize: 35 }}>Tags</h1>
       </div>
       <div>
-        {group.map(tag => (
-          <FooterTags to={`/tags/${tag.fieldValue.split(' ').join('-')}/`}>
+        {group.map((tag, idx) => (
+          <FooterTags key={idx} to={`/tags/${tag.fieldValue.split(' ').join('-')}/`}>
             {tag.fieldValue} ({tag.totalCount})
           </FooterTags>
         ))}

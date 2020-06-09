@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ShareFooter,
   LoveButton,
@@ -8,29 +8,34 @@ import {
   MoreButton,
   ThanksContainer,
   ThanksCounter,
+  LoveContainer,
 } from './styles';
 
-export default () => (
-  <ShareFooter>
-    <ThanksContainer>
-      <span>
-        <LoveButton />
-      </span>
-      <ThanksCounter>26 Love</ThanksCounter>
-    </ThanksContainer>
-    <div>
-      <span>
-        <FacebookButton />
-      </span>
-      <span>
-        <TwitterButton />
-      </span>
-      <span>
-        <LinkedinButton />
-      </span>
-      <span>
-        <MoreButton />
-      </span>
-    </div>
-  </ShareFooter>
-);
+export default () => {
+  const [love, useLove] = useState(26);
+
+  return (
+    <ShareFooter>
+      <ThanksContainer>
+        <LoveContainer onClick={() => useLove(love + 1)}>
+          <LoveButton />
+        </LoveContainer>
+        <ThanksCounter>{love} Love</ThanksCounter>
+      </ThanksContainer>
+      <div>
+        <span>
+          <FacebookButton />
+        </span>
+        <span>
+          <TwitterButton />
+        </span>
+        <span>
+          <LinkedinButton />
+        </span>
+        <span>
+          <MoreButton />
+        </span>
+      </div>
+    </ShareFooter>
+  );
+};

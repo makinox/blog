@@ -25,6 +25,10 @@ export const ShareFooter = styled.div`
   align-items: center;
 `;
 
+export const LoveContainer = styled.span`
+  cursor: pointer;
+`;
+
 export const LoveButton = styled(RiHandHeartLine)`
   border-radius: 50px;
   width: 50px;
