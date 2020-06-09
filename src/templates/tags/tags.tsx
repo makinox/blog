@@ -1,30 +1,25 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { SEO, LayoutContainer, Navbar, PostList } from '../../components';
+import { FooterTags } from '../../utils/styles/re';
 
 export default function Tags({ pageContext, data }) {
   const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
+  const { totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields;
-          const { title } = node.frontmatter;
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
-    </div>
+    <>
+      <SEO title={`Tag ${tag}`} />
+
+      <LayoutContainer>
+        <Navbar />
+        <h1>{tagHeader}</h1>
+        <PostList data={data.allMarkdownRemark.edges} />
+        <div style={{ margin: '30px 0 60px 0' }}>
+          <FooterTags to="/tags">All tags</FooterTags>
+        </div>
+      </LayoutContainer>
+    </>
   );
 }
 
@@ -43,7 +38,17 @@ export const query = graphql`
           }
           frontmatter {
             title
+            date
+            timage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
+          timeToRead
+          excerpt
         }
       }
     }
