@@ -1,30 +1,29 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { SEO } from '../components';
+import { graphql } from 'gatsby';
+import { FooterTags } from '../utils/styles/re';
+import { SEO, LayoutContainer, Navbar } from '../components';
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
-  <div>
-    <SEO title={title} />
-    <div>
-      <h1>Tags</h1>
-      <ul>
+  <>
+    <SEO title={'Tags'} />
+    <LayoutContainer>
+      <Navbar />
+      <div>
+        <h1 style={{ fontSize: 35 }}>Tags</h1>
+      </div>
+      <div>
         {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${tag.fieldValue.split(' ').join('-')}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
+          <FooterTags to={`/tags/${tag.fieldValue.split(' ').join('-')}/`}>
+            {tag.fieldValue} ({tag.totalCount})
+          </FooterTags>
         ))}
-      </ul>
-    </div>
-  </div>
+      </div>
+    </LayoutContainer>
+  </>
 );
 
 export default TagsPage;

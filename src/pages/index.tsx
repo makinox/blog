@@ -17,7 +17,7 @@ export default IndexPage;
 
 export const query = graphql`
   query blogListQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 3) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
       edges {
         node {
           fields {

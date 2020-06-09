@@ -1,12 +1,13 @@
 import React from 'react';
 import { ShareFooter } from '../../components';
-import { Footer, Image, Subtitle, Title, Description, TagFooter, FooterTags } from './styles';
+import { Footer, Image, Subtitle, Title, Description, TagFooter } from './styles';
+import { FooterTags } from '../../utils/styles/re';
 
 export default ({ data }) => (
   <>
     <TagFooter>
       {data.tags.map((el, key) => (
-        <FooterTags to={`/tags/${el}`} key={key}>
+        <FooterTags to={`/tags/${el.split(' ').join('-')}`} key={key}>
           {el}
         </FooterTags>
       ))}
