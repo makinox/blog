@@ -3,6 +3,7 @@ module.exports = {
     title: `Blog - Jesús Bossa`,
     description: `Un blog para compartir reviews de videojuegos.`,
     author: `Jesús Bossa`,
+    keywords: ['Blog', 'Gaming', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
     siteUrl: 'https://blog.jesusbossa.dev/',
   },
   plugins: [

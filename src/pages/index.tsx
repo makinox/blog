@@ -4,10 +4,10 @@ import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" />
+    <SEO title="Home" image={data.allMarkdownRemark.edges[0].node.frontmatter.timage.childImageSharp.fluid.src} />
     <LayoutContainer>
       <Navbar />
-      {console.log(data.allMarkdownRemark.edges)}
+      {/* {console.log(this.props)} */}
       <PostList data={data.allMarkdownRemark.edges} />
       <Pagination pag={{ currentPage: 1, numPages: 200 }} />
     </LayoutContainer>
