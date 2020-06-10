@@ -13,7 +13,11 @@ import {
 
 export default ({ modalHandler, data }) => {
   const [love, useLove] = useState(26);
-
+  const URL = typeof window !== 'undefined' && window.location.href.replace('http://localhost:8000', 'https://blog.jesusbossa.dev');
+  const copyClipboard = () => {
+    document.execCommand(URL);
+    alert(`Se ha copiado la URL para que la compartas`);
+  };
   const loveHandler = () => {
     modalHandler();
     useLove(love + 1);
@@ -28,25 +32,16 @@ export default ({ modalHandler, data }) => {
         <ThanksCounter>{love} Love</ThanksCounter>
       </ThanksContainer>
       <div>
-        <a
-          href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${window.location.href.replace(
-            'http://localhost:8000',
-            'https://blog.jesusbossa.dev'
-          )}`}
-          target="_blank"
-        >
+        <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">
           <FacebookButton />
         </a>
-        <a
-          href={`https://twitter.com/intent/tweet?text=${data.title}&url=${window.location.href}&hashtags=${data.tags.join(',')}`}
-          target="_blank"
-        >
+        <a href={`https://twitter.com/intent/tweet?text=${data.title}&url=${URL}&hashtags=${data.tags.join(',')}`} target="_blank">
           <TwitterButton />
         </a>
-        <span>
+        <a href={`https://www.linkedin.com/shareArticle?&url=${URL}&title=${data.title}`}>
           <LinkedinButton />
-        </span>
-        <span>
+        </a>
+        <span onClick={copyClipboard}>
           <MoreButton />
         </span>
       </div>

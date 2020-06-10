@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { IoIosMore } from 'react-icons/io';
+import { AiOutlineLink } from 'react-icons/ai';
 import { RiHandHeartLine } from 'react-icons/ri';
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
 
@@ -47,6 +47,6 @@ export const LinkedinButton = styled(FaLinkedin)`
 export const TwitterButton = styled(FaTwitterSquare)`
   ${intent}
 `;
-export const MoreButton = styled(IoIosMore)`
+export const MoreButton = styled(AiOutlineLink)`
   ${intent}
 `;
