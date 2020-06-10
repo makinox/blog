@@ -1,11 +1,12 @@
 import React from 'react';
-import { ModalContent, ModalTitle } from './styles';
+import { ModalContent, ModalTitle, ModalHeader, CloseIcon } from './styles';
 
-export default () => (
+export default ({ modalHandler }) => (
   <ModalContent>
-    <div>
+    <ModalHeader>
       <ModalTitle>Me elegra que te haya gustado</ModalTitle>
-    </div>
+      <CloseIcon onClick={modalHandler} />
+    </ModalHeader>
     <div>
       <p>Si te interesa colaborar, podrias ayudarme compartiendo el post, comprandome un cafe o simplemente hablandome en twitter</p>
     </div>

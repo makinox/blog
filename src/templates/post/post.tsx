@@ -7,10 +7,7 @@ import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
   const [modal, useModal] = useState(false);
-  const toggleModal = () => {
-    useModal(!modal);
-    console.log(modal);
-  };
+  const toggleModal = () => useModal(!modal);
   return (
     <>
       <SEO title={post.frontmatter.title} description={post.excerpt} image={post.frontmatter.timage.childImageSharp.fluid.src} />
@@ -24,8 +21,8 @@ export default function BlogPost({ data }) {
         <PostFooter data={post.frontmatter} modalHandler={toggleModal} />
       </PostContainer>
       {modal ? (
-        <ModalContainer full={true} modalHandler={toggleModal}>
-          <ModalContent />
+        <ModalContainer full={true}>
+          <ModalContent modalHandler={toggleModal} />
         </ModalContainer>
       ) : (
         <></>
