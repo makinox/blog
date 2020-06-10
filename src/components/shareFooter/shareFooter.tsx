@@ -12,16 +12,14 @@ import {
 } from './styles';
 
 export default ({ modalHandler, data }) => {
-  const [love, useLove] = useState(26);
-  const URL = typeof window !== 'undefined' && window.location.href.replace('http://localhost:8000', 'https://blog.jesusbossa.dev');
+  const URL = `https://blog.jesusbossa.dev/article/${data.title.split(' ').join('_')}`;
   const copyClipboard = () => {
-    document.execCommand(URL);
-    alert(`Se ha copiado la URL para que la compartas`);
+    navigator.clipboard
+      .writeText(URL)
+      .then(() => alert(`Se ha copiado la URL para que la compartas`))
+      .catch(() => console.log('No copiado'));
   };
-  const loveHandler = () => {
-    modalHandler();
-    useLove(love + 1);
-  };
+  const loveHandler = () => modalHandler();
 
   return (
     <ShareFooter>
@@ -29,7 +27,7 @@ export default ({ modalHandler, data }) => {
         <LoveContainer onClick={loveHandler}>
           <LoveButton />
         </LoveContainer>
-        <ThanksCounter>{love} Love</ThanksCounter>
+        <ThanksCounter>Love</ThanksCounter>
       </ThanksContainer>
       <div>
         <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">

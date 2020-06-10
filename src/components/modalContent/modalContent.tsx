@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalContent, ModalTitle, ModalHeader, CloseIcon } from './styles';
+import { ModalContent, ModalTitle, ModalHeader, CloseIcon, ModalParragraph } from './styles';
 
 export default ({ modalHandler }) => (
   <ModalContent>
@@ -8,7 +8,12 @@ export default ({ modalHandler }) => (
       <CloseIcon onClick={modalHandler} />
     </ModalHeader>
     <div>
-      <p>Si te interesa colaborar, podrias ayudarme compartiendo el post, comprandome un cafe o simplemente hablandome en twitter</p>
+      <ModalParragraph>
+        Si te interesa colaborar, podrias ayudarme compartiendo el post o simplemente hablandome en{' '}
+        <a href="https://twitter.com/jesMakinox" target="_blank">
+          twitter
+        </a>
+      </ModalParragraph>
     </div>
   </ModalContent>
 );

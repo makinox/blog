@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { RiCloseCircleLine } from 'react-icons/ri';
 
 export const ModalContent = styled.section`
-  background-color: #fff;
+  background-color: var(--backgroundColor);
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   border-radius: 10px;
@@ -22,4 +22,8 @@ export const CloseIcon = styled(RiCloseCircleLine)`
 
 export const ModalTitle = styled.h2`
   margin: 0;
+`;
+
+export const ModalParragraph = styled.p`
+  color: var(--textColor);
 `;
