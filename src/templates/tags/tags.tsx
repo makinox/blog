@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { SEO, LayoutContainer, Navbar, PostList } from '../../components';
 import { FooterTags } from '../../utils/styles/re';
 

@@ -7,6 +7,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <LayoutContainer>
       <Navbar />
+      {console.log(data.allMarkdownRemark.edges)}
       <PostList data={data.allMarkdownRemark.edges} />
       <Pagination pag={{ currentPage: 1, numPages: 200 }} />
     </LayoutContainer>

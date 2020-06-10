@@ -1,6 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { Link } from 'gatsby';
 
 export const Footer = styled.a`
   display: flex;
