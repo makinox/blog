@@ -6,10 +6,8 @@ interface ItemProps {
 }
 
 export const Nav = styled.nav<ItemProps>`
-  display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
-  justify-content: center;
-  justify-items: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 
@@ -30,6 +28,11 @@ export const Nav = styled.nav<ItemProps>`
 export const Logo = styled.img`
   cursor: pointer;
   width: 110px;
+`;
+
+export const NavFirst = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const LogoWrapper = styled(Link)`

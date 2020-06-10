@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 import { AiOutlineLink } from 'react-icons/ai';
 import { RiHandHeartLine } from 'react-icons/ri';
-import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
 
 const intent = css`
   cursor: pointer;
   margin: 0 5px;
   font-size: 20px;
-  color: var(--textSecondaryColor);
+  color: var(--textTercColor);
 `;
 
 export const ThanksContainer = styled.div`
@@ -38,15 +37,6 @@ export const LoveButton = styled(RiHandHeartLine)`
   border: 1px solid var(--textTercColor);
 `;
 
-export const FacebookButton = styled(FaFacebookSquare)`
-  ${intent}
-`;
-export const LinkedinButton = styled(FaLinkedin)`
-  ${intent}
-`;
-export const TwitterButton = styled(FaTwitterSquare)`
-  ${intent}
-`;
 export const MoreButton = styled(AiOutlineLink)`
   ${intent}
 `;

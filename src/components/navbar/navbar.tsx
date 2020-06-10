@@ -1,7 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { BlogContext } from '../../utils/context/context';
+import React, { useContext, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Nav, InputContainer, Input, Logo, LogoWrapper, ThemeButton } from './styles';
+import { BlogContext } from '../../utils/context/context';
+import { Nav, Logo, LogoWrapper, ThemeButton, NavFirst } from './styles';
+import { TwitterButton, LinkedinButton, HomeButton } from '../../utils/styles/re';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -13,33 +14,31 @@ export default () => {
   `);
   const { changeTheme } = useContext(BlogContext);
   const [icon, useIcon] = useState(false);
-  const [showFixed, setFixed] = useState(false);
-  const handleInput = e => console.log(e.target.value);
+  // const handleInput = e => console.log(e.target.value);
   const handleTheme = () => {
     useIcon(!icon);
     changeTheme();
   };
-  useEffect(() => {
-    const onScroll = () => {
-      const newShowFixed = window.scrollY > 92;
-      showFixed !== newShowFixed && setFixed(newShowFixed);
-      // console.log(showFixed);
-    };
-
-    document.addEventListener('scroll', onScroll);
-
-    return () => document.removeEventListener('scroll', onScroll);
-  }, [showFixed]);
   return (
-    <Nav activate={showFixed}>
-      <LogoWrapper to="/">
-        <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
-      </LogoWrapper>
-      <InputContainer>
-        <Input placeholder="Buscar" type="text" onChange={handleInput} />
-      </InputContainer>
-      <div onClick={handleTheme}>
-        <ThemeButton>{icon ? '🌞' : '🌙'}</ThemeButton>
+    <Nav activate={false}>
+      <NavFirst>
+        <LogoWrapper to="/">
+          <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
+        </LogoWrapper>
+        <div onClick={handleTheme}>
+          <ThemeButton>{icon ? '🌞' : '🌙'}</ThemeButton>
+        </div>
+      </NavFirst>
+      <div>
+        <a href={`https://jesusbossa.dev/`} target="_blank">
+          <HomeButton />
+        </a>
+        <a href={`https://twitter.com/jesMakinox`} target="_blank">
+          <TwitterButton />
+        </a>
+        <a href={`https://www.linkedin.com/in/makinox/`} target="_blank">
+          <LinkedinButton />
+        </a>
       </div>
     </Nav>
   );

@@ -1,15 +1,6 @@
-import React, { useState } from 'react';
-import {
-  ShareFooter,
-  LoveButton,
-  FacebookButton,
-  TwitterButton,
-  LinkedinButton,
-  MoreButton,
-  ThanksContainer,
-  ThanksCounter,
-  LoveContainer,
-} from './styles';
+import React from 'react';
+import { ShareFooter, LoveButton, MoreButton, ThanksContainer, ThanksCounter, LoveContainer } from './styles';
+import { FacebookButton, TwitterButton, LinkedinButton } from '../../utils/styles/re';
 
 export default ({ modalHandler, data }) => {
   const URL = `https://blog.jesusbossa.dev/article/${data.title.split(' ').join('_')}`;
