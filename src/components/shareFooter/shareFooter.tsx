@@ -2,8 +2,8 @@ import React from 'react';
 import { ShareFooter, LoveButton, MoreButton, ThanksContainer, ThanksCounter, LoveContainer } from './styles';
 import { FacebookButton, TwitterButton, LinkedinButton } from '../../utils/styles/re';
 
-export default ({ modalHandler, data }) => {
-  const URL = `https://blog.jesusbossa.dev/article/${data.title.split(' ').join('_')}`;
+export default ({ modalHandler, data, slug }) => {
+  const URL = `https://blog.jesusbossa.dev/${slug}`;
   const copyClipboard = () => {
     navigator.clipboard
       .writeText(URL)

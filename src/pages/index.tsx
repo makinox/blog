@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" image={data.allMarkdownRemark.edges[0].node.frontmatter.timage.childImageSharp.fluid.src} />
+    <SEO title="Home" image={data.allMarkdownRemark.edges[0].node.frontmatter.timage.childImageSharp.fluid.src} pathname="/" />
     <LayoutContainer>
       <Navbar />
       {/* {console.log(this.props)} */}

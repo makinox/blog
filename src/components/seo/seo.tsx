@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
             description
             author
             keywords
+            siteUrl
           }
         }
       }
@@ -34,7 +35,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={`${title} | ${site.siteMetadata.title}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical
@@ -53,7 +54,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -77,7 +78,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:description`,
