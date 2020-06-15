@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
       <Navbar />
       {/* {console.log(this.props)} */}
       <PostList data={data.allMarkdownRemark.edges} />
-      <Pagination pag={{ currentPage: 1, numPages: 200 }} />
+      <Pagination pag={{ currentPage: 1, numPages: 1 }} />
     </LayoutContainer>
   </>
 );
