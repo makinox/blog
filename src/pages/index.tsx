@@ -4,10 +4,10 @@ import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" image={data.allMarkdownRemark.edges[0].node.frontmatter.timage.childImageSharp.fluid.src} pathname="/" />
+    <SEO title="Home" image={data.previewImage.publicURL} pathname="/" />
     <LayoutContainer>
       <Navbar />
-      {/* {console.log(this.props)} */}
+      {/* {console.log(data.previewImage.publicURL)} */}
       <PostList data={data.allMarkdownRemark.edges} />
       <Pagination pag={{ currentPage: 1, numPages: 1 }} />
     </LayoutContainer>
@@ -18,6 +18,9 @@ export default IndexPage;
 
 export const query = graphql`
   query blogListQuery {
+    previewImage: file(relativePath: { eq: "preview.png" }) {
+      publicURL
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
       edges {
         node {

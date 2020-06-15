@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+.pan h2 {
+  margin-top: 2em;
+}
+
 .pan div p {
   display: flex;
   flex-direction: column;
