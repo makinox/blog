@@ -14,6 +14,14 @@ En mi camino a ser desarrollador también me he sentido conmovido por estas preg
 
 ## Concéntrate, especialízate en una tecnología a la vez
 
+![GitHub Logo](../images/archive/004/1.jpg)
+
+<div>
+
+_Foto: Johannes Plenio_
+
+</div>
+
 Web, móviles, videojuegos y muchas más son las tecnologías que nos podremos encontrar en el camino, es toda una industria increíble en la cual es fácil distraerse y querer aprender todas estas tecnologías, sin embargo, creo que podemos estar de acuerdo en que no podemos emplearnos en todas a la vez.
 
 Concentrarse en una nos ayuda a convertirnos expertos en el tema una vez la domines puedes optar por aprender otra, tendremos más experiencia y una imagen más clara de lo que queremos.
@@ -24,6 +32,14 @@ Si tu meta es obtener un trabajo lo más pronto posible, se valora más demostra
 
 ## La práctica hace al maestro
 
+![GitHub Logo](../images/archive/004/2.jpg)
+
+<div>
+
+_Foto: Daniel Chekalov_
+
+</div>
+
 Seguramente has escuchado mucho esta frase, sin embargo, esta no pierde valor en el tiempo.
 
 Si quieres ser bueno en lo que haces deberías aspirar a dominar lo que haces, por eso es importante practicar, desarrollar proyectos, que cuando llegue el día de enseñar lo que sabes, puedas demostrar que eres bueno.
@@ -31,6 +47,14 @@ Si quieres ser bueno en lo que haces deberías aspirar a dominar lo que haces, p
 Una manera de motivarse a practicar es compartiendo eso que te gusta, ya sea en forma de aplicaciones, blogs, videos, charlas. Nada mejor como el apoyo de la gente que te conoce.
 
 ## Aprende como funciona tu mundo
+
+![GitHub Logo](../images/archive/004/3.jpg)
+
+<div>
+
+_Foto: Tom Ritson_
+
+</div>
 
 Independientemente del camino que hayas escogido es muy importante como funciona tu ecosistema.
 
@@ -40,6 +64,14 @@ Si te gustaría más ser independiente no deberías descuidar este punto, es cla
 
 ## Reconoce tus cualidades no técnicas
 
+![GitHub Logo](../images/archive/004/4.jpg)
+
+<div>
+
+_Foto: Brooke Cagle_
+
+</div>
+
 Algo que se hace muy importante a través del tiempo son tus habilidades blandas, las cuales son las que se notan la mayoría del tiempo en tu día a día.
 
 El como te comunicas, tu humor al trabajar determina la facilidad de como trabajar contigo. A nadie le gusta trabajar con gente gruñona, agresiva o cualquier otra forma de comportamiento indeseable.
@@ -47,6 +79,14 @@ El como te comunicas, tu humor al trabajar determina la facilidad de como trabaj
 Asegúrate en ser la persona con la que te gustaría trabajar, más allá de la tecnología que domines, estas habilidades te harán destacar como alguien más profesional.
 
 ## Nunca te rindas, todo tiene solución
+
+![GitHub Logo](../images/archive/004/5.jpg)
+
+<div>
+
+_Foto: Justin Luebke_
+
+</div>
 
 Las personas exitosas nunca se rinden, parece más fácil decir lo que hacerlo, sin embargo, hay algo de verdad aquí.
 El camino del desarrollador como todo, tiene muchos obstáculos, pero simplemente intentándolo lo puedes superar, todo tiene su solución, incluso lo nadie ha logrado.

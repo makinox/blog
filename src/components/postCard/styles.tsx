@@ -30,3 +30,8 @@ export const PostCardInfo = styled.div`
 export const PostCardInfoTitle = styled.h2`
   margin: 0;
 `;
+
+export const PostSubtitle = styled.span`
+  color: #6a737d;
+  font-size: 14px;
+`;

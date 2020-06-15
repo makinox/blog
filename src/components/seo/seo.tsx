@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
       htmlAttributes={{
         lang,
       }}
-      title={`${title} | ${site.siteMetadata.title}`}
+      title={`${title}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical
