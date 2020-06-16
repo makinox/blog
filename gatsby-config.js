@@ -44,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Blog - Jesús Bossa`,
-        short_name: `Blog - JB`,
+        name: `Voib`,
+        short_name: `Voib`,
         start_url: `/`,
         background_color: `#0087AA`,
         theme_color: `#0087AA`,
@@ -64,8 +64,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://blog.jesusbossa.dev',
-        sitemap: 'https://blog.jesusbossa.dev/sitemap.xml',
+        host: 'https://voib.jesusbossa.dev',
+        sitemap: 'https://voib.jesusbossa.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
