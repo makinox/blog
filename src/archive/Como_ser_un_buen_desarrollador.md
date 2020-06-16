@@ -14,11 +14,11 @@ En mi camino a ser desarrollador también me he sentido conmovido por estas preg
 
 ## Concéntrate, especialízate en una tecnología a la vez
 
-![Foto: Johannes Plenio](../images/archive/004/1.jpg)
+![Unsplash: Johannes Plenio](../images/archive/004/1.jpg)
 
 <div>
 
-_Foto: Johannes Plenio_
+_Unsplash: Johannes Plenio_
 
 </div>
 
@@ -32,11 +32,11 @@ Si tu meta es obtener un trabajo lo más pronto posible, se valora más demostra
 
 ## La práctica hace al maestro
 
-![Foto: Daniel Chekalov](../images/archive/004/2.jpg)
+![Unsplash: Daniel Chekalov](../images/archive/004/2.jpg)
 
 <div>
 
-_Foto: Daniel Chekalov_
+_Unsplash: Daniel Chekalov_
 
 </div>
 
@@ -48,11 +48,11 @@ Una manera de motivarse a practicar es compartiendo eso que te gusta, ya sea en 
 
 ## Aprende como funciona tu mundo
 
-![Foto: Tom Ritson](../images/archive/004/3.jpg)
+![Unsplash: Tom Ritson](../images/archive/004/3.jpg)
 
 <div>
 
-_Foto: Tom Ritson_
+_Unsplash: Tom Ritson_
 
 </div>
 
@@ -64,11 +64,11 @@ Si te gustaría más ser independiente no deberías descuidar este punto, es cla
 
 ## Reconoce tus cualidades no técnicas
 
-![Foto: Brooke Cagle](../images/archive/004/4.jpg)
+![Unsplash: Brooke Cagle](../images/archive/004/4.jpg)
 
 <div>
 
-_Foto: Brooke Cagle_
+_Unsplash: Brooke Cagle_
 
 </div>
 
@@ -80,11 +80,11 @@ Asegúrate en ser la persona con la que te gustaría trabajar, más allá de la 
 
 ## Nunca te rindas, todo tiene solución
 
-![Foto: Justin Luebke](../images/archive/004/5.jpg)
+![Unsplash: Justin Luebke](../images/archive/004/5.jpg)
 
 <div>
 
-_Foto: Justin Luebke_
+_Unsplash: Justin Luebke_
 
 </div>
 
