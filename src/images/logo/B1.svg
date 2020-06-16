@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 80 80" style="enable-background:new 0 0 80 80;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#editing-offset);}
+</style>
+<filter  id="editing-offset">
+	<feFlood  flood-color="#00a5b8" flood-opacity="0.5" result="c1"></feFlood>
+	<feFlood  flood-color="#0087aa" flood-opacity="0.5" result="c2"></feFlood>
+	<feFlood  flood-color="#0000ff" flood-opacity="0.5" result="c3"></feFlood>
+	<feComposite  in="c1" in2="SourceAlpha" operator="in" result="text-c1"></feComposite>
+	<feComposite  in="c2" in2="SourceAlpha" operator="in" result="text-c2"></feComposite>
+	<feComposite  in="c3" in2="SourceAlpha" operator="in" result="text-c3"></feComposite>
+	<feOffset  dx="-10" dy="0" in="text-c1" result="text1"></feOffset>
+	<feOffset  dx="10" dy="0" in="text-c2" result="text2"></feOffset>
+	<feOffset  dx="0" dy="0" in="text-c3" result="text3"></feOffset>
+	<feMerge>
+		<feMergeNode  in="text1"></feMergeNode>
+		<feMergeNode  in="text2"></feMergeNode>
+		<feMergeNode  in="text3"></feMergeNode>
+	</feMerge>
+</filter>
+<g class="st0">
+	<g transform="translate(217.64999961853027, 110)">
+		<path d="M-166.9-73.1L-166.9-73.1c4.4,1.1,7.8,3.1,10.1,6.2l0,0l0,0c2.3,3,3.5,7,3.5,11.9l0,0l0,0c0,6.2-2,11.1-6,14.7l0,0l0,0
+			c-4,3.6-9.4,5.3-16.3,5.3l0,0H-202v-70h22.1l0,0c6.4,0,11.4,1.4,14.9,4.3l0,0l0,0c3.5,2.9,5.3,7.1,5.3,12.8l0,0l0,0
+			c0,3.3-0.6,6.3-1.8,8.9l0,0l0,0C-162.8-76.4-164.6-74.4-166.9-73.1L-166.9-73.1z M-192.5-96.5v20.6h11.4l0,0
+			c3.7,0,6.6-0.8,8.6-2.3l0,0l0,0c2-1.5,2.9-4.2,2.9-8l0,0l0,0c0-3.9-1-6.6-2.9-8.1l0,0l0,0c-2-1.5-4.8-2.3-8.6-2.3l0,0H-192.5z
+			 M-176.4-43.6L-176.4-43.6c3.9,0,7-1,9.3-3l0,0l0,0c2.3-2,3.4-4.9,3.4-8.8l0,0l0,0c0-8-4.2-12-12.7-12l0,0h-16.1v23.7H-176.4z"/>
+	</g>
+</g>
+</svg>

@@ -9,7 +9,7 @@
 
 .pan a {
   color: var(--linkColor);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .pan h2 {
