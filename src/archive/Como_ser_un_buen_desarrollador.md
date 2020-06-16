@@ -89,7 +89,8 @@ _Foto: Justin Luebke_
 </div>
 
 Las personas exitosas nunca se rinden, parece más fácil decir lo que hacerlo, sin embargo, hay algo de verdad aquí.
-El camino del desarrollador como todo, tiene muchos obstáculos, pero simplemente intentándolo lo puedes superar, todo tiene su solución, incluso lo nadie ha logrado.
+
+El camino del desarrollador como todo, tiene muchos obstáculos, pero simplemente intentándolo lo puedes superar, todo tiene su solución, incluso lo que nadie ha logrado.
 
 Con el suficiente estudio e incluso un poco de suerte, puedes lograr cualquier cosa que te propongas.
 Te invito a intentarlo, me gustaría saber qué opinas al respecto, háblame en <a href="https://twitter.com/jesMakinox" target="_blank">Twitter</a>, estaré muy feliz de responderte.
