@@ -14,6 +14,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
             author
             keywords
             siteUrl
+            image
           }
         }
       }
@@ -21,7 +22,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const pathImage = `${site.siteMetadata.siteUrl}${image}`;
+  const pathImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (

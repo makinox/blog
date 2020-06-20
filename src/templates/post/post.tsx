@@ -8,7 +8,7 @@ export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark;
   const [modal, useModal] = useState(false);
   const toggleModal = () => useModal(!modal);
-  console.log(post.frontmatter.timage.thumb.fluid.src);
+  // console.log(post.frontmatter.timage.thumb.fluid.src);
   return (
     <>
       <SEO
@@ -61,7 +61,7 @@ export const query = graphql`
             }
           }
           thumb: childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 400) {
+            fluid(maxWidth: 1200, maxHeight: 628) {
               ...GatsbyImageSharpFluid
             }
           }
