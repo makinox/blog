@@ -8,13 +8,13 @@ export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark;
   const [modal, useModal] = useState(false);
   const toggleModal = () => useModal(!modal);
-  // console.log(pageContext.slug);
+  console.log(post.frontmatter.timage.thumb.fluid.src);
   return (
     <>
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        image={post.frontmatter.timage.childImageSharp.fluid.src}
+        image={post.frontmatter.timage.thumb.fluid.src}
         pathname={`/${pageContext.slug}`}
       />
       <LayoutContainer>
@@ -57,6 +57,11 @@ export const query = graphql`
         timage {
           childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 460) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          thumb: childImageSharp {
+            fluid(maxWidth: 600, maxHeight: 400) {
               ...GatsbyImageSharpFluid
             }
           }
