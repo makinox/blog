@@ -21,6 +21,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const pathImage = `${site.siteMetadata.siteUrl}${image}`;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (
@@ -47,7 +48,7 @@ function SEO({ description, lang, meta, title, image, pathname }) {
         },
         {
           name: `image`,
-          content: image,
+          content: pathImage,
         },
         {
           property: `og:title`,
@@ -63,11 +64,11 @@ function SEO({ description, lang, meta, title, image, pathname }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: pathImage,
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: pathImage,
         },
         {
           name: `twitter:card`,
