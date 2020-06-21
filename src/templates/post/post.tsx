@@ -16,6 +16,7 @@ export default function BlogPost({ data, pageContext }) {
         description={post.excerpt}
         image={post.frontmatter.timage.thumb.fluid.src}
         pathname={`/${pageContext.slug}`}
+        keyw={post.frontmatter.tags}
       />
       <LayoutContainer>
         <Navbar />
