@@ -96,4 +96,4 @@ A veces es común ver videojuegos que se inspiran en eventos conocidos para tene
 
 Hay un caso particular que me llama la atención es Hellblade, sumergiéndote en un pasado nórdico lleno de simbolismo y cultura, en el cual te cuentan la historia de una chica con esquizofrenia, la cual nos guía en su búsqueda para salvar el alma de su amado.
 
-Sin duda hay muchas formas de explorar eventos históricos en cuanto videojuegos se refiere, creo que lo mas importante debe ser equilibrio con la historia que se esta contando, ya que muchas veces no se tiene un entendimiento completo de la época en la cual están contando las cosas. Si te apasionan este tipo de historias no dudes en investigar para complementar mejor la historia.
+Sin duda hay muchas formas de explorar eventos históricos en cuanto videojuegos se refiere, creo que lo mas importante debe ser equilibrio con la historia que se esta contando, ya que muchas veces no se tiene un entendimiento completo de la época en la cual están contando las cosas. Si te apasionan este tipo de historias no dudes en investigar para complementar mejor lo que te están contando.
