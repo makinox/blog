@@ -9,6 +9,6 @@ Used:
 - Gatsby
 - PWA (Workbox)
 
-Link to [blog!](https://blog.jesusbossa.dev/)
+Link to [blog!](https://voib.jesusbossa.dev/)
 
 ![Image of blog](./src/images/preview.png)
