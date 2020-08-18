@@ -10,7 +10,7 @@ tags: ['Tecnologia', 'Desarrollo', '5-minutos']
 
 En algún momento de nuestra carrera de desarrollo habremos escuchado de ReactJS, siempre diciendo de que React es lo mejor, si quieres hacer una pagina web o app usa React, React esto y lo otro.
 
-Sin embargo, ¿te has preguntado porque dicen eso?, que tanto hay de verdad en esas palabras.
+Sin embargo, ¿te has preguntado por qué dicen eso?, ¿qué tanto hay de verdad en esas palabras?
 
 Yo también me he sentido conmovido por esas preguntas y quisiera ayudarte a comprender mejor esta herramienta.
 
@@ -24,7 +24,7 @@ _Creando un componente_
 
 </div>
 
-Reas en una pequeña librería de vistas que te permite crear interfaces visuales de una forma muy fácil.
+React es una pequeña librería de vistas que te permite crear interfaces visuales de una forma muy fácil.
 
 Al manejar una sintaxis muy sencilla cualquier desarrollador podría empezar a desarrollar aplicaciones web en muy poco tiempo.
 
