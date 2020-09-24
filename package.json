@@ -33,7 +33,12 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.0",
-    "prettier": "2.0.5"
+    "babel-jest": "^26.3.0",
+    "babel-preset-gatsby": "^0.5.10",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.2",
+    "prettier": "2.0.5",
+    "react-test-renderer": "^16.13.1"
   },
   "keywords": [
     "gatsby"
@@ -47,7 +52,7 @@
     "serve": "gatsby serve",
     "deploy": "npm run build && firebase deploy",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
