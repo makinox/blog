@@ -1,9 +1,9 @@
 {
   "name": "blog",
   "private": true,
-  "description": "Un blog para compartir reviews de videojuegos.",
+  "description": "Un blog para compartir reviews de cosas, tecnologia y videojuegos.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesus bossa <x@jesusbossa.dev>",
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "@types/react-helmet": "^6.1.1",
@@ -24,23 +24,17 @@
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-remark": "^4.3.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "node-fetch": "^2.6.1",
-    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "rehype-react": "^6.2.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.0",
-    "babel-jest": "^26.3.0",
     "babel-preset-gatsby": "^0.5.10",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.4.2",
     "prettier": "2.0.5",
-    "react-icons": "^4.2.0",
-    "react-test-renderer": "^16.13.1"
+    "react-icons": "^4.2.0"
   },
   "keywords": [
     "gatsby"
