@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
 
@@ -8,7 +8,7 @@ export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark;
   const [modal, useModal] = useState(false);
   const toggleModal = () => useModal(!modal);
-  // console.log(post.frontmatter.timage.thumb.fluid.src);
+  const postImage = getImage(post.frontmatter.timage.postImage);
   return (
     <>
       <SEO
@@ -21,7 +21,8 @@ export default function BlogPost({ data, pageContext }) {
       <LayoutContainer>
         <Navbar />
       </LayoutContainer>
-      <Img fluid={post.frontmatter.timage.childImageSharp.fluid} />
+      {console.log({ postImage })}
+      <GatsbyImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -56,15 +57,19 @@ export const query = graphql`
           }
         }
         timage {
-          childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 460) {
-              ...GatsbyImageSharpFluid
-            }
-          }
           thumb: childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 628) {
               ...GatsbyImageSharpFluid
             }
+          }
+          postImage: childImageSharp {
+            gatsbyImageData(
+              width: 1200
+              height: 460
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              transformOptions: { fit: COVER, cropFocus: NORTH }
+            )
           }
         }
       }
