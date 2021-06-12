@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+import { PrimaryImage } from './post.styles';
 
 export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark;
@@ -21,8 +22,7 @@ export default function BlogPost({ data, pageContext }) {
       <LayoutContainer>
         <Navbar />
       </LayoutContainer>
-      {console.log({ postImage })}
-      <GatsbyImage image={postImage} alt={post.frontmatter.title} />
+      <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
