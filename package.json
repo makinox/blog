@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Jesus bossa <x@jesusbossa.dev>",
   "dependencies": {
-    "@loadable/component": "^5.15.0",
     "@types/react-helmet": "^6.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^3.4.0",
@@ -32,8 +31,6 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.0",
-    "babel-preset-gatsby": "^0.5.10",
-    "identity-obj-proxy": "^3.0.0",
     "prettier": "2.0.5",
     "react-icons": "^4.2.0"
   },
