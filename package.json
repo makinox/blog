@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Jesus bossa <x@jesusbossa.dev>",
   "dependencies": {
+    "@makinox/makinox-ui": "^1.4.3",
     "@types/react-helmet": "^6.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^3.4.0",

@@ -10,8 +10,8 @@ const TagsPage = ({
 }) => (
   <>
     <SEO title={'Tags'} />
+    <Navbar />
     <LayoutContainer>
-      <Navbar />
       <div>
         <h1 style={{ fontSize: 35 }}>Tags</h1>
       </div>

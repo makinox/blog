@@ -11,8 +11,8 @@ export default function Tags({ pageContext, data }) {
     <>
       <SEO title={`Tag ${tag}`} />
 
+      <Navbar />
       <LayoutContainer>
-        <Navbar />
         <h1>{tagHeader}</h1>
         <PostList data={data.allMarkdownRemark.edges} />
         <div style={{ margin: '30px 0 60px 0' }}>

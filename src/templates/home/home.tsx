@@ -5,8 +5,8 @@ import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../compon
 export default ({ data, pageContext }) => (
   <>
     <SEO title="Pan" />
+    <Navbar />
     <LayoutContainer>
-      <Navbar />
       <PostList data={data.allMarkdownRemark.edges} />
       <Pagination pag={pageContext} />
     </LayoutContainer>

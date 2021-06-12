@@ -5,8 +5,8 @@ import { graphql } from 'gatsby';
 const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" pathname="/" />
+    <Navbar />
     <LayoutContainer>
-      <Navbar />
       <PostList data={data.allMarkdownRemark.edges} />
       <Pagination pag={{ currentPage: 1, numPages: 1 }} />
     </LayoutContainer>

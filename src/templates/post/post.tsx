@@ -19,9 +19,8 @@ export default function BlogPost({ data, pageContext }) {
         pathname={`/${pageContext.slug}`}
         keyw={post.frontmatter.tags}
       />
-      <LayoutContainer>
-        <Navbar />
-      </LayoutContainer>
+      <Navbar />
+      <LayoutContainer></LayoutContainer>
       <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
