@@ -9,7 +9,7 @@ export default function Tags({ pageContext, data }) {
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
   return (
     <>
-      <SEO title={`Tag ${tag}`} />
+      <SEO title={`Tag ${tag}`} pathname="tag" />
 
       <Navbar />
       <LayoutContainer>
