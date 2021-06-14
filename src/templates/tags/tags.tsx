@@ -1,22 +1,30 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React, { useContext } from 'react';
+import { graphql, navigate } from 'gatsby';
+
 import { SEO, LayoutContainer, Navbar, PostList } from '../../components';
-import { FooterTags } from '../../utils/styles/re';
+import { BlogContext } from '../../utils/context/context';
+import { Button } from '@makinox/makinox-ui';
 
 export default function Tags({ pageContext, data }) {
+  const { isDark } = useContext(BlogContext);
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
+  const tagHeader = `${totalCount} post${detectPlural(totalCount)} tageado${detectPlural(totalCount)} como "${tag}"`;
+
+  function detectPlural(num: number) {
+    return num === 1 ? '' : 's';
+  }
+
   return (
     <>
-      <SEO title={`Tag ${tag}`} />
+      <SEO title={`Tag ${tag}`} pathname={`tags/${tag}`} />
 
+      <Navbar />
       <LayoutContainer>
-        <Navbar />
         <h1>{tagHeader}</h1>
         <PostList data={data.allMarkdownRemark.edges} />
         <div style={{ margin: '30px 0 60px 0' }}>
-          <FooterTags to="/tags">All tags</FooterTags>
+          <Button use="outlined" isDark={isDark} style={{ margin: 5 }} message="Todos los tags" onClick={() => navigate('/tags')} />
         </div>
       </LayoutContainer>
     </>
@@ -40,10 +48,14 @@ export const query = graphql`
             title
             date
             timage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+              postImage: childImageSharp {
+                gatsbyImageData(
+                  width: 900
+                  height: 350
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  transformOptions: { fit: COVER }
+                )
               }
             }
           }

@@ -4,10 +4,6 @@ import { Link } from 'gatsby';
 
 export const PostCard = styled(Link)`
   text-decoration: none;
-  margin: 20px 0;
-  border-radius: 10px;
-  color: var(--textColor);
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const PostCardImageContainer = styled.div`

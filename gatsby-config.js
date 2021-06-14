@@ -8,8 +8,10 @@ module.exports = {
     image: '/preview.png',
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
@@ -20,7 +22,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              quality: 90,
+              quality: 80,
             },
           },
           {

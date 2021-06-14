@@ -8,10 +8,21 @@ export const PaginationSection = styled.section`
   margin-bottom: 40px;
 `;
 
-export const PaginationButton = styled(Link)`
+export const PaginationButton = styled(Link)<{ isDark: boolean }>`
   border: 1px solid var(--textTercColor);
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 20px;
-  /* box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1); */
+
+  ${props => {
+    if (props.isDark) {
+      return `
+      border: 1px solid rgb(var(--dark-primary));
+      `;
+    } else {
+      return `
+      border: 1px solid rgb(var(--light-primary));
+      `;
+    }
+  }}
 `;

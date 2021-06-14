@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import './styles.css';
-import Img from 'gatsby-image';
+import React, { useContext, useState } from 'react';
+import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+
+import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+import { BlogContext } from '../../utils/context/context';
+import { PrimaryImage } from './post.styles';
+import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
+  const { isDark } = useContext(BlogContext);
   const post = data.markdownRemark;
+  const postImage = getImage(post.frontmatter.timage.postImage);
+
   const [modal, useModal] = useState(false);
   const toggleModal = () => useModal(!modal);
-  // console.log(post.frontmatter.timage.thumb.fluid.src);
   return (
     <>
       <SEO
@@ -18,18 +23,16 @@ export default function BlogPost({ data, pageContext }) {
         pathname={`/${pageContext.slug}`}
         keyw={post.frontmatter.tags}
       />
-      <LayoutContainer>
-        <Navbar />
-      </LayoutContainer>
-      <Img fluid={post.frontmatter.timage.childImageSharp.fluid} />
+      <Navbar />
+      <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostFooter data={post.frontmatter} modalHandler={toggleModal} slug={pageContext.slug} />
+        <PostFooter isDark={isDark} data={post.frontmatter} modalHandler={toggleModal} slug={pageContext.slug} />
       </PostContainer>
       {modal ? (
         <ModalContainer full={true}>
-          <ModalContent modalHandler={toggleModal} />
+          <ModalContent isDark={isDark} modalHandler={toggleModal} />
         </ModalContainer>
       ) : (
         <></>
@@ -56,15 +59,13 @@ export const query = graphql`
           }
         }
         timage {
-          childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 460) {
-              ...GatsbyImageSharpFluid
-            }
-          }
           thumb: childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 628) {
               ...GatsbyImageSharpFluid
             }
+          }
+          postImage: childImageSharp {
+            gatsbyImageData(width: 1200, height: 460, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
           }
         }
       }

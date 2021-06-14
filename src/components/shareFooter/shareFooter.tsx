@@ -1,8 +1,12 @@
 import React from 'react';
-import { ShareFooter, LoveButton, MoreButton, ThanksContainer, ThanksCounter, LoveContainer } from './styles';
-import { FacebookButton, TwitterButton, LinkedinButton } from '../../utils/styles/re';
 
-export default ({ modalHandler, data, slug }) => {
+import { FaTwitterSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
+import { RiHandHeartLine } from 'react-icons/ri';
+import { AiOutlineLink } from 'react-icons/ai';
+
+import { ShareFooter, ThanksContainer, ThanksCounter, LoveContainer, ShareSection } from './styles';
+
+export default ({ modalHandler, data, slug, isDark }) => {
   const URL = `https://voib.jesusbossa.dev/${slug}`;
   const copyClipboard = () => {
     navigator.clipboard
@@ -15,25 +19,25 @@ export default ({ modalHandler, data, slug }) => {
   return (
     <ShareFooter>
       <ThanksContainer>
-        <LoveContainer onClick={loveHandler}>
-          <LoveButton />
+        <LoveContainer onClick={loveHandler} isDark={isDark}>
+          <RiHandHeartLine />
         </LoveContainer>
         <ThanksCounter>Love</ThanksCounter>
       </ThanksContainer>
-      <div>
+      <ShareSection isDark={isDark}>
         <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">
-          <FacebookButton />
+          <FaFacebookSquare />
         </a>
         <a href={`https://twitter.com/intent/tweet?text=${data.title}&url=${URL}&hashtags=${data.tags.join(',')}`} target="_blank">
-          <TwitterButton />
+          <FaTwitterSquare />
         </a>
         <a href={`https://www.linkedin.com/shareArticle?&url=${URL}&title=${data.title}`} target="_blank">
-          <LinkedinButton />
+          <FaLinkedin />
         </a>
         <span onClick={copyClipboard}>
-          <MoreButton />
+          <AiOutlineLink />
         </span>
-      </div>
+      </ShareSection>
     </ShareFooter>
   );
 };

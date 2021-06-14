@@ -1,18 +1,22 @@
-import React from 'react';
-import { SEO, Navbar, LayoutContainer, PostList, Pagination } from '../components/';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 
-const IndexPage = ({ data }) => (
-  <>
-    <SEO title="Home" pathname="/" />
-    <LayoutContainer>
+import { SEO, Navbar, LayoutContainer, PostList, Pagination } from '../components/';
+import { BlogContext } from '../utils/context/context';
+
+function IndexPage({ data }) {
+  const { isDark } = useContext(BlogContext);
+  return (
+    <>
+      <SEO title="Home" pathname="/" />
       <Navbar />
-      {/* {console.log(data.previewImage.publicURL)} */}
-      <PostList data={data.allMarkdownRemark.edges} />
-      <Pagination pag={{ currentPage: 1, numPages: 1 }} />
-    </LayoutContainer>
-  </>
-);
+      <LayoutContainer>
+        <PostList data={data.allMarkdownRemark.edges} />
+        <Pagination isDark={isDark} pag={{ currentPage: 1, numPages: 1 }} />
+      </LayoutContainer>
+    </>
+  );
+}
 
 export default IndexPage;
 
@@ -28,10 +32,14 @@ export const query = graphql`
             title
             date
             timage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+              postImage: childImageSharp {
+                gatsbyImageData(
+                  width: 900
+                  height: 350
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  transformOptions: { fit: COVER }
+                )
               }
             }
           }

@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
-import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
 
-export default ({ data, pageContext }) => (
-  <>
-    <SEO title="Pan" />
-    <LayoutContainer>
+import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
+import { BlogContext } from '../../utils/context/context';
+
+export default ({ data, pageContext }) => {
+  const { isDark } = useContext(BlogContext);
+  return (
+    <>
+      <SEO title="Home" pathname="/home" />
       <Navbar />
-      <PostList data={data.allMarkdownRemark.edges} />
-      <Pagination pag={pageContext} />
-    </LayoutContainer>
-  </>
-);
+      <LayoutContainer>
+        <PostList data={data.allMarkdownRemark.edges} />
+        <Pagination isDark={isDark} pag={pageContext} />
+      </LayoutContainer>
+    </>
+  );
+};
 
 export const query = graphql`
   query query($skip: Int!, $limit: Int!) {
