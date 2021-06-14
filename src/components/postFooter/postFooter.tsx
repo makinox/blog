@@ -12,9 +12,8 @@ export default ({ data, modalHandler, slug, isDark }) => (
         </FooterTags>
       ))}
     </TagFooter>
-    <ShareFooter modalHandler={modalHandler} data={data} slug={slug} />
+    <ShareFooter isDark={isDark} modalHandler={modalHandler} data={data} slug={slug} />
     <Footer isDark={isDark} href="https://jesusbossa.dev/" target="_blank">
-      {/* {console.log(data)} */}
       <div>
         <Image fixed={data.authorImage.childImageSharp.fixed} />
       </div>

@@ -1,13 +1,5 @@
-import styled, { css } from 'styled-components';
-import { AiOutlineLink } from 'react-icons/ai';
+import styled from 'styled-components';
 import { RiHandHeartLine } from 'react-icons/ri';
-
-const intent = css`
-  cursor: pointer;
-  margin: 0 5px;
-  font-size: 20px;
-  color: var(--textTercColor);
-`;
 
 export const ThanksContainer = styled.div`
   display: flex;
@@ -28,15 +20,19 @@ export const LoveContainer = styled.span`
   cursor: pointer;
 `;
 
-export const LoveButton = styled(RiHandHeartLine)`
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
+export const LoveButton = styled(RiHandHeartLine)<{ isDark: boolean }>`
+  width: 40px;
+  height: 40px;
   padding: 10px;
-  color: var(--textSecondaryColor);
-  border: 1px solid var(--textTercColor);
+  ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
 `;
 
-export const MoreButton = styled(AiOutlineLink)`
-  ${intent}
+export const ShareSection = styled.div<{ isDark: boolean }>`
+  & a,
+  & span {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 20px;
+    ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
+  }
 `;
