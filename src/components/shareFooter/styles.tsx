@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { RiHandHeartLine } from 'react-icons/ri';
 
 export const ThanksContainer = styled.div`
   display: flex;
@@ -16,15 +15,13 @@ export const ShareFooter = styled.div`
   align-items: center;
 `;
 
-export const LoveContainer = styled.span`
+export const LoveContainer = styled.span<{ isDark: boolean }>`
   cursor: pointer;
-`;
-
-export const LoveButton = styled(RiHandHeartLine)<{ isDark: boolean }>`
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
+  & > svg {
+    width: 40px;
+    height: 40px;
+    ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
+  }
 `;
 
 export const ShareSection = styled.div<{ isDark: boolean }>`

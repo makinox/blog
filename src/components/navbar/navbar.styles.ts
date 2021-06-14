@@ -20,16 +20,14 @@ export const Bar = styled(TopBar)`
     }}
   }
 
+  & > div > div:nth-child(3) {
+    height: 17px;
+  }
+
   @media (max-width: 435px) {
     & > div > div:nth-child(2) a {
       font-size: 15px;
       margin: 0 3px !important;
-    }
-  }
-
-  @media (max-width: 495px) {
-    & > div > div:nth-child(1) {
-      display: none;
     }
   }
 

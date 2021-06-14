@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { AiOutlineLink } from 'react-icons/ai';
 import { FaTwitterSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
+import { RiHandHeartLine } from 'react-icons/ri';
+import { AiOutlineLink } from 'react-icons/ai';
 
-import { ShareFooter, LoveButton, ThanksContainer, ThanksCounter, LoveContainer, ShareSection } from './styles';
+import { ShareFooter, ThanksContainer, ThanksCounter, LoveContainer, ShareSection } from './styles';
 
 export default ({ modalHandler, data, slug, isDark }) => {
   const URL = `https://voib.jesusbossa.dev/${slug}`;
@@ -18,8 +19,8 @@ export default ({ modalHandler, data, slug, isDark }) => {
   return (
     <ShareFooter>
       <ThanksContainer>
-        <LoveContainer onClick={loveHandler}>
-          <LoveButton isDark={isDark} />
+        <LoveContainer onClick={loveHandler} isDark={isDark}>
+          <RiHandHeartLine />
         </LoveContainer>
         <ThanksCounter>Love</ThanksCounter>
       </ThanksContainer>

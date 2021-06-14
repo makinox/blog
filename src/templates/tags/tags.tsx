@@ -9,10 +9,15 @@ export default function Tags({ pageContext, data }) {
   const { isDark } = useContext(BlogContext);
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
+  const tagHeader = `${totalCount} post${detectPlural(totalCount)} tageado${detectPlural(totalCount)} como "${tag}"`;
+
+  function detectPlural(num: number) {
+    return num === 1 ? '' : 's';
+  }
+
   return (
     <>
-      <SEO title={`Tag ${tag}`} pathname="tag" />
+      <SEO title={`Tag ${tag}`} pathname={`tags/${tag}`} />
 
       <Navbar />
       <LayoutContainer>
