@@ -20,7 +20,6 @@ export default function BlogPost({ data, pageContext }) {
         keyw={post.frontmatter.tags}
       />
       <Navbar />
-      <LayoutContainer></LayoutContainer>
       <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>

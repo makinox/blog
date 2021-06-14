@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, navigate } from 'gatsby';
 import { BlogContext } from '../../utils/context/context';
 import { TwitterButton, LinkedinButton, HomeButton } from '../../utils/styles/re';
 import { Bar, Logo, ThemeButton } from './navbar.styles';
@@ -23,7 +23,7 @@ export default () => {
       isDark={icon}
       leftChild={
         <div className="flex items-center">
-          <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
+          <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
           <div onClick={handleTheme}>
             <ThemeButton>{icon ? '🌞' : '🌙'}</ThemeButton>
           </div>

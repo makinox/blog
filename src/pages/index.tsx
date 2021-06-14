@@ -27,10 +27,13 @@ export const query = graphql`
             title
             date
             timage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+              postImage: childImageSharp {
+                gatsbyImageData(
+                  width: 900
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  transformOptions: { fit: COVER, cropFocus: NORTH }
+                )
               }
             }
           }
