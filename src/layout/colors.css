@@ -1,8 +1,8 @@
 :root {
-  --light-primary: 22, 10, 255;
-  --light-primary-variant: 117, 70, 255;
-  --light-secondary: 243, 255, 10;
-  --light-secondary-variant: 255, 255, 91;
+  --light-primary: 4, 166, 183;
+  --light-primary-variant: 91, 216, 234;
+  --light-secondary: 1, 184, 110;
+  --light-secondary-variant: 90, 235, 157;
   --light-background: 255, 255, 255;
   --light-surface: 245, 245, 246;
   --light-error: 255, 22, 23;
@@ -11,8 +11,9 @@
   --light-onBackground: 0, 0, 0;
   --light-onSurface: 0, 0, 0;
   --light-onError: 0, 0, 0;
-  --dark-primary: 188, 204, 0;
-  --dark-secondary: 0, 0, 202;
+
+  --dark-primary: 4, 119, 136;
+  --dark-secondary: 4, 135, 65;
   --dark-background: 31, 31, 31;
   --dark-surface: 18, 18, 18;
   --dark-error: 194, 8, 15;
@@ -22,3 +23,20 @@
   --dark-onSurface: 255, 255, 255;
   --dark-onError: 255, 255, 255;
 }
+
+/* light: {
+  backgroundColor: '#fff',
+  backgroundSecondaryColor: '#fafafa',
+  textColor: '#000',
+  textSecondaryColor: '#292b2e',
+  textTercColor: '#00a5b8',
+  linkColor: '#345f83',
+},
+dark: {
+  backgroundColor: '#282c35',
+  backgroundSecondaryColor: '#737c9933',
+  textColor: '#fff',
+  textSecondaryColor: '#fff',
+  textTercColor: '#00a5b8',
+  linkColor: '#00a5b8',
+}, */

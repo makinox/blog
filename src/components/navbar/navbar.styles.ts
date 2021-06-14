@@ -53,3 +53,10 @@ export const ThemeButton = styled.span`
   cursor: pointer;
   padding: 10px;
 `;
+
+export const NavbarLink = styled.a<{ isDark: boolean }>`
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 20px;
+  ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
+`;

@@ -1,45 +1,38 @@
-import React, { useContext, useState } from 'react';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
+import React, { useContext } from 'react';
+import { navigate } from 'gatsby';
+
+import { FaTwitterSquare, FaLinkedin, FaHome } from 'react-icons/fa';
 import { BlogContext } from '../../utils/context/context';
-import { TwitterButton, LinkedinButton, HomeButton } from '../../utils/styles/re';
-import { Bar, Logo, ThemeButton } from './navbar.styles';
+import { Bar, Logo, NavbarLink } from './navbar.styles';
+import { useNavbarQuery } from './Navbar.graph';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo/Blog.svg" }) {
-        publicURL
-      }
-    }
-  `);
-  const { changeTheme } = useContext(BlogContext);
-  const [icon, useIcon] = useState(false);
-  const handleTheme = () => {
-    useIcon(!icon);
-    changeTheme();
-  };
+  const { placeholderImage } = useNavbarQuery();
+  const { changeTheme, isDark } = useContext(BlogContext);
+
   return (
     <Bar
-      isDark={icon}
+      isDark={isDark}
       leftChild={
         <div className="flex items-center">
-          <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
-          <div onClick={handleTheme}>
-            <ThemeButton>{icon ? '🌞' : '🌙'}</ThemeButton>
+          <Logo src={placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
+          <div onClick={changeTheme} style={{ height: '12px' }}>
+            {isDark ? <FaSun /> : <FaMoon />}
           </div>
         </div>
       }
       rightChild={
         <>
-          <a href={`https://jesusbossa.dev/`} target="_blank">
-            <HomeButton />
-          </a>
-          <a href={`https://twitter.com/jesMakinox`} target="_blank">
-            <TwitterButton />
-          </a>
-          <a href={`https://www.linkedin.com/in/makinox/`} target="_blank">
-            <LinkedinButton />
-          </a>
+          <NavbarLink isDark={isDark} href={`https://jesusbossa.dev/`} target="_blank">
+            <FaHome />
+          </NavbarLink>
+          <NavbarLink isDark={isDark} href={`https://twitter.com/jesMakinox`} target="_blank">
+            <FaLinkedin />
+          </NavbarLink>
+          <NavbarLink isDark={isDark} href={`https://www.linkedin.com/in/makinox/`} target="_blank">
+            <FaTwitterSquare />
+          </NavbarLink>
         </>
       }
     />
