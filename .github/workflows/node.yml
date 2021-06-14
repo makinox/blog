@@ -36,7 +36,7 @@ jobs:
         run: yarn install
 
       - name: Running building
-        run: npm build
+        run: yarn build
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
