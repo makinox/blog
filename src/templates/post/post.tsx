@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-import './styles.css';
+import React, { useContext, useState } from 'react';
 import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
-import { Navbar, LayoutContainer, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+
+import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+import { BlogContext } from '../../utils/context/context';
 import { PrimaryImage } from './post.styles';
+import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
+  const { isDark } = useContext(BlogContext);
   const post = data.markdownRemark;
+  const postImage = getImage(post.frontmatter.timage.postImage);
+
   const [modal, useModal] = useState(false);
   const toggleModal = () => useModal(!modal);
-  const postImage = getImage(post.frontmatter.timage.postImage);
   return (
     <>
       <SEO
@@ -28,7 +32,7 @@ export default function BlogPost({ data, pageContext }) {
       </PostContainer>
       {modal ? (
         <ModalContainer full={true}>
-          <ModalContent modalHandler={toggleModal} />
+          <ModalContent isDark={isDark} modalHandler={toggleModal} />
         </ModalContainer>
       ) : (
         <></>
