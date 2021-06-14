@@ -61,13 +61,7 @@ export const query = graphql`
             }
           }
           postImage: childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              height: 460
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-              transformOptions: { fit: COVER, cropFocus: NORTH }
-            )
+            gatsbyImageData(width: 1200, height: 460, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
           }
         }
       }

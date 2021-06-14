@@ -17,7 +17,7 @@ export default () => {
       leftChild={
         <div className="flex items-center">
           <Logo src={placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
-          <div onClick={changeTheme} style={{ height: '12px' }}>
+          <div onClick={changeTheme} style={{ height: '12px', cursor: 'pointer' }}>
             {isDark ? <FaSun /> : <FaMoon />}
           </div>
         </div>

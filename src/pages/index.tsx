@@ -30,9 +30,10 @@ export const query = graphql`
               postImage: childImageSharp {
                 gatsbyImageData(
                   width: 900
+                  height: 350
                   placeholder: BLURRED
                   formats: [AUTO, WEBP, AVIF]
-                  transformOptions: { fit: COVER, cropFocus: NORTH }
+                  transformOptions: { fit: COVER }
                 )
               }
             }
