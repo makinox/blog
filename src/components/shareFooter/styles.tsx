@@ -24,7 +24,7 @@ export const LoveButton = styled(RiHandHeartLine)<{ isDark: boolean }>`
   width: 40px;
   height: 40px;
   padding: 10px;
-  ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
+  ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
 `;
 
 export const ShareSection = styled.div<{ isDark: boolean }>`
@@ -33,6 +33,6 @@ export const ShareSection = styled.div<{ isDark: boolean }>`
     cursor: pointer;
     margin: 0 5px;
     font-size: 20px;
-    ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
+    ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
   }
 `;

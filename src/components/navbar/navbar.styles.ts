@@ -46,7 +46,7 @@ export const Bar = styled(TopBar)`
 export const Logo = styled.img`
   cursor: pointer;
   width: 110px;
-  height: 38px;
+  height: 34px;
 `;
 
 export const ThemeButton = styled.span`
@@ -58,5 +58,5 @@ export const NavbarLink = styled.a<{ isDark: boolean }>`
   margin: 0 5px;
   cursor: pointer;
   font-size: 20px;
-  ${props => (props.isDark ? `color: rgb(var(--light-primary));` : `color: rgb(var(--dark-primary));`)}
+  ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
 `;
