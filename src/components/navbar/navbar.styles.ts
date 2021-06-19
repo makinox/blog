@@ -21,7 +21,7 @@ export const Bar = styled(TopBar)`
   }
 
   & > div > div:nth-child(3) {
-    height: 17px;
+    height: 18px;
   }
 
   @media (max-width: 435px) {
