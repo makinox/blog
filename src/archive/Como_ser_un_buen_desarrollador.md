@@ -4,7 +4,7 @@ date: '2020-06-15'
 timage: '../images/archive/004/0.jpg'
 author: 'Jesús Bossa'
 authorImage: '../images/author/photo.jpeg'
-authorDescription: 'Ingeniero de software, intentando crear cosas geniales.'
+authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Tecnologia', 'Desarrollo', '5-minutos']
 ---
 

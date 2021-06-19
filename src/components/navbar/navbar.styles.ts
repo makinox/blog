@@ -6,15 +6,17 @@ export const Bar = styled(TopBar)`
     text-decoration: none;
     margin: 0 10px;
     cursor: pointer;
-
+  }
+  & > div svg,
+  & > div > div:nth-child(2) a {
     ${props => {
       if (props.theme?.isDark || props.isDark) {
         return `
-        color: rgb(var(--dark-onBackground)) !important;
+        color: rgb(var(--dark-primary)) !important;
       `;
       } else {
         return `
-        color: rgb(var(--light-onBackground)) !important;
+        color: rgb(var(--light-primary)) !important;
       `;
       }
     }}

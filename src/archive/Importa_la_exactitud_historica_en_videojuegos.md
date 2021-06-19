@@ -4,7 +4,7 @@ date: '2020-06-20'
 timage: '../images/archive/005/0.png'
 author: 'Jesús Bossa'
 authorImage: '../images/author/photo.jpeg'
-authorDescription: 'Ingeniero de software, intentando crear cosas geniales.'
+authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Videojuegos', '5-minutos', 'Juegos']
 ---
 
