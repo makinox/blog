@@ -27,10 +27,10 @@ export default () => {
           <NavbarLink isDark={isDark} href={`https://jesusbossa.dev/`} target="_blank">
             <FaHome />
           </NavbarLink>
-          <NavbarLink isDark={isDark} href={`https://twitter.com/jesMakinox`} target="_blank">
+          <NavbarLink isDark={isDark} href={`https://www.linkedin.com/in/makinox/`} target="_blank">
             <FaLinkedin />
           </NavbarLink>
-          <NavbarLink isDark={isDark} href={`https://www.linkedin.com/in/makinox/`} target="_blank">
+          <NavbarLink isDark={isDark} href={`https://twitter.com/jesMakinox`} target="_blank">
             <FaTwitterSquare />
           </NavbarLink>
         </>
