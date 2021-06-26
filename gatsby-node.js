@@ -1,13 +1,14 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
+const { CreateImage } = require('@makinox/image-creator');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  // console.log({ type: node.internal.type, internal: node.internal })
   if (node.internal.type === `MarkdownRemark`) {
-    // console.log({ type: node.internal.type, internal: node.internal, rel: getNode(node.parent).relativePath })
-
+    console.log('Creating imagessss');
+    CreateImage({ filePath: './test.png' })
+      .then(created => console.log({ created }))
+      .catch(err => console.error({ err }));
     const slug = createFilePath({ node, getNode, basePath: `pages` });
-    // console.log(slug.split('/'));
     actions.createNodeField({
       node,
       name: `slug`,
