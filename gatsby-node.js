@@ -1,13 +1,24 @@
 const path = require('path');
+const fs = require('fs');
 const { CreateImage } = require('@makinox/image-creator');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
-    console.log('Creating imagessss');
-    CreateImage({ filePath: './test.png' })
-      .then(created => console.log({ created }))
-      .catch(err => console.error({ err }));
+    // console.log('Creating imagessss');
+    const metadata = node.frontmatter;
+    // console.log({ metadata, getNode });
+    if (metadata.timage === 'no') {
+      const imageDir = `./src/images/archive/${metadata.idx}`;
+
+      if (!fs.existsSync(imageDir)) {
+        fs.mkdirSync(imageDir);
+      }
+
+      CreateImage({ filePath: `${imageDir}/0.png` })
+        .then(created => console.log({ created }))
+        .catch(err => console.error({ err }));
+    }
     const slug = createFilePath({ node, getNode, basePath: `pages` });
     actions.createNodeField({
       node,

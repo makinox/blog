@@ -1,4 +1,5 @@
 ---
+idx: '007'
 title: 'Porque hacer aplicaciones de escritorio en 2021 '
 date: '2021-05-19'
 timage: '../images/archive/007/0.png'

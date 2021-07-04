@@ -1,4 +1,5 @@
 ---
+idx: '004'
 title: 'Como saber si eres un buen desarrollador'
 date: '2020-06-15'
 timage: '../images/archive/004/0.jpg'
