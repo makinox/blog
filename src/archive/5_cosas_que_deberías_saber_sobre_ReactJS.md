@@ -1,4 +1,5 @@
 ---
+idx: '006'
 title: '5 cosas que deberías saber sobre ReactJS'
 date: '2020-08-17'
 timage: '../images/archive/006/0.png'

@@ -1,4 +1,5 @@
 ---
+idx: '005'
 title: '¿Importa la exactitud histórica en videojuegos?'
 date: '2020-06-20'
 timage: '../images/archive/005/0.png'

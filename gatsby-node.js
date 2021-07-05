@@ -1,13 +1,28 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
+const fs = require('fs');
+const { CreateImage } = require('@makinox/image-creator');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  // console.log({ type: node.internal.type, internal: node.internal })
+exports.onCreateNode = async ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
-    // console.log({ type: node.internal.type, internal: node.internal, rel: getNode(node.parent).relativePath })
+    const metadata = node.frontmatter;
 
+    if (metadata.timage === 'no') {
+      const imageDir = `./src/images/archive/${metadata.idx}`;
+      const filePath = `${imageDir}/0.png`;
+      const relativePath = `../images/archive/${metadata.idx}/0.png`;
+      if (!fs.existsSync(imageDir)) {
+        fs.mkdirSync(imageDir);
+      }
+
+      const created = await CreateImage({ filePath, textTitle: metadata.title, subText: 'voib.jesusbossa.dev' });
+      if (created) {
+        metadata.timage = relativePath;
+      }
+    }
+
+    node.frontmatter = metadata;
     const slug = createFilePath({ node, getNode, basePath: `pages` });
-    // console.log(slug.split('/'));
     actions.createNodeField({
       node,
       name: `slug`,
