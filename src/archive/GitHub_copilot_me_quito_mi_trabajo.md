@@ -21,7 +21,7 @@ A grandes rasgos copilot es una herramienta la cual genera código semi funciona
 
 Probando la herramienta me doy cuenta que por medio de texto trata de generar explícitamente lo que le escribimos, entre más simple o común, mejor es el resultado, entiendo que esto pasa porque en la <a href="https://copilot.github.com" target="_blank">documentación</a> se menciona que la herramienta revisa el código público de internet; entre más ejemplos haya de los que has escrito mejor es la respuesta.
 
-Con el texto que trata de autocompletar (Me gustaría llamarlo sugerir) en base al código que vamos escribiendo, sucede similar; el código no es perfecto sin embargo entre más contexto tengamos en el proyecto mejor y más funcional es el código que crea.
+Con el texto que trata de auto completar (Me gustaría llamarlo sugerir) en base al código que vamos escribiendo, sucede algo similar; el código no es perfecto sin embargo entre más contexto tengamos en el proyecto mejor y más funcional es el código que se crea.
 
 Algo curioso que note también, es que en los lenguajes de más bajo nivel como Java o C# da mejores resultados que con lenguajes de alto nivel como Ruby o Python, me imagino aquí inventando en mi mente sebe ser por la longevidad o quizás también la robustez de los lenguajes de bajo nivel.
 
