@@ -8,6 +8,10 @@ export const Footer = styled.a<{ isDark: boolean }>`
   margin: 30px 0;
   text-decoration: none;
 
+  & > div:first-of-type {
+    margin-right: 20px;
+  }
+
   ${props => {
     if (props.isDark) {
       return `
@@ -23,11 +27,6 @@ export const Footer = styled.a<{ isDark: boolean }>`
 
 export const TagFooter = styled.div`
   margin: 30px 0;
-`;
-
-export const Image = styled(Img)`
-  border-radius: 50%;
-  margin-right: 20px;
 `;
 
 export const Subtitle = styled.h4`

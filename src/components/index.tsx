@@ -4,6 +4,7 @@ export { default as PostCard } from '../components/postCard/postCard';
 export { default as PostList } from '../components/postList/postList';
 export { default as Pagination } from '../components/pagination/pagination';
 export { default as PostFooter } from '../components/postFooter/postFooter';
+export { default as AuthorImage } from '../components/authorImage/authorImage';
 export { default as ShareFooter } from '../components/shareFooter/shareFooter';
 export { default as ModalContent } from '../components/modalContent/modalContent';
 export { default as PostContainer } from '../components/postContainer/postContainer';

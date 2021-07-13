@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 
-import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent } from '../../components';
+import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, ShareFooter, AuthorImage } from '../../components';
 import { BlogContext } from '../../utils/context/context';
-import { PrimaryImage } from './post.styles';
+import { PostResumen, PrimaryImage } from './post.styles';
 import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
@@ -26,7 +26,17 @@ export default function BlogPost({ data, pageContext }) {
       <Navbar />
       <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
-        <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
+        <PostResumen className="flex justify-between" isDark={isDark}>
+          <div className="flex items-center">
+            <AuthorImage imageSrc={post.frontmatter.authorImage.authorSrc} authorName={post.frontmatter.author} size={40} />
+            <span>{post.frontmatter.author}</span>
+            <span>{post.frontmatter.date}</span>
+            <span>·</span>
+            <span>{post.timeToRead} minutos</span>
+          </div>
+          <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
+        </PostResumen>
+        <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
         <PostFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
       </PostContainer>
@@ -46,9 +56,11 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
+      timeToRead
       frontmatter {
         title
         author
+        date
         authorDescription
         tags
         authorImage {
@@ -56,6 +68,9 @@ export const query = graphql`
             fixed(width: 100, height: 100) {
               ...GatsbyImageSharpFixed
             }
+          }
+          authorSrc: childImageSharp {
+            gatsbyImageData(width: 100, height: 100, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
         timage {

@@ -15,21 +15,19 @@ export default ({ data, slug, isDark }) => {
   };
 
   return (
-    <div className="flex justify-end">
-      <ShareSection isDark={isDark}>
-        <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">
-          <FaFacebookSquare />
-        </a>
-        <a href={`https://twitter.com/intent/tweet?text=${data.title}&url=${URL}&hashtags=${data.tags.join(',')}`} target="_blank">
-          <FaTwitterSquare />
-        </a>
-        <a href={`https://www.linkedin.com/shareArticle?&url=${URL}&title=${data.title}`} target="_blank">
-          <FaLinkedin />
-        </a>
-        <span onClick={copyClipboard}>
-          <AiOutlineLink />
-        </span>
-      </ShareSection>
-    </div>
+    <ShareSection isDark={isDark}>
+      <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">
+        <FaFacebookSquare />
+      </a>
+      <a href={`https://twitter.com/intent/tweet?text=${data.title}&url=${URL}&hashtags=${data.tags.join(',')}`} target="_blank">
+        <FaTwitterSquare />
+      </a>
+      <a href={`https://www.linkedin.com/shareArticle?&url=${URL}&title=${data.title}`} target="_blank">
+        <FaLinkedin />
+      </a>
+      <span onClick={copyClipboard}>
+        <AiOutlineLink />
+      </span>
+    </ShareSection>
   );
 };
