@@ -29,10 +29,12 @@ export default function BlogPost({ data, pageContext }) {
         <PostResumen className="flex justify-between" isDark={isDark}>
           <div className="flex items-center">
             <AuthorImage imageSrc={post.frontmatter.authorImage.authorSrc} authorName={post.frontmatter.author} size={40} />
-            <span>{post.frontmatter.author}</span>
-            <span>{post.frontmatter.date}</span>
-            <span>·</span>
-            <span>{post.timeToRead} minutos</span>
+            <div className="flex items-center">
+              <span>{post.frontmatter.author}</span>
+              <span>{post.frontmatter.date}</span>
+              <span>·</span>
+              <span>{post.timeToRead} minutos</span>
+            </div>
           </div>
           <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
         </PostResumen>

@@ -9,6 +9,38 @@ export const PrimaryImage = styled(GatsbyImage)`
 export const PostResumen = styled.div<{ isDark: boolean }>`
   margin: 30px 0;
 
+  @media (min-width: 500px) {
+    & > div:last-of-type {
+      padding-top: 9px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > div:last-of-type {
+      justify-content: center;
+      margin-top: 5px;
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    & > div:first-of-type {
+      justify-content: space-between;
+      width: 100%;
+    }
+    & > div:first-of-type > div {
+      flex-direction: column;
+    }
+
+    & > div:first-of-type > div > span:nth-child(3) {
+      display: none;
+    }
+  }
+
   & > div:first-of-type > div {
     margin-right: 10px;
   }
