@@ -9,12 +9,6 @@ export const ThanksCounter = styled.span`
   margin-left: 10px;
 `;
 
-export const ShareFooter = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const LoveContainer = styled.span<{ isDark: boolean }>`
   cursor: pointer;
   & > svg {

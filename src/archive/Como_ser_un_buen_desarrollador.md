@@ -4,7 +4,7 @@ title: 'Como saber si eres un buen desarrollador'
 date: '2020-06-15'
 timage: '../images/archive/004/0.jpg'
 author: 'Jesús Bossa'
-authorImage: '../images/author/photo.jpeg'
+authorImage: '../images/author/photo.JPG'
 authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Tecnologia', 'Desarrollo', '5-minutos']
 ---

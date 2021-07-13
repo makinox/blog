@@ -28,7 +28,7 @@ export default function BlogPost({ data, pageContext }) {
       <PostContainer>
         <h1 style={{ fontSize: 40 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostFooter isDark={isDark} data={post.frontmatter} modalHandler={toggleModal} slug={pageContext.slug} />
+        <PostFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
       </PostContainer>
       {modal ? (
         <ModalContainer full={true}>

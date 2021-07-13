@@ -5,7 +5,7 @@ import { ShareFooter } from '../../components';
 import { Footer, Image, Subtitle, Title, Description, TagFooter } from './styles';
 import { Button } from '@makinox/makinox-ui';
 
-export default ({ data, modalHandler, slug, isDark }) => (
+export default ({ data, slug, isDark }) => (
   <>
     <TagFooter>
       {data.tags.map((el, idx) => (
@@ -19,7 +19,7 @@ export default ({ data, modalHandler, slug, isDark }) => (
         />
       ))}
     </TagFooter>
-    <ShareFooter isDark={isDark} modalHandler={modalHandler} data={data} slug={slug} />
+    <ShareFooter isDark={isDark} data={data} slug={slug} />
     <Footer isDark={isDark} href="https://jesusbossa.dev/" target="_blank">
       <div>
         <Image fixed={data.authorImage.childImageSharp.fixed} />

@@ -1,12 +1,11 @@
 import React from 'react';
 
 import { FaTwitterSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
-import { RiHandHeartLine } from 'react-icons/ri';
 import { AiOutlineLink } from 'react-icons/ai';
 
-import { ShareFooter, ThanksContainer, ThanksCounter, LoveContainer, ShareSection } from './styles';
+import { ShareSection } from './styles';
 
-export default ({ modalHandler, data, slug, isDark }) => {
+export default ({ data, slug, isDark }) => {
   const URL = `https://voib.jesusbossa.dev/${slug}`;
   const copyClipboard = () => {
     navigator.clipboard
@@ -14,16 +13,9 @@ export default ({ modalHandler, data, slug, isDark }) => {
       .then(() => alert(`Se ha copiado la URL para que la compartas`))
       .catch(() => console.log('No copiado'));
   };
-  const loveHandler = () => modalHandler();
 
   return (
-    <ShareFooter>
-      <ThanksContainer>
-        <LoveContainer onClick={loveHandler} isDark={isDark}>
-          <RiHandHeartLine />
-        </LoveContainer>
-        <ThanksCounter>Love</ThanksCounter>
-      </ThanksContainer>
+    <div className="flex justify-end">
       <ShareSection isDark={isDark}>
         <a href={`https://www.facebook.com/sharer/sharer.php?t=hola mundo&u=${URL}`} target="_blank">
           <FaFacebookSquare />
@@ -38,6 +30,6 @@ export default ({ modalHandler, data, slug, isDark }) => {
           <AiOutlineLink />
         </span>
       </ShareSection>
-    </ShareFooter>
+    </div>
   );
 };

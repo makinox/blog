@@ -4,14 +4,14 @@ title: 'GitHub copilot me quito mi trabajo'
 date: '2021-06-10'
 timage: '../images/archive/009/0.png'
 author: 'Jesús Bossa'
-authorImage: '../images/author/photo.jpeg'
+authorImage: '../images/author/photo.JPG'
 authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Tecnologia', 'Desarrollo', '5-minutos', 'Opinión']
 ---
 
 En los últimos días, salió al aire una nueva herramienta para desarrollo llamada GitHub copilot; la cual es una acompañante que te escribe de forma auténtica código que puede ser completamente funcional con solo escribirle una instrucción como comentario.
 
-Muy genial, ¿cierto? Pues sí, aunque no todos tendrán la misma opinión, ya que en el transcurso de pocas horas internet se llenó de comentarios mixtos acerca de la misma, muchos tanto negativos como curiosos, títulos como _**el fin de los desarrolladores**_, _**la IA que reemplazará los programadores**_; títulos haciendo referencia a como la herramienta dejará sin empleo a los desarrolladores valga la redundancia.
+Muy genial, ¿cierto? Pues sí, aunque no todos tendrán la misma opinión, ya que en el transcurso de pocas horas internet se llenó de comentarios mixtos acerca de la misma, muchos tanto negativos como curiosos, títulos como _**el fin de los desarrolladores**_, _**la IA que reemplazará los programadores**_; títulos haciendo referencia a como la herramienta dejará sin empleo a los desarrolladores valga la redundancia (Nótese la ironía).
 
 Quisiera en esta ocasión dar mi punto de vista como desarrollador como veo esta herramienta, que creo va a pasar, porque, no hay nada que temer ¿verdad?
 
