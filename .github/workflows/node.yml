@@ -35,12 +35,12 @@ jobs:
       - name: Download backup archives
         uses: wei/wget@v1.1.1
         with:
-          args: -O archiveDocsBackup.tar.gz ${{ secrets.ARCHIVE_BACKUP }}
+          args: -O archiveDocsBackup.tar.gz https://download1641.mediafire.com/3f9d2lrzhr1g/vkoedzv6le2264f/archiveDocsBackup.tar.gz
 
       - name: Download backup images
         uses: wei/wget@v1.1.1
         with:
-          args: -O archiveImagesBackup.tar.gz ${{ secrets.IMAGES_BACKUP }}
+          args: -O archiveImagesBackup.tar.gz https://download1338.mediafire.com/9wbh7yh17h0g/vmos4thf8fu7f2s/archiveImagesBackup.tar.gz
 
       - name: Read
         run: ls -lha
