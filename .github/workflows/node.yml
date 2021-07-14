@@ -28,14 +28,14 @@ jobs:
         run: yarn install
 
       - name: Download backup archives
-        uses: wei/wget@v1
+        uses: wei/curl@v1.1.1
         with:
-          args: ${{ secrets.ARCHIVE_BACKUP }}
+          args: ${{ secrets.ARCHIVE_BACKUP }} -O
 
       - name: Download backup images
-        uses: wei/wget@v1
+        uses: wei/curl@v1.1.1
         with:
-          args: ${{ secrets.IMAGES_BACKUP }}
+          args: ${{ secrets.IMAGES_BACKUP }} -O
 
       - name: read
         run: ls -lha
