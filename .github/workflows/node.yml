@@ -27,17 +27,22 @@ jobs:
       - name: Running install process
         run: yarn install
 
-      - name: Download backup archives
-        uses: wei/curl@v1.1.1
+      - name: Download test file
+          uses: wei/wget@v1.1.1
         with:
-          args: ${{ secrets.ARCHIVE_BACKUP }} -O
+          args: -O sample.html https://httpbin.org/html
+
+      - name: Download backup archives
+          uses: wei/wget@v1.1.1
+        with:
+          args: -O archiveDocsBackup.tar.gz ${{ secrets.ARCHIVE_BACKUP }}
 
       - name: Download backup images
-        uses: wei/curl@v1.1.1
+          uses: wei/wget@v1.1.1
         with:
-          args: ${{ secrets.IMAGES_BACKUP }} -O
+          args: -O archiveImagesBackup.tar.gz ${{ secrets.IMAGES_BACKUP }}
 
-      - name: read
+      - name: Read
         run: ls -lha
 
       - name: Unzip backup files
