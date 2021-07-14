@@ -9,15 +9,15 @@ export const PrimaryImage = styled(GatsbyImage)`
 export const PostResumen = styled.div<{ isDark: boolean }>`
   margin: 30px 0;
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
     & > div:last-of-type {
       padding-top: 9px;
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     & > div:last-of-type {
       justify-content: center;
@@ -27,7 +27,7 @@ export const PostResumen = styled.div<{ isDark: boolean }>`
     }
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 430px) {
     & > div:first-of-type {
       justify-content: space-between;
       width: 100%;
