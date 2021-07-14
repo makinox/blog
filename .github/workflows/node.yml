@@ -39,6 +39,16 @@ jobs:
       - name: Running install process
         run: yarn install
 
+      - name: Download backup files
+        run: |
+          curl ${{ secrets.ARCHIVE_BACKUP }} -O
+          curl ${{ secrets.IMAGES_BACKUP }} -O
+
+      - name: Unzip backup files
+        run: |
+          tar -zxvf ${{ secrets.ARCHIVE_BACKUP }}
+          tar -zxvf ${{ secrets.IMAGES_BACKUP }}
+
       - name: Running building
         run: yarn build
 
