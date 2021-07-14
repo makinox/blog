@@ -3,7 +3,7 @@ idx: '006'
 title: '5 cosas que deberías saber sobre ReactJS'
 date: '2020-08-17'
 timage: '../images/archive/006/0.png'
-author: 'Jesús Bossa'
+author: 'Jesús David Bossa'
 authorImage: '../images/author/photo.JPG'
 authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Tecnologia', 'Desarrollo', '5-minutos']

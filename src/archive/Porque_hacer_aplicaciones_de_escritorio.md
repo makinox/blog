@@ -3,7 +3,7 @@ idx: '007'
 title: '¿Por qué hacer aplicaciones de escritorio en 2021?'
 date: '2021-05-19'
 timage: '../images/archive/007/0.png'
-author: 'Jesús Bossa'
+author: 'Jesús David Bossa'
 authorImage: '../images/author/photo.JPG'
 authorDescription: 'Arquitecto de software, intentando crear cosas geniales.'
 tags: ['Tecnologia', 'Desarrollo', 'Apps', 'Aplicaciones', '5-minutos']

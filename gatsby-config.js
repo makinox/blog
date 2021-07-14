@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Voib - Un blog de Jesús Bossa`,
+    title: `Voib - Un blog de Jesús David Bossa`,
     description: `Un blog para compartir opinión de programación y videojuegos.`,
-    author: `Jesús Bossa`,
-    keywords: ['Blog', 'Gaming', 'Tech', 'Jesus bossa', 'Jesus david bossa'],
+    author: `Jesús David Bossa`,
+    keywords: ['Blog', 'Gaming', 'Tech', 'Jesús David Bossa', 'Jesus david bossa'],
     siteUrl: 'https://voib.jesusbossa.dev',
     image: '/preview.png',
   },
