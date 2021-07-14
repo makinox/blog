@@ -28,17 +28,17 @@ jobs:
         run: yarn install
 
       - name: Download test file
-          uses: wei/wget@v1.1.1
+        uses: wei/wget@v1.1.1
         with:
           args: -O sample.html https://httpbin.org/html
 
       - name: Download backup archives
-          uses: wei/wget@v1.1.1
+        uses: wei/wget@v1.1.1
         with:
           args: -O archiveDocsBackup.tar.gz ${{ secrets.ARCHIVE_BACKUP }}
 
       - name: Download backup images
-          uses: wei/wget@v1.1.1
+        uses: wei/wget@v1.1.1
         with:
           args: -O archiveImagesBackup.tar.gz ${{ secrets.IMAGES_BACKUP }}
 
