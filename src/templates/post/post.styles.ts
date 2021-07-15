@@ -9,7 +9,8 @@ export const PrimaryImage = styled(GatsbyImage)`
 export const PostResumen = styled.div<{ isDark: boolean }>`
   margin: 30px 0;
 
-  & > div:first-of-type > div > span:nth-child(3) {
+  & > div:first-of-type > div > span:nth-child(3),
+  & > div:first-of-type > div > span:nth-child(5) {
     text-transform: capitalize;
   }
 
