@@ -1,4 +1,4 @@
-name: Testing & deploy
+name: Testing
 
 on:
   push:
@@ -27,35 +27,5 @@ jobs:
       - name: Running install process
         run: yarn install
 
-      - name: Download test file
-        uses: wei/wget@v1.1.1
-        with:
-          args: -O sample.html https://httpbin.org/html
-
-      - name: Download backup archives
-        uses: wei/wget@v1.1.1
-        with:
-          args: -O archiveDocsBackup.tar.gz https://download1641.mediafire.com/3f9d2lrzhr1g/vkoedzv6le2264f/archiveDocsBackup.tar.gz
-
-      - name: Download backup images
-        uses: wei/wget@v1.1.1
-        with:
-          args: -O archiveImagesBackup.tar.gz https://download1338.mediafire.com/9wbh7yh17h0g/vmos4thf8fu7f2s/archiveImagesBackup.tar.gz
-
-      - name: Read
-        run: ls -lha
-
-      - name: Unzip backup files
-        run: |
-          tar -zxvf archiveDocsBackup.tar.gz
-          tar -zxvf archiveImagesBackup.tar.gz
-
       - name: Running building
         run: yarn build
-
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
