@@ -26,6 +26,5 @@ jobs:
 
       - name: Running install process
         run: yarn install
-
-      - name: Running building
-        run: yarn build
+      # - name: Running building
+      #   run: yarn build
