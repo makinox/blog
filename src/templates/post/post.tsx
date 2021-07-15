@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react';
 import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 
-import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, ShareFooter, AuthorImage } from '../../components';
+import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage } from '../../components';
 import { BlogContext } from '../../utils/context/context';
 import { PostResumen, PrimaryImage } from './post.styles';
+import moment from 'moment';
 import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
@@ -26,17 +27,18 @@ export default function BlogPost({ data, pageContext }) {
       <Navbar />
       <PrimaryImage image={postImage} alt={post.frontmatter.title} />
       <PostContainer>
-        <PostResumen className="flex justify-between" isDark={isDark}>
+        <PostResumen className="flex justify-start" isDark={isDark}>
           <div className="flex items-center">
             <AuthorImage imageSrc={post.frontmatter.authorImage.authorSrc} authorName={post.frontmatter.author} size={40} />
             <div className="flex items-center">
               <span>{post.frontmatter.author}</span>
-              <span>{post.frontmatter.date}</span>
+              <span>·</span>
+              <span>{moment(post.frontmatter.date, 'YYYYMMDD').locale('es').fromNow()}</span>
               <span>·</span>
               <span>{post.timeToRead} minutos</span>
             </div>
           </div>
-          <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
+          {/* <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} /> */}
         </PostResumen>
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />

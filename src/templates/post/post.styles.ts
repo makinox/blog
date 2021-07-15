@@ -9,34 +9,26 @@ export const PrimaryImage = styled(GatsbyImage)`
 export const PostResumen = styled.div<{ isDark: boolean }>`
   margin: 30px 0;
 
-  @media (min-width: 550px) {
+  & > div:first-of-type > div > span:nth-child(3) {
+    text-transform: capitalize;
+  }
+
+  @media (min-width: 590px) {
     & > div:last-of-type {
       padding-top: 9px;
     }
   }
 
-  @media (max-width: 550px) {
-    flex-direction: column;
-    align-items: center;
-
-    & > div:last-of-type {
-      justify-content: center;
-      margin-top: 5px;
-      display: flex;
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 430px) {
-    & > div:first-of-type {
-      justify-content: space-between;
-      width: 100%;
-    }
+  @media (max-width: 470px) {
+    justify-content: center;
     & > div:first-of-type > div {
       flex-direction: column;
     }
 
-    & > div:first-of-type > div > span:nth-child(3) {
+    & > div:first-of-type > div > span:nth-child(2) {
+      display: none;
+    }
+    & > div:first-of-type > div > span:nth-child(4) {
       display: none;
     }
   }
