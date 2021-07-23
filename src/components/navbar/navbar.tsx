@@ -5,7 +5,7 @@ import { FaTwitterSquare, FaLinkedin, FaHome } from 'react-icons/fa';
 import { BlogContext } from '../../utils/context/context';
 import { Bar, Logo, NavbarLink } from './navbar.styles';
 import { useNavbarQuery } from './Navbar.graph';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { CgDarkMode } from 'react-icons/cg';
 
 export default () => {
   const { placeholderImage } = useNavbarQuery();
@@ -18,7 +18,7 @@ export default () => {
         <div className="flex items-center">
           <Logo src={placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
           <div onClick={changeTheme} style={{ height: '12px', cursor: 'pointer' }}>
-            {isDark ? <FaSun /> : <FaMoon />}
+            <CgDarkMode size={19} />
           </div>
         </div>
       }
