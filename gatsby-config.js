@@ -77,6 +77,15 @@ module.exports = {
       resolve: 'gatsby-plugin-remove-serviceworker',
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-18Q6NNY4G8'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         showSpinner: false,
