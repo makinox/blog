@@ -20,7 +20,7 @@ export default function BlogPost({ data, pageContext }) {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        image={post.frontmatter.timage.thumb.childImageSharp.gatsbyImageData.images.fallback.src}
+        image={post.frontmatter.timage.thumb.gatsbyImageData.images.fallback.src}
         pathname={`/${pageContext.slug}`}
         keyw={post.frontmatter.tags}
       />
