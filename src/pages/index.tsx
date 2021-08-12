@@ -8,7 +8,7 @@ function IndexPage({ data }) {
   const { isDark } = useContext(BlogContext);
   return (
     <>
-      <SEO title="Home" pathname="/" />
+      <SEO title="Home" pathname="/" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
       <Navbar />
       <LayoutContainer>
         <PostList data={data.allMarkdownRemark.edges} />
@@ -46,6 +46,17 @@ export const query = graphql`
           timeToRead
           excerpt
         }
+      }
+    }
+    preview: file(relativePath: { eq: "preview.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1200
+          height: 630
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          transformOptions: { fit: COVER, cropFocus: NORTH }
+        )
       }
     }
   }

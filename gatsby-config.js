@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Voib - Un blog de Jesús David Bossa`,
-    description: `Un blog para compartir opinión de programación y videojuegos.`,
+    description: `Un blog para compartir opinión de programación y videojuegos. Sientete como en casa, tratare de escribir temas recurrentemente`,
     author: `Jesús David Bossa`,
     keywords: ['Blog', 'Gaming', 'Tech', 'Jesús David Bossa', 'Jesus david bossa'],
     siteUrl: 'https://voib.jesusbossa.dev',
@@ -75,15 +75,6 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-remove-serviceworker',
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ['G-18Q6NNY4G8'],
-        pluginConfig: {
-          head: true,
-        },
-      },
     },
     {
       resolve: 'gatsby-plugin-nprogress',
