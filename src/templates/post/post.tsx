@@ -20,7 +20,7 @@ export default function BlogPost({ data, pageContext }) {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        image={post.frontmatter.timage.thumb.fluid.src}
+        image={post.frontmatter.timage.thumb.childImageSharp.gatsbyImageData.images.fallback.src}
         pathname={`/${pageContext.slug}`}
         keyw={post.frontmatter.tags}
       />
@@ -79,9 +79,13 @@ export const query = graphql`
         }
         timage {
           thumb: childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 628) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 1200
+              height: 630
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              transformOptions: { fit: COVER, cropFocus: NORTH }
+            )
           }
           postImage: childImageSharp {
             gatsbyImageData(width: 1200, height: 460, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF], transformOptions: { fit: COVER })
