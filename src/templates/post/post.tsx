@@ -35,7 +35,9 @@ export default function BlogPost({ data, pageContext }) {
               <span>·</span>
               <span>{moment(post.frontmatter.date, 'YYYYMMDD').locale('es').fromNow()}</span>
               <span>·</span>
-              <span>{post.timeToRead} minutos</span>
+              <span>
+                {post.timeToRead} {post.timeToRead > 1 ? 'minutos' : 'minuto'}
+              </span>
             </div>
           </div>
           {/* <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} /> */}
