@@ -70,11 +70,6 @@ export const query = graphql`
         authorDescription
         tags
         authorImage {
-          childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
-            }
-          }
           authorSrc: childImageSharp {
             gatsbyImageData(width: 100, height: 100, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
