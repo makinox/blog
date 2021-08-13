@@ -18,7 +18,7 @@ export default ({ data }: { data: object | any }) => {
       text={data.node.excerpt}
       title={data.node.frontmatter.title}
       onClick={() => navigate(`/${data.node.fields.slug}`)}
-      secondary={`${data.node.timeToRead} minutos de lectura`}
+      secondary={`${data.node.timeToRead} ${data.node.timeToRead > 1 ? 'minutos' : 'minuto'} de lectura`}
       customMedia={<GatsbyImage image={image} alt={`${data.node.frontmatter.title} imagen`} />}
     />
   );
