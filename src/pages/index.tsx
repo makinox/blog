@@ -8,7 +8,6 @@ function IndexPage({ data, pageContext }) {
   const { isDark } = useContext(BlogContext);
   return (
     <>
-      {console.log({ pageContext })}
       <SEO title="Home" pathname="/" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
       <Navbar />
       <LayoutContainer>

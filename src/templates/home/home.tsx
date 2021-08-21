@@ -8,7 +8,6 @@ export default ({ data, pageContext }) => {
   const { isDark } = useContext(BlogContext);
   return (
     <>
-      {console.log({ pageContext })}
       <SEO title="Home" pathname="/home" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
       <Navbar />
       <LayoutContainer>

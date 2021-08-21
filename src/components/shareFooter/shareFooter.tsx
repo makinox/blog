@@ -11,7 +11,7 @@ export default ({ data, slug, isDark }) => {
     navigator.clipboard
       .writeText(URL)
       .then(() => alert(`Se ha copiado la URL para que la compartas`))
-      .catch(() => console.log('No copiado'));
+      .catch(() => console.error('No copiado'));
   };
 
   return (
