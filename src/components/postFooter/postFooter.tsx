@@ -3,7 +3,6 @@ import { navigate } from 'gatsby';
 import { AuthorImage, ShareFooter } from '../../components';
 
 import { Footer, Subtitle, Title, Description, TagFooter } from './styles';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { getImage } from 'gatsby-plugin-image';
 import { Button } from '@makinox/makinox-ui';
 

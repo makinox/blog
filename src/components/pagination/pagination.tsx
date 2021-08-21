@@ -1,5 +1,7 @@
+import { Button } from '@makinox/makinox-ui';
+import { navigate } from 'gatsby';
 import React from 'react';
-import { PaginationSection, PaginationButton } from './styles';
+import { PaginationSection } from './styles';
 
 export default function Pagination({ pag, isDark }) {
   const before = pag.currentPage - 1;
@@ -8,16 +10,12 @@ export default function Pagination({ pag, isDark }) {
   return (
     <PaginationSection>
       {pag.currentPage !== 1 ? (
-        <PaginationButton isDark={isDark} to={before === 1 ? '/' : `/home/${before}`}>
-          {before}
-        </PaginationButton>
+        <Button use="outlined" isDark={isDark} message={'Anterior'} onClick={() => navigate(before === 1 ? '/' : `/home/${before}`)} />
       ) : (
         <div></div>
       )}
       {pag.currentPage < pag.numPages ? (
-        <PaginationButton isDark={isDark} to={`/home/${next}`}>
-          {next}
-        </PaginationButton>
+        <Button use="outlined" isDark={isDark} message={'Siguiente'} onClick={() => navigate(`/home/${next}`)} />
       ) : (
         <></>
       )}
