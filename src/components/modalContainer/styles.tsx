@@ -9,6 +9,7 @@ export const ModalContainer = styled.section<ItemProps>`
   position: fixed;
   align-items: center;
   justify-content: center;
+  ${(p: any) => (p.full ? 'backdrop-filter: blur(2px);' : '')};
   ${(p: any) => (p.full ? 'background-color: rgba(0,0,0,.1);' : '')};
   ${(p: any) => (p.full ? 'top: 0' : '')};
   ${(p: any) => (p.full ? 'left: 0' : '')};
