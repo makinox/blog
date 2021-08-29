@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 
-import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage } from '../../components';
+import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
 import { BlogContext } from '../../utils/context/context';
 import { PostResumen, PrimaryImage } from './post.styles';
 import moment from 'moment';
@@ -44,6 +44,7 @@ export default function BlogPost({ data, pageContext }) {
         </PostResumen>
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Recomended postTitle={post.frontmatter.title} />
         <PostFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
       </PostContainer>
       {modal ? (
