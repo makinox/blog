@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { getImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
+import { Button } from '@makinox/makinox-ui';
+import { IoMdArrowBack } from 'react-icons/io';
+import { graphql, navigate } from 'gatsby';
+import moment from 'moment';
 
 import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
 import { BlogContext } from '../../utils/context/context';
 import { PostResumen, PrimaryImage } from './post.styles';
-import moment from 'moment';
 import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
@@ -45,6 +47,14 @@ export default function BlogPost({ data, pageContext }) {
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
         <Recomended postTitle={post.frontmatter.title} />
+        <section style={{ marginTop: 20 }}>
+          <Button
+            message="Regresar al home"
+            use="text"
+            onClick={() => navigate('/')}
+            icon={<IoMdArrowBack size={18} style={{ marginRight: 10 }} />}
+          />
+        </section>
         <PostFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
       </PostContainer>
       {modal ? (

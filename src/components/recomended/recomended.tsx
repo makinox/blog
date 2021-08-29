@@ -18,7 +18,7 @@ export default function Recomended({ postTitle }: { postTitle: string }) {
   const { allMarkdownRemark: data } = useRecomendedQuery();
   return (
     <section>
-      <h2 style={{ marginTop: '10px' }}>Historias recomendadas</h2>
+      <h2 style={{ marginTop: 40 }}>Últimas historias</h2>
       <RecomendedRow className="flex justify-evenly">
         {data.nodes
           .filter((aux: recomendedObject) => aux.frontmatter.title !== postTitle)
