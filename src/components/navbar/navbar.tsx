@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { navigate } from 'gatsby';
 
 import { FaTwitterSquare, FaLinkedin, FaHome, FaSearch } from 'react-icons/fa';
@@ -11,6 +11,7 @@ import { SearchContent } from '..';
 export default () => {
   const { placeholderImage } = useNavbarQuery();
   const { changeTheme, isDark } = useContext(BlogContext);
+  const [searchView, setSearchView] = useState(false);
 
   return (
     <>
@@ -26,9 +27,8 @@ export default () => {
         }
         rightChild={
           <>
-            <FaSearch size={19} style={{ cursor: 'pointer' }} onClick={() => console.log('search')} />
-            {/* <div onClick={() => console.log('search')} style={{ height: '12px', cursor: 'pointer' }}>
-          </div> */}
+            <FaSearch size={19} style={{ cursor: 'pointer' }} onClick={() => setSearchView(true)} />
+
             <NavbarLink isDark={isDark} href={`https://jesusbossa.dev/`} target="_blank">
               <FaHome />
             </NavbarLink>
@@ -41,7 +41,7 @@ export default () => {
           </>
         }
       />
-      <SearchContent>pan</SearchContent>
+      <SearchContent isVisble={searchView} onDismiss={() => setSearchView(false)} />
     </>
   );
 };

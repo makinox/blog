@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
   top: 3%;
-  margin-top: -30%;
+  margin-top: -45vh;
   border-radius: 5px;
   background-color: #fff;
   width: 100%;
@@ -32,6 +32,7 @@ export const SearchContainer = styled.div`
     border-radius: 5px;
     height: 35px;
     width: 100%;
+    padding: 0 10px;
   }
 
   & div.search-content {
