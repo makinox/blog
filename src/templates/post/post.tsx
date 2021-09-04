@@ -46,7 +46,7 @@ export default function BlogPost({ data, pageContext }) {
         </PostResumen>
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <Recomended postTitle={post.frontmatter.title} />
+        <Recomended isDark={isDark} postTitle={post.frontmatter.title} />
         <section style={{ marginTop: 20 }}>
           <Button
             message="Regresar al home"

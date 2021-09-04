@@ -14,7 +14,7 @@ type recomendedObject = {
   fields: { slug: string };
 };
 
-export default function Recomended({ postTitle }: { postTitle: string }) {
+export default function Recomended({ postTitle, isDark }: { postTitle: string; isDark: boolean }) {
   const { allMarkdownRemark: data } = useRecomendedQuery();
   return (
     <section>
@@ -29,6 +29,7 @@ export default function Recomended({ postTitle }: { postTitle: string }) {
               <CardContainer
                 use="elevated"
                 maxWidth="220px"
+                isDark={isDark}
                 title={el.frontmatter.title}
                 customMedia={<GatsbyImage image={image} alt={`${el.frontmatter.title} imagen`} />}
                 onClick={() => navigate(`/${el.fields.slug}`)}
