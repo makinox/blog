@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { ModalContainer } from '../modalContainer/styles';
 import { SearchContainer } from './searchContent.styles';
+import { useSearchContent } from './searchContent.graph';
 import { BsFullscreenExit } from 'react-icons/bs';
+import SearchItems from './ui/searchItems';
 
 function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onDismiss: VoidFunction }) {
   const ref = useRef<HTMLDivElement>(null);
+  const { allMarkdownRemark: data } = useSearchContent();
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
@@ -24,6 +27,7 @@ function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onD
   if (isVisble) {
     return (
       <ModalContainer full>
+        {console.log({ data })}
         <SearchContainer ref={ref}>
           <div className="search-header flex justify-between items-center">
             <h3></h3>
@@ -32,11 +36,7 @@ function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onD
           <div className="search-input">
             <input type="text" placeholder="Mejoran la vida" />
           </div>
-          <div className="search-content flex flex-col items-center">
-            <span>lista</span>
-            <span>lista</span>
-            <span>lista</span>
-          </div>
+          <SearchItems items={data} />
         </SearchContainer>
       </ModalContainer>
     );
