@@ -4,22 +4,21 @@ import { SearchContainer } from './searchContent.styles';
 import { useSearchContent } from './searchContent.graph';
 import { BsFullscreenExit } from 'react-icons/bs';
 import SearchItems from './ui/searchItems';
+import { useInputValue } from '../../hooks/useInputValue';
 
 function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onDismiss: VoidFunction }) {
   const ref = useRef<HTMLDivElement>(null);
   const { allMarkdownRemark: data } = useSearchContent();
+  const SearchInput = useInputValue({});
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
       if (isVisble && !ref?.current.contains(e.target)) {
         onDismiss();
       }
     };
     document.addEventListener('mousedown', checkIfClickedOutside);
     return () => {
-      // Cleanup the event listener
       document.removeEventListener('mousedown', checkIfClickedOutside);
     };
   }, [isVisble]);
@@ -34,9 +33,9 @@ function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onD
             <BsFullscreenExit size={25} onClick={onDismiss} />
           </div>
           <div className="search-input">
-            <input type="text" placeholder="Buscar" />
+            <input type="text" placeholder="Buscar" {...SearchInput} />
           </div>
-          <SearchItems items={data} />
+          <SearchItems items={data} searchValue={SearchInput.value.toLowerCase()} />
         </SearchContainer>
       </ModalContainer>
     );

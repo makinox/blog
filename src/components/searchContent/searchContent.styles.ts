@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
   top: 3%;
-  margin-top: -30vh;
-  border-radius: 5px;
-  background-color: #fff;
   width: 100%;
   max-width: 90%;
+  margin-top: 2vh;
+  border-radius: 5px;
+  background-color: #fff;
+  align-self: flex-start;
 
   & div.search-header {
     border-radius: 5px;
@@ -19,6 +20,7 @@ export const SearchContainer = styled.div`
 
   & div.search-header svg {
     cursor: pointer;
+    color: #c1c1c1;
   }
 
   & div.search-input {
