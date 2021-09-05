@@ -1,36 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Voib - Un blog de Jesús David Bossa`,
-    description: `Un blog para compartir opinión de programación y videojuegos. Sientete como en casa, tratare de escribir temas recurrentemente`,
-    author: `Jesús David Bossa`,
-    keywords: ['Blog', 'Gaming', 'Tech', 'Jesús David Bossa', 'Jesus david bossa'],
-    siteUrl: 'https://voib.jesusbossa.dev',
-    image: '/preview.png',
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              quality: 80,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-          },
-        ],
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,51 +15,23 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `archive`,
-        path: `${__dirname}/src/archive`,
-      },
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Voib`,
-        short_name: `Voib`,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
         start_url: `/`,
-        background_color: `#0087AA`,
-        theme_color: `#0087AA`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo/B.svg`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: ['Open Sans', 'Cabin'],
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://voib.jesusbossa.dev',
-        sitemap: 'https://voib.jesusbossa.dev/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-remove-serviceworker',
-    },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        showSpinner: false,
-        trickle: false,
-        minimum: 0.4,
-      },
-    },
+    `gatsby-plugin-gatsby-cloud`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
-};
+}

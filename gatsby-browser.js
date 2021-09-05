@@ -1,20 +1,7 @@
-const React = require('react');
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/browser-apis/
+ */
 
-const { GlobalStyles } = require('./src/components/globalStyles/GlobalStyles');
-const { BlogProvider, BlogContext } = require('./src/utils/context/context');
-
-require('./src/layout/colors.css');
-require('@makinox/makinox-ui/dist/index.css');
-
-function RootElement() {
-  const { isDark } = React.useContext(BlogContext);
-
-  return <GlobalStyles theme={{ isDark }} />;
-}
-
-exports.wrapRootElement = ({ element }) => (
-  <BlogProvider>
-    <RootElement />
-    {element}
-  </BlogProvider>
-);
+// You can delete this file if you're not using it
