@@ -1,8 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { GlobalStyles } from '../components/GlobalStyles/GlobalStyles';
-import { ContextProp } from './context.types';
 
-export const BlogContext = createContext<ContextProp | undefined>(undefined);
+export const BlogContext = createContext({ isDark: false, changeTheme: () => {} });
 
 export const BlogProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(false);

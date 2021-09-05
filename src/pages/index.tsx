@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { Seo, Navbar, LayoutContainer, PostList, Pagination } from '../components/';
 import { BlogContext } from '../context/context';
 
-function IndexPage({ data, pageContext }) {
+function IndexPage({ data }) {
   const { isDark } = useContext(BlogContext);
   return (
     <>
