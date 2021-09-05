@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+const React = require('react');
 
-// You can delete this file if you're not using it
+const { BlogProvider } = require('./src/context/context');
+
+require('./src/layout/colors.css');
+require('@makinox/makinox-ui/dist/index.css');
+
+exports.wrapRootElement = ({ element }) => <BlogProvider>{element}</BlogProvider>;
