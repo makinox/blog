@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface ItemProps {
-  readonly full: boolean;
-}
-
-export const ModalContainer = styled.section<ItemProps>`
+export const ModalContainer = styled.section<{ full: boolean }>`
   display: flex;
   position: fixed;
   align-items: center;

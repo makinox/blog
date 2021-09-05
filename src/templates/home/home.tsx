@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 
-import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
-import { BlogContext } from '../../utils/context/context';
+import { Seo, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
+import { BlogContext } from '../../context/context';
 
 export default ({ data, pageContext }) => {
   const { isDark } = useContext(BlogContext);
   return (
     <>
-      <SEO title="Home" pathname="/home" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
+      <Seo title="Home" pathname="/home" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
       <Navbar />
       <LayoutContainer>
         <PostList data={data.allMarkdownRemark.edges} />

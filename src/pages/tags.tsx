@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { graphql, navigate } from 'gatsby';
 import { Button } from '@makinox/makinox-ui';
 
-import { SEO, LayoutContainer, Navbar } from '../components';
-import { BlogContext } from '../utils/context/context';
+import { Seo, LayoutContainer, Navbar } from '../components';
+import { BlogContext } from '../context/context';
 
 function TagsPage({
   data: {
@@ -13,7 +13,7 @@ function TagsPage({
   const { isDark } = useContext(BlogContext);
   return (
     <>
-      <SEO title={'Tags'} pathname="tags/" />
+      <Seo title={'Tags'} pathname="tags/" />
       <Navbar />
       <LayoutContainer>
         <div>

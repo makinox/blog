@@ -1,7 +1,7 @@
 import { Button } from '@makinox/makinox-ui';
 import { navigate } from 'gatsby';
 import React from 'react';
-import { PaginationSection } from './styles';
+import { PaginationSection } from './Pagination.styles';
 
 export default function Pagination({ pag, isDark }) {
   const before = pag.currentPage - 1;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import { AuthorImage, ShareFooter } from '../../components';
+import { AuthorImage, ShareFooter } from '..';
 
-import { Footer, Subtitle, Title, Description, TagFooter } from './styles';
+import { Footer, Subtitle, Title, Description, TagFooter } from './PostFooter.styles';
 import { getImage } from 'gatsby-plugin-image';
 import { Button } from '@makinox/makinox-ui';
 

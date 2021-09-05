@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Layout = styled.section`
+export const LayoutContainer = styled.section`
   display: grid;
-  grid-template-columns: minmax(auto, 700px);
+  grid-template-columns: minmax(auto, 900px);
   justify-content: center;
   margin: 0 15px;
 `;

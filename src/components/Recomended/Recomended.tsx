@@ -1,8 +1,8 @@
 import React from 'react';
-import { useRecomendedQuery } from './recomended.graph';
-import { CardContainer } from '../postCard/postCard.styles';
+import { useRecomendedQuery } from './Recomended.graph';
+import { CardContainer } from '../PostCard/PostCard.styles';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
-import { RecomendedRow } from './recomended.styles';
+import { RecomendedRow } from './Recomended.styles';
 import { navigate } from 'gatsby';
 
 type recomendedObject = {

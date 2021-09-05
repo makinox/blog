@@ -1,16 +1,17 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { navigate } from 'gatsby';
 
 import { FaTwitterSquare, FaLinkedin, FaHome, FaSearch } from 'react-icons/fa';
-import { BlogContext } from '../../utils/context/context';
-import { Bar, Logo, NavbarLink } from './navbar.styles';
-import { useNavbarQuery } from './Navbar.graph';
 import { CgDarkMode } from 'react-icons/cg';
+
+import { Bar, Logo, NavbarLink } from './Navbar.styles';
+import { useNavbarQuery } from './Navbar.graph';
+import { useBlog } from '../../context/context';
 import { SearchContent } from '..';
 
-export default () => {
+function Navbar() {
   const { placeholderImage } = useNavbarQuery();
-  const { changeTheme, isDark } = useContext(BlogContext);
+  const { changeTheme, isDark } = useBlog();
   const [searchView, setSearchView] = useState(false);
 
   return (
@@ -44,4 +45,6 @@ export default () => {
       <SearchContent isDark={isDark} isVisble={searchView} onDismiss={() => setSearchView(false)} />
     </>
   );
-};
+}
+
+export default React.memo(Navbar);

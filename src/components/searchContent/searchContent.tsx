@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { ModalContainer } from '../modalContainer/styles';
-import { SearchContainer } from './searchContent.styles';
-import { useSearchContent } from './searchContent.graph';
+import { ModalContainer } from '../ModalContainer/ModalContainer.styles';
+import { SearchContainer } from './SearchContent.styles';
+// import { useSearchContent } from './SearchContent.graph';
 import { BsFullscreenExit } from 'react-icons/bs';
-import SearchItems from './ui/searchItems';
+import SearchItems from './ui/SearchContent';
 import { useInputValue } from '../../hooks/useInputValue';
 
 function SearchContent({ isVisble = false, isDark, onDismiss }: { isVisble: boolean; isDark: boolean; onDismiss: VoidFunction }) {
   const ref = useRef<HTMLDivElement>(null);
-  const { allMarkdownRemark: data } = useSearchContent();
+  // const { allMarkdownRemark: data } = useSearchContent();
   const SearchInput = useInputValue({});
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function SearchContent({ isVisble = false, isDark, onDismiss }: { isVisble: bool
           <div className="search-input">
             <input type="text" placeholder="Buscar" {...SearchInput} />
           </div>
-          <SearchItems items={data} searchValue={SearchInput.value.toLowerCase()} />
+          {/* <SearchItems items={data} searchValue={SearchInput.value.toLowerCase()} /> */}
         </SearchContainer>
       </ModalContainer>
     );

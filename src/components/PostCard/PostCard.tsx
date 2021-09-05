@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { navigate } from 'gatsby';
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { CardContainer } from './postCard.styles';
+import { CardContainer } from './PostCard.styles';
 
-import { BlogContext } from '../../utils/context/context';
+import { BlogContext } from '../../context/context';
 
 export default ({ data }: { data: object | any }) => {
   const image = getImage(data.node.frontmatter.timage.postImage);

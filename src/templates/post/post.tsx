@@ -5,8 +5,8 @@ import { IoMdArrowBack } from 'react-icons/io';
 import { graphql, navigate } from 'gatsby';
 import moment from 'moment';
 
-import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
-import { BlogContext } from '../../utils/context/context';
+import { Navbar, PostContainer, Seo, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
+import { BlogContext } from '../../context/context';
 import { PostResumen, PrimaryImage } from './post.styles';
 import './styles.css';
 
@@ -19,7 +19,7 @@ export default function BlogPost({ data, pageContext }) {
   const toggleModal = () => useModal(!modal);
   return (
     <>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.excerpt}
         image={post.frontmatter.timage.thumb.gatsbyImageData.images.fallback.src}
@@ -69,7 +69,7 @@ export default function BlogPost({ data, pageContext }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt

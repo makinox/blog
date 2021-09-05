@@ -3,7 +3,7 @@ import React from 'react';
 import { FaTwitterSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
 import { AiOutlineLink } from 'react-icons/ai';
 
-import { ShareSection } from './styles';
+import { ShareSection } from './ShareFooter.styles';
 
 export default ({ data, slug, isDark }) => {
   const URL = `https://voib.jesusbossa.dev/${slug}`;

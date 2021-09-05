@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { graphql, navigate } from 'gatsby';
 
-import { SEO, LayoutContainer, Navbar, PostList } from '../../components';
-import { BlogContext } from '../../utils/context/context';
+import { Seo, LayoutContainer, Navbar, PostList } from '../../components';
+import { BlogContext } from '../../context/context';
 import { Button } from '@makinox/makinox-ui';
 
 export default function Tags({ pageContext, data }) {
@@ -17,7 +17,7 @@ export default function Tags({ pageContext, data }) {
 
   return (
     <>
-      <SEO title={`Tag ${tag}`} pathname={`tags/${tag}`} />
+      <Seo title={`Tag ${tag}`} pathname={`tags/${tag}`} />
 
       <Navbar />
       <LayoutContainer>
@@ -32,7 +32,7 @@ export default function Tags({ pageContext, data }) {
 }
 
 export const query = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
