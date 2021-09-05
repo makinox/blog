@@ -30,7 +30,7 @@ export const BlogProvider = ({ children }) => {
 export const useBlog = () => {
   const context = React.useContext(BlogContext);
   if (context === undefined) {
-    throw new Error('useBlog must be used within a BlogContext.Provider');
+    console.error('useBlog must be used within a BlogContext.Provider');
   }
   return context;
 };

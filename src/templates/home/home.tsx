@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 
-import { Seo, Navbar } from '../components/';
-// import { BlogContext } from '../context/context';
+// import { SEO, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
+// import { BlogContext } from '../../utils/context/context';
 
-function IndexPage({ data }) {
+export default ({ data, pageContext }) => {
   // const { isDark } = useContext(BlogContext);
   return (
     <>
-      <Seo title="Home" pathname="/" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
+      {console.log({ data })}
+      {/* <SEO title="Home" pathname="/home" image={data.preview.childImageSharp.gatsbyImageData.images.fallback.src} />
       <Navbar />
+      <LayoutContainer>
+        <PostList data={data.allMarkdownRemark.edges} />
+        <Pagination isDark={isDark} pag={pageContext} />
+      </LayoutContainer> */}
     </>
   );
-}
-
-export default IndexPage;
+};
 
 export const query = graphql`
-  query blogListQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
+  query query($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {
           fields {
