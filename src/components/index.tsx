@@ -1,14 +1,3 @@
-export { default as SEO } from './seo/seo';
-export { default as Navbar } from './navbar/navbar';
-export { default as PostCard } from './postCard/postCard';
-export { default as PostList } from './postList/postList';
-export { default as Recomended } from './recomended/recomended';
-export { default as Pagination } from './pagination/pagination';
-export { default as PostFooter } from './postFooter/postFooter';
-export { default as AuthorImage } from './authorImage/authorImage';
-export { default as ShareFooter } from './shareFooter/shareFooter';
-export { default as ModalContent } from './modalContent/modalContent';
-export { default as SearchContent } from './searchContent/searchContent';
-export { default as PostContainer } from './postContainer/postContainer';
-export { default as ModalContainer } from './modalContainer/ModalContainer';
-export { default as LayoutContainer } from './layoutContainer/layoutContainer';
+export { default as Navbar } from './Navbar/Navbar';
+export { default as SearchContent } from './SearchContent/SearchContent';
+export { ModalContainer, WhiteSpace } from './ModalContainer/ModalContainer.styles';
