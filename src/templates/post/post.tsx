@@ -3,24 +3,23 @@ import { getImage } from 'gatsby-plugin-image';
 import { Button } from '@makinox/makinox-ui';
 import { IoMdArrowBack } from 'react-icons/io';
 import { graphql, navigate } from 'gatsby';
-// import moment from 'moment';
+import moment from 'moment';
 
-// import { Navbar, PostContainer, SEO, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
-// import { BlogContext } from '../../utils/context/context';
-// import { PostResumen, PrimaryImage } from './post.styles';
-// import './styles.css';
+import { Navbar, PostContainer, Seo, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
+import { BlogContext } from '../../context/context';
+import { PostResumen, PrimaryImage } from './post.styles';
+import './styles.css';
 
 export default function BlogPost({ data, pageContext }) {
-  // const { isDark } = useContext(BlogContext);
-  // const post = data.markdownRemark;
-  // const postImage = getImage(post.frontmatter.timage.postImage);
+  const { isDark } = useContext(BlogContext);
+  const post = data.markdownRemark;
+  const postImage = getImage(post.frontmatter.timage.postImage);
 
-  // const [modal, useModal] = useState(false);
-  // const toggleModal = () => useModal(!modal);
+  const [modal, useModal] = useState(false);
+  const toggleModal = () => useModal(!modal);
   return (
     <>
-      {console.log({ data })}
-      {/* <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.excerpt}
         image={post.frontmatter.timage.thumb.gatsbyImageData.images.fallback.src}
@@ -43,6 +42,7 @@ export default function BlogPost({ data, pageContext }) {
               </span>
             </div>
           </div>
+          {/* <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} /> */}
         </PostResumen>
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -63,7 +63,7 @@ export default function BlogPost({ data, pageContext }) {
         </ModalContainer>
       ) : (
         <></>
-      )} */}
+      )}
     </>
   );
 }

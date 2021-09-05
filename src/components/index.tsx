@@ -1,6 +1,7 @@
 export { ModalContainer, WhiteSpace } from './ModalContainer/ModalContainer.styles';
 export { LayoutContainer } from './LayoutContainer/LayoutContainer.styles';
 export { default as SearchContent } from './SearchContent/SearchContent';
+export { default as ModalContent } from './ModalContent/ModalContent';
 export { PostContainer } from './PostContainer/PostContainer.styles';
 export { default as AuthorImage } from './AuthorImage/AuthorImage';
 export { default as ShareFooter } from './ShareFooter/ShareFooter';
@@ -8,5 +9,6 @@ export { default as Recomended } from './Recomended/Recomended';
 export { default as PostFooter } from './PostFooter/PostFooter';
 export { default as Pagination } from './Pagination/Pagination';
 export { default as PostCard } from './PostCard/PostCard';
+export { default as PostList } from './PostList/PostList';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as Seo } from './Seo/Seo';

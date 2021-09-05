@@ -1,24 +1,23 @@
 import React, { useContext } from 'react';
 import { graphql, navigate } from 'gatsby';
 
-// import { SEO, LayoutContainer, Navbar, PostList } from '../../components';
-// import { BlogContext } from '../../utils/context/context';
-// import { Button } from '@makinox/makinox-ui';
+import { Seo, LayoutContainer, Navbar, PostList } from '../../components';
+import { BlogContext } from '../../context/context';
+import { Button } from '@makinox/makinox-ui';
 
 export default function Tags({ pageContext, data }) {
-  // const { isDark } = useContext(BlogContext);
-  // const { tag } = pageContext;
-  // const { totalCount } = data.allMarkdownRemark;
-  // const tagHeader = `${totalCount} post${detectPlural(totalCount)} tageado${detectPlural(totalCount)} como "${tag}"`;
+  const { isDark } = useContext(BlogContext);
+  const { tag } = pageContext;
+  const { totalCount } = data.allMarkdownRemark;
+  const tagHeader = `${totalCount} post${detectPlural(totalCount)} tageado${detectPlural(totalCount)} como "${tag}"`;
 
-  // function detectPlural(num: number) {
-  //   return num === 1 ? '' : 's';
-  // }
+  function detectPlural(num: number) {
+    return num === 1 ? '' : 's';
+  }
 
   return (
     <>
-      {console.log({ data })}
-      {/* <SEO title={`Tag ${tag}`} pathname={`tags/${tag}`} />
+      <Seo title={`Tag ${tag}`} pathname={`tags/${tag}`} />
 
       <Navbar />
       <LayoutContainer>
@@ -27,7 +26,7 @@ export default function Tags({ pageContext, data }) {
         <div style={{ margin: '30px 0 60px 0' }}>
           <Button use="outlined" isDark={isDark} style={{ margin: 5 }} message="Todos los tags" onClick={() => navigate('/tags')} />
         </div>
-      </LayoutContainer> */}
+      </LayoutContainer>
     </>
   );
 }
