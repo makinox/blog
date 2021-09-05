@@ -46,6 +46,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "compress": "sh ./compress.sh",
+    "deploy:remote": "sh ./downloadBackup.sh && npm run build && firebase deploy",
+    "deploy": "npm run build && firebase deploy",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
