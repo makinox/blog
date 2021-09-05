@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
   top: 3%;
-  margin-top: -45vh;
+  margin-top: -30vh;
   border-radius: 5px;
   background-color: #fff;
   width: 100%;
@@ -37,5 +37,16 @@ export const SearchContainer = styled.div`
 
   & div.search-content {
     padding: 0 10px;
+  }
+
+  & div.search-content span {
+    border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  & div.search-content span:last-of-type {
+    border: none;
   }
 `;

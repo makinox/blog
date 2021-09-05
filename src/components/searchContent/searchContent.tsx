@@ -34,7 +34,7 @@ function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onD
             <BsFullscreenExit size={25} onClick={onDismiss} />
           </div>
           <div className="search-input">
-            <input type="text" placeholder="Mejoran la vida" />
+            <input type="text" placeholder="Buscar" />
           </div>
           <SearchItems items={data} />
         </SearchContainer>
