@@ -6,7 +6,7 @@ import { BsFullscreenExit } from 'react-icons/bs';
 import SearchItems from './ui/searchItems';
 import { useInputValue } from '../../hooks/useInputValue';
 
-function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onDismiss: VoidFunction }) {
+function SearchContent({ isVisble = false, isDark, onDismiss }: { isVisble: boolean; isDark: boolean; onDismiss: VoidFunction }) {
   const ref = useRef<HTMLDivElement>(null);
   const { allMarkdownRemark: data } = useSearchContent();
   const SearchInput = useInputValue({});
@@ -26,8 +26,7 @@ function SearchContent({ isVisble = false, onDismiss }: { isVisble: boolean; onD
   if (isVisble) {
     return (
       <ModalContainer full>
-        {console.log({ data })}
-        <SearchContainer ref={ref}>
+        <SearchContainer ref={ref} isDark={isDark}>
           <div className="search-header flex justify-between items-center">
             <h3></h3>
             <BsFullscreenExit size={25} onClick={onDismiss} />

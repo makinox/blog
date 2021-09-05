@@ -41,7 +41,7 @@ export default () => {
           </>
         }
       />
-      <SearchContent isVisble={searchView} onDismiss={() => setSearchView(false)} />
+      <SearchContent isDark={isDark} isVisble={searchView} onDismiss={() => setSearchView(false)} />
     </>
   );
 };

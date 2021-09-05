@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-export const SearchContainer = styled.div`
+export const SearchContainer = styled.div<{ isDark: boolean }>`
   top: 3%;
   width: 100%;
   max-width: 80%;
   min-width: 60%;
   margin-top: 2vh;
   border-radius: 5px;
-  background-color: #fff;
   align-self: flex-start;
+
+  ${props => (props.isDark ? `background-color: rgb(var(--dark-surface));` : `background-color: rgb(var(--light-surface));`)}
 
   & div.search-header {
     border-radius: 5px;
@@ -21,7 +22,7 @@ export const SearchContainer = styled.div`
 
   & div.search-header svg {
     cursor: pointer;
-    color: #c1c1c1;
+    ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
   }
 
   & div.search-input {
@@ -33,23 +34,28 @@ export const SearchContainer = styled.div`
     border: 1px solid #c1c1c1;
     box-sizing: border-box;
     border-radius: 5px;
+    padding: 0 10px;
     height: 35px;
     width: 100%;
-    padding: 0 10px;
+
+    ${props => (props.isDark ? `background-color: rgb(var(--dark-background));` : `background-color: rgb(var(--light-background));`)}
   }
 
   & div.search-content {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   & div.search-content span {
-    border-bottom: 1px solid #eaeaea;
     cursor: pointer;
     padding: 8px 0;
     width: 100%;
   }
 
+  & div.search-content span:hover {
+    ${props => (props.isDark ? `color: rgb(var(--dark-primary));` : `color: rgb(var(--light-primary));`)}
+  }
+
   & div.search-content span:last-of-type {
-    border: none;
+    margin-bottom: 10px;
   }
 `;
