@@ -7,6 +7,9 @@ export const useSearchContent = () => {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           nodes {
             id
+            fields {
+              slug
+            }
             frontmatter {
               title
             }

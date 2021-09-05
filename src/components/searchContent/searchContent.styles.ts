@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const SearchContainer = styled.div`
   top: 3%;
   width: 100%;
-  max-width: 90%;
+  max-width: 80%;
+  min-width: 60%;
   margin-top: 2vh;
   border-radius: 5px;
   background-color: #fff;
