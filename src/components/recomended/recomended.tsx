@@ -23,10 +23,11 @@ export default function Recomended({ postTitle, isDark }: { postTitle: string; i
         {data.nodes
           .filter((aux: recomendedObject) => aux.frontmatter.title !== postTitle)
           .slice(0, 3)
-          .map((el: recomendedObject) => {
+          .map((el: recomendedObject, idx) => {
             const image = getImage(el.frontmatter.timage.postImage);
             return (
               <CardContainer
+                key={idx}
                 use="elevated"
                 maxWidth="220px"
                 isDark={isDark}
