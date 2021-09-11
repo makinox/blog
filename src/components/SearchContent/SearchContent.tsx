@@ -3,7 +3,7 @@ import { ModalContainer } from '../ModalContainer/ModalContainer.styles';
 import { SearchContainer } from './SearchContent.styles';
 import { useSearchContent } from './SearchContent.graph';
 import { BsFullscreenExit } from 'react-icons/bs';
-import SearchItems from './ui/SearchContent';
+import SearchItems from './ui/SearchItem';
 import { useInputValue } from '../../hooks/useInputValue';
 
 function SearchContent({ isVisble = false, isDark, onDismiss }: { isVisble: boolean; isDark: boolean; onDismiss: VoidFunction }) {
