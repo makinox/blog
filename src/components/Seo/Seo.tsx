@@ -1,24 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useSeoContent } from './Seo.graph';
 
-function SEO({ description = '', lang = 'es', meta = [], title, image = '', pathname, keyw = [] }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            keywords
-            siteUrl
-            image
-          }
-        }
-      }
-    `
-  );
+function SEO({
+  description = '',
+  lang = 'es',
+  meta = [],
+  title,
+  image = '',
+  pathname,
+  keyw = [],
+}: {
+  description?: string;
+  lang?: string;
+  meta?: Array<{ name: string; content: string; property?: undefined }>;
+  title?: string;
+  image?: string;
+  pathname?: string;
+  keyw?: Array<string>;
+}) {
+  const { site } = useSeoContent();
 
   const metaDescription = description || site.siteMetadata.description;
   const pathImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;

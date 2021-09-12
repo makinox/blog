@@ -1,7 +1,7 @@
 import React from 'react';
 import { ModalContent as ModalContainer, ModalTitle, ModalHeader, CloseIcon } from './ModalContent.styles';
 
-export default function ModalContent({ modalHandler, isDark }) {
+export default function ModalContent({ modalHandler, isDark }: { modalHandler: VoidFunction; isDark: boolean }) {
   return (
     <ModalContainer isDark={isDark}>
       <ModalHeader>

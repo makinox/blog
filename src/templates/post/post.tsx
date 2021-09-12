@@ -1,17 +1,18 @@
 import React, { useContext, useState } from 'react';
+import { subDays, formatDistance } from 'date-fns';
 import { getImage } from 'gatsby-plugin-image';
-import { Button } from '@makinox/makinox-ui';
 import { IoMdArrowBack } from 'react-icons/io';
+import { Button } from '@makinox/makinox-ui';
 import { graphql, navigate } from 'gatsby';
-import { formatRelative, subDays, formatDistance } from 'date-fns';
 import { es } from 'date-fns/locale';
 
 import { Navbar, PostContainer, Seo, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
-import { BlogContext } from '../../context/context';
+import { PostQuery, SitePageContext } from '../../../graphql-types';
 import { PostResumen, PrimaryImage } from './post.styles';
+import { BlogContext } from '../../context/context';
 import './styles.css';
 
-export default function BlogPost({ data, pageContext }) {
+export default function BlogPost({ data, pageContext }: { data: PostQuery; pageContext: SitePageContext }) {
   const { isDark } = useContext(BlogContext);
   const post = data.markdownRemark;
   const postImage = getImage(post.frontmatter.timage.postImage);
@@ -43,7 +44,6 @@ export default function BlogPost({ data, pageContext }) {
               </span>
             </div>
           </div>
-          {/* <ShareFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} /> */}
         </PostResumen>
         <h1 style={{ fontSize: 40, marginTop: 16 }}>{post.frontmatter.title}</h1>
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -70,7 +70,7 @@ export default function BlogPost({ data, pageContext }) {
 }
 
 export const query = graphql`
-  query ($slug: String!) {
+  query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt

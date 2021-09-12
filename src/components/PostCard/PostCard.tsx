@@ -4,9 +4,10 @@ import { navigate } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { CardContainer } from './PostCard.styles';
 
+import { BlogListQuery } from '../../../graphql-types';
 import { BlogContext } from '../../context/context';
 
-export default ({ data }: { data: object | any }) => {
+export default ({ data }: { data: BlogListQuery['allMarkdownRemark']['edges'][0] }) => {
   const image = getImage(data.node.frontmatter.timage.postImage);
   const { isDark } = useContext(BlogContext);
 

@@ -5,8 +5,17 @@ import { AuthorImage, ShareFooter } from '..';
 import { Footer, Subtitle, Title, Description, TagFooter } from './PostFooter.styles';
 import { getImage } from 'gatsby-plugin-image';
 import { Button } from '@makinox/makinox-ui';
+import { PostQuery, SitePageContext } from '../../../graphql-types';
 
-export default ({ data, slug, isDark }) => {
+export default ({
+  data,
+  slug,
+  isDark,
+}: {
+  data: PostQuery['markdownRemark']['frontmatter'];
+  slug: SitePageContext['slug'];
+  isDark: boolean;
+}) => {
   const authorImage = getImage(data.authorImage.authorSrc);
 
   return (

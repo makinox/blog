@@ -1,9 +1,11 @@
-import { Button } from '@makinox/makinox-ui';
-import { navigate } from 'gatsby';
 import React from 'react';
-import { PaginationSection } from './Pagination.styles';
+import { Button } from '@makinox/makinox-ui';
 
-export default function Pagination({ pag, isDark }) {
+import { SitePageContext } from '../../../graphql-types';
+import { PaginationSection } from './Pagination.styles';
+import { navigate } from 'gatsby';
+
+export default function Pagination({ pag, isDark }: { pag: SitePageContext; isDark: boolean }) {
   const before = pag.currentPage - 1;
   const next = pag.currentPage + 1;
 

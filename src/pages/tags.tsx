@@ -4,11 +4,14 @@ import { Button } from '@makinox/makinox-ui';
 
 import { Seo, LayoutContainer, Navbar } from '../components';
 import { BlogContext } from '../context/context';
+import { TagsQuery } from '../../graphql-types';
 
 function TagsPage({
   data: {
     allMarkdownRemark: { group },
   },
+}: {
+  data: TagsQuery;
 }) {
   const { isDark } = useContext(BlogContext);
   return (
@@ -38,7 +41,7 @@ function TagsPage({
 
 export default TagsPage;
 export const pageQuery = graphql`
-  query {
+  query Tags {
     site {
       siteMetadata {
         title

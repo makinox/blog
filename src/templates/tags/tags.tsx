@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { graphql, navigate } from 'gatsby';
 
 import { Seo, LayoutContainer, Navbar, PostList } from '../../components';
+import { SitePageContext, TagQuery } from '../../../graphql-types';
 import { BlogContext } from '../../context/context';
+
 import { Button } from '@makinox/makinox-ui';
 
-export default function Tags({ pageContext, data }) {
+export default function Tags({ pageContext, data }: { data: TagQuery; pageContext: SitePageContext }) {
   const { isDark } = useContext(BlogContext);
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
@@ -32,7 +34,7 @@ export default function Tags({ pageContext, data }) {
 }
 
 export const query = graphql`
-  query ($tag: String) {
+  query Tag($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }

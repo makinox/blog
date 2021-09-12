@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 
 import { Seo, LayoutContainer, Navbar, PostList, Pagination } from '../../components';
+import { HomeQuery, SitePageContext } from '../../../graphql-types';
 import { BlogContext } from '../../context/context';
 
-export default ({ data, pageContext }) => {
+export default ({ data, pageContext }: { data: HomeQuery; pageContext: SitePageContext }) => {
   const { isDark } = useContext(BlogContext);
   return (
     <>
@@ -19,7 +20,7 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query query($skip: Int!, $limit: Int!) {
+  query Home($skip: Int!, $limit: Int!) {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {

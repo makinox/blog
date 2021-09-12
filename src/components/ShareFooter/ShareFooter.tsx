@@ -4,8 +4,17 @@ import { FaTwitterSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa';
 import { AiOutlineLink } from 'react-icons/ai';
 
 import { ShareSection } from './ShareFooter.styles';
+import { PostQuery, SitePageContext } from '../../../graphql-types';
 
-export default ({ data, slug, isDark }) => {
+export default ({
+  data,
+  slug,
+  isDark,
+}: {
+  data: PostQuery['markdownRemark']['frontmatter'];
+  slug: SitePageContext['slug'];
+  isDark: boolean;
+}) => {
   const URL = `https://voib.jesusbossa.dev/${slug}`;
   const copyClipboard = () => {
     navigator.clipboard

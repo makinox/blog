@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 
 import { Seo, Navbar, LayoutContainer, PostList, Pagination } from '../components/';
+import { BlogListQuery } from '../../graphql-types';
 import { BlogContext } from '../context/context';
 
-function IndexPage({ data }) {
+function IndexPage({ data }: { data: BlogListQuery }) {
   const { isDark } = useContext(BlogContext);
   return (
     <>
@@ -21,7 +22,7 @@ function IndexPage({ data }) {
 export default IndexPage;
 
 export const query = graphql`
-  query blogListQuery {
+  query BlogList {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
       edges {
         node {

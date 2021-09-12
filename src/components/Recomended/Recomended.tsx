@@ -1,18 +1,10 @@
 import React from 'react';
-import { useRecomendedQuery } from './Recomended.graph';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
 import { CardContainer } from '../PostCard/PostCard.styles';
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
+import { useRecomendedQuery } from './Recomended.graph';
 import { RecomendedRow } from './Recomended.styles';
 import { navigate } from 'gatsby';
-
-type recomendedObject = {
-  timeToRead: number;
-  frontmatter: {
-    title: string;
-    timage: { postImage: ImageDataLike };
-  };
-  fields: { slug: string };
-};
 
 export default function Recomended({ postTitle, isDark }: { postTitle: string; isDark: boolean }) {
   const { allMarkdownRemark: data } = useRecomendedQuery();
@@ -21,9 +13,9 @@ export default function Recomended({ postTitle, isDark }: { postTitle: string; i
       <h2 style={{ marginTop: 40 }}>Últimas historias</h2>
       <RecomendedRow className="flex justify-evenly">
         {data.nodes
-          .filter((aux: recomendedObject) => aux.frontmatter.title !== postTitle)
+          .filter(aux => aux.frontmatter.title !== postTitle)
           .slice(0, 3)
-          .map((el: recomendedObject, idx) => {
+          .map((el, idx) => {
             const image = getImage(el.frontmatter.timage.postImage);
             return (
               <CardContainer

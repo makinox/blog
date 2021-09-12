@@ -1,6 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { RecomendedQuery } from '../../../graphql-types';
+
 export const useRecomendedQuery = () => {
-  const data = useStaticQuery(
+  const data: RecomendedQuery = useStaticQuery(
     graphql`
       query Recomended {
         allMarkdownRemark(limit: 4, sort: { fields: [frontmatter___date], order: DESC }) {

@@ -1,9 +1,10 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { SearchQuery } from '../../../graphql-types';
 
 export const useSearchContent = () => {
-  const data = useStaticQuery(
+  const data: SearchQuery = useStaticQuery(
     graphql`
-      query SEO {
+      query Search {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           nodes {
             id
