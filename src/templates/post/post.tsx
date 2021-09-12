@@ -3,7 +3,8 @@ import { getImage } from 'gatsby-plugin-image';
 import { Button } from '@makinox/makinox-ui';
 import { IoMdArrowBack } from 'react-icons/io';
 import { graphql, navigate } from 'gatsby';
-import moment from 'moment';
+import { formatRelative, subDays, formatDistance } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 import { Navbar, PostContainer, Seo, PostFooter, ModalContainer, ModalContent, AuthorImage, Recomended } from '../../components';
 import { BlogContext } from '../../context/context';
@@ -35,7 +36,7 @@ export default function BlogPost({ data, pageContext }) {
             <div className="flex items-center">
               <span>{post.frontmatter.author}</span>
               <span>·</span>
-              <span>{moment(post.frontmatter.date, 'YYYYMMDD').locale('es').fromNow()}</span>
+              <span>{formatDistance(subDays(new Date(), 3), new Date(), { locale: es, addSuffix: true })}</span>
               <span>·</span>
               <span>
                 {post.timeToRead} {post.timeToRead > 1 ? 'minutos' : 'minuto'}
