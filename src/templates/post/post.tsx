@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { subDays, formatDistance } from 'date-fns';
 import { getImage } from 'gatsby-plugin-image';
 import { IoMdArrowBack } from 'react-icons/io';
-import { Button } from '@makinox/makinox-ui';
+import { ButtonText } from '@makinox/makinox-ui';
 import { graphql, navigate } from 'gatsby';
 import { es } from 'date-fns/locale';
 
@@ -49,12 +49,10 @@ export default function BlogPost({ data, pageContext }: { data: PostQuery; pageC
         <div className="pan" dangerouslySetInnerHTML={{ __html: post.html }} />
         <Recomended isDark={isDark} postTitle={post.frontmatter.title} />
         <section style={{ marginTop: 20 }}>
-          <Button
-            message="Regresar al home"
-            use="text"
-            onClick={() => navigate('/')}
-            icon={<IoMdArrowBack size={18} style={{ marginRight: 10 }} />}
-          />
+          <button className={ButtonText({ isDark })} onClick={() => navigate('/')}>
+            <IoMdArrowBack size={18} style={{ marginRight: 10 }} />
+            <span>Regresar al home</span>
+          </button>
         </section>
         <PostFooter isDark={isDark} data={post.frontmatter} slug={pageContext.slug} />
       </PostContainer>

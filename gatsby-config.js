@@ -13,7 +13,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-graphql-codegen`,
+    // `gatsby-plugin-graphql-codegen`,
     `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-source-filesystem`,

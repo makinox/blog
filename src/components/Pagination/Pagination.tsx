@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@makinox/makinox-ui';
+import { ButtonOutline } from '@makinox/makinox-ui';
 
 import { SitePageContext } from '../../../graphql-types';
 import { PaginationSection } from './Pagination.styles';
@@ -12,12 +12,16 @@ export default function Pagination({ pag, isDark }: { pag: SitePageContext; isDa
   return (
     <PaginationSection>
       {pag.currentPage !== 1 ? (
-        <Button use="outlined" isDark={isDark} message={'Anterior'} onClick={() => navigate(before === 1 ? '/' : `/home/${before}`)} />
+        <button className={ButtonOutline({ isDark })} onClick={() => navigate(before === 1 ? '/' : `/home/${before}`)}>
+          Anterior
+        </button>
       ) : (
         <div></div>
       )}
       {pag.currentPage < pag.numPages ? (
-        <Button use="outlined" isDark={isDark} message={'Siguiente'} onClick={() => navigate(`/home/${next}`)} />
+        <button className={ButtonOutline({ isDark })} onClick={() => navigate(`/home/${next}`)}>
+          Siguiente
+        </button>
       ) : (
         <></>
       )}

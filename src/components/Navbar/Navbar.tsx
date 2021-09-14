@@ -8,6 +8,7 @@ import { Bar, Logo, NavbarLink } from './Navbar.styles';
 import { useNavbarQuery } from './Navbar.graph';
 import { useBlog } from '../../context/context';
 import { SearchContent } from '..';
+import { TopBar, FluidContainer } from '@makinox/makinox-ui';
 
 function Navbar() {
   const { placeholderImage } = useNavbarQuery();
@@ -16,19 +17,16 @@ function Navbar() {
 
   return (
     <>
-      <Bar
-        isDark={isDark}
-        leftChild={
+      <nav className={TopBar({ isDark })}>
+        <Bar isDark={isDark} className={`flex justify-between items-center ${FluidContainer()}`}>
           <div className="flex items-center">
             <Logo src={placeholderImage.publicURL} alt="Cereno logo" onClick={() => navigate('/')} />
             <div onClick={changeTheme} style={{ height: '12px', cursor: 'pointer' }}>
               <CgDarkMode size={19} />
             </div>
           </div>
-        }
-        rightChild={
-          <>
-            <FaSearch size={19} style={{ cursor: 'pointer' }} onClick={() => setSearchView(true)} />
+          <div className="flex items-center" style={{ marginTop: 5, marginRight: 5 }}>
+            <FaSearch size={16} style={{ cursor: 'pointer', marginBottom: 5 }} onClick={() => setSearchView(true)} />
 
             <NavbarLink isDark={isDark} href={`https://jesusbossa.dev/`} target="_blank">
               <FaHome />
@@ -39,9 +37,9 @@ function Navbar() {
             <NavbarLink isDark={isDark} href={`https://twitter.com/jesMakinox`} target="_blank">
               <FaTwitterSquare />
             </NavbarLink>
-          </>
-        }
-      />
+          </div>
+        </Bar>
+      </nav>
       <SearchContent isDark={isDark} isVisble={searchView} onDismiss={() => setSearchView(false)} />
     </>
   );

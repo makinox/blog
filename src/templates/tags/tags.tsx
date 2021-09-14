@@ -5,7 +5,7 @@ import { Seo, LayoutContainer, Navbar, PostList } from '../../components';
 import { SitePageContext, TagQuery } from '../../../graphql-types';
 import { BlogContext } from '../../context/context';
 
-import { Button } from '@makinox/makinox-ui';
+import { ButtonOutline } from '@makinox/makinox-ui';
 
 export default function Tags({ pageContext, data }: { data: TagQuery; pageContext: SitePageContext }) {
   const { isDark } = useContext(BlogContext);
@@ -26,7 +26,9 @@ export default function Tags({ pageContext, data }: { data: TagQuery; pageContex
         <h1>{tagHeader}</h1>
         <PostList data={data.allMarkdownRemark.edges} />
         <div style={{ margin: '30px 0 60px 0' }}>
-          <Button use="outlined" isDark={isDark} style={{ margin: 5 }} message="Todos los tags" onClick={() => navigate('/tags')} />
+          <button className={ButtonOutline({ isDark })} style={{ margin: 5 }} onClick={() => navigate('/tags')}>
+            Todos los tags
+          </button>
         </div>
       </LayoutContainer>
     </>

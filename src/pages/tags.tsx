@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { graphql, navigate } from 'gatsby';
-import { Button } from '@makinox/makinox-ui';
+import { ButtonOutline } from '@makinox/makinox-ui';
 
 import { Seo, LayoutContainer, Navbar } from '../components';
 import { BlogContext } from '../context/context';
@@ -24,14 +24,14 @@ function TagsPage({
         </div>
         <div>
           {group.map((tag, idx) => (
-            <Button
+            <button
+              className={ButtonOutline({ isDark })}
               key={idx}
-              use="outlined"
-              isDark={isDark}
               style={{ margin: 5 }}
-              message={`${tag.fieldValue} (${tag.totalCount})`}
               onClick={() => navigate(`/tags/${tag.fieldValue.split(' ').join('-')}/`)}
-            />
+            >
+              {tag.fieldValue} ({tag.totalCount})
+            </button>
           ))}
         </div>
       </LayoutContainer>

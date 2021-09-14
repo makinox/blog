@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import { TopBar } from '@makinox/makinox-ui';
 
-export const Bar = styled(TopBar)`
-  & > div > div:nth-child(2) a {
+export const Bar = styled.section<{ isDark: boolean }>`
+  & > div:nth-child(2) a {
     text-decoration: none;
-    margin: 0 10px;
     cursor: pointer;
   }
-  & > div svg,
-  & > div > div:nth-child(2) a {
+  & svg,
+  & > div:nth-child(2) a {
     ${props => {
       if (props.theme?.isDark || props.isDark) {
         return `
@@ -22,23 +20,13 @@ export const Bar = styled(TopBar)`
     }}
   }
 
-  & > div > div:nth-child(3) {
-    height: 18px;
-  }
-
   @media (max-width: 435px) {
-    & > div > div:nth-child(2) a {
+    & > div a,
+    & > div svg {
       font-size: 15px;
+      height: 15px;
+      width: 15px;
       margin: 0 3px !important;
-    }
-  }
-
-  @media (max-width: 765px) {
-    & > div > div:nth-child(1) span {
-      display: none;
-    }
-    & > div > div:nth-child(3) > div > span div span {
-      display: none;
     }
   }
 `;

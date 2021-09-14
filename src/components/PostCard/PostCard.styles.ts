@@ -1,11 +1,10 @@
-import { Card } from '@makinox/makinox-ui';
 import styled from 'styled-components';
 
-export const CardContainer = styled(Card)`
+export const CardContainer = styled.article`
   cursor: pointer;
   margin: 20px 0;
 
-  & > div.card-customMedia {
+  & > div.card-media {
     padding: initial;
     position: relative;
     box-sizing: border-box;
@@ -16,9 +15,9 @@ export const CardContainer = styled(Card)`
     border-top-right-radius: 4px;
   }
 
-  & > div.card-customMedia div,
-  & > div.card-customMedia div img,
-  & > div.card-customMedia div picture {
+  & > div.card-media div,
+  & > div.card-media div img,
+  & > div.card-media div picture {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }

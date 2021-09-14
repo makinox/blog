@@ -4,7 +4,7 @@ import { AuthorImage, ShareFooter } from '..';
 
 import { Footer, Subtitle, Title, Description, TagFooter } from './PostFooter.styles';
 import { getImage } from 'gatsby-plugin-image';
-import { Button } from '@makinox/makinox-ui';
+import { ButtonOutline } from '@makinox/makinox-ui';
 import { PostQuery, SitePageContext } from '../../../graphql-types';
 
 export default ({
@@ -22,14 +22,14 @@ export default ({
     <>
       <TagFooter>
         {data.tags.map((el, idx) => (
-          <Button
+          <button
             key={idx}
-            use="outlined"
-            isDark={isDark}
+            className={ButtonOutline({ isDark })}
             style={{ margin: 5 }}
-            message={el}
             onClick={() => navigate(`/tags/${el.split(' ').join('-')}`)}
-          />
+          >
+            {el}
+          </button>
         ))}
       </TagFooter>
       <div className="flex justify-end">

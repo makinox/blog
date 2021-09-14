@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Jesus bossa <x@jesusbossa.dev>",
   "dependencies": {
-    "@makinox/makinox-ui": "^1.4.3",
+    "@makinox/makinox-ui": "^1.5.1",
     "babel-plugin-styled-components": "^1.13.2",
     "date-fns": "^2.23.0",
     "gatsby": "^3.12.1",

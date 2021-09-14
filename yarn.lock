@@ -2223,15 +2223,15 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@makinox/makinox-ui@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.4.3.tgz#597b9f3f8ecb0f1bf5812b040b700957a8ce780f"
-  integrity sha512-Ysrx26gN1wmpozuROyHFAe8r8a30pYa3bRG9MjZ0KYnG8lSMr3/1gSuNUuaMkas0RG9Y4Fnv//V1mTVl6T1zlw==
+"@makinox/makinox-ui@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.5.1.tgz#caadfd3151cdc4f61a2bf9e535243693837a3771"
+  integrity sha512-KzKSHdZ7gtuanRY6S4goXIPMvLhLpVweiin6f111b5wHsto6He8bKUD3VaUOCmER74O0wP6gKl/9IMerNiAecA==
   dependencies:
+    "@stitches/core" "^1.1.0"
     react "^17.0.2"
     react-dom "^17.0.2"
     react-scripts "4.0.3"
-    styled-components "^5.2.3"
 
 "@mdx-js/util@^2.0.0-next.8":
   version "2.0.0-next.8"
@@ -2381,6 +2381,11 @@
   integrity sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@stitches/core@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-1.1.0.tgz#c4370638efbdefeb68a5e2d81b0d6158d5711b59"
+  integrity sha512-qKbNVx04ybrhkaPDhEAux6LvlWNjnKGhwum3WakHtyHBWIWoBLM39rGb3JpwkXKECaulS5+wdwldN7OQxaDBvA==
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"
@@ -16081,7 +16086,7 @@ style-to-object@^0.3.0:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-components@^5.2.3, styled-components@^5.3.1:
+styled-components@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.1.tgz#8a86dcd31bff7049c2ed408bae36fa23f03f071a"
   integrity sha512-JThv2JRzyH0NOIURrk9iskdxMSAAtCfj/b2Sf1WJaCUsloQkblepy1jaCLX/bYE+mhYo3unmwVSI9I5d9ncSiQ==

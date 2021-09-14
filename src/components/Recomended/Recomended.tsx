@@ -5,6 +5,7 @@ import { CardContainer } from '../PostCard/PostCard.styles';
 import { useRecomendedQuery } from './Recomended.graph';
 import { RecomendedRow } from './Recomended.styles';
 import { navigate } from 'gatsby';
+import { Card } from '@makinox/makinox-ui';
 
 export default function Recomended({ postTitle, isDark }: { postTitle: string; isDark: boolean }) {
   const { allMarkdownRemark: data } = useRecomendedQuery();
@@ -19,14 +20,17 @@ export default function Recomended({ postTitle, isDark }: { postTitle: string; i
             const image = getImage(el.frontmatter.timage.postImage);
             return (
               <CardContainer
+                className={Card({ isDark, css: { maxWidth: '220px' }, type: 'elevated' })}
                 key={idx}
-                use="elevated"
-                maxWidth="220px"
-                isDark={isDark}
-                title={el.frontmatter.title}
-                customMedia={<GatsbyImage image={image} alt={`${el.frontmatter.title} imagen`} />}
                 onClick={() => navigate(`/${el.fields.slug}`)}
-              />
+              >
+                <div className="card-media">
+                  <GatsbyImage image={image} alt={`${el.frontmatter.title} imagen`} />
+                </div>
+                <div className="card-header">
+                  <h6 className="headline6">{el.frontmatter.title}</h6>
+                </div>
+              </CardContainer>
             );
           })}
       </RecomendedRow>
