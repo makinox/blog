@@ -1,8 +1,10 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { NavbarQuery } from '../../../graphql-types';
+
 export const useNavbarQuery = () => {
-  const data = useStaticQuery(
+  const data: NavbarQuery = useStaticQuery(
     graphql`
-      query {
+      query Navbar {
         placeholderImage: file(relativePath: { eq: "logo/Blog.svg" }) {
           publicURL
         }
