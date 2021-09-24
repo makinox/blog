@@ -23,9 +23,9 @@ export const Bar = styled.section<{ isDark: boolean }>`
   @media (max-width: 435px) {
     & > div a,
     & > div svg {
-      font-size: 15px;
-      height: 15px;
-      width: 15px;
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
       margin: 0 3px !important;
     }
   }
