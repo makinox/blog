@@ -19,16 +19,6 @@ export const Bar = styled.section<{ isDark: boolean }>`
       }
     }}
   }
-
-  @media (max-width: 435px) {
-    & > div a,
-    & > div svg {
-      font-size: 20px;
-      height: 20px;
-      width: 20px;
-      margin: 0 3px !important;
-    }
-  }
 `;
 
 export const Logo = styled.img`

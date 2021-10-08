@@ -25,8 +25,13 @@ function Navbar() {
               <CgDarkMode size={19} />
             </div>
           </div>
-          <div className="flex items-center" style={{ marginTop: 5, marginRight: 5 }}>
-            <FaSearch size={16} style={{ cursor: 'pointer', marginBottom: 5 }} onClick={() => setSearchView(true)} />
+          <div className="flex items-center" style={{ paddingTop: 7, marginRight: 5, marginBottom: -6 }}>
+            <FaSearch
+              className="navbar-search"
+              size={18}
+              style={{ cursor: 'pointer', marginBottom: 5, marginRight: 2 }}
+              onClick={() => setSearchView(true)}
+            />
 
             <NavbarLink isDark={isDark} href={`https://jesusbossa.dev/`} target="_blank">
               <FaHome />
