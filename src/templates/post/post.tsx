@@ -37,7 +37,7 @@ export default function BlogPost({ data, pageContext }: { data: PostQuery; pageC
             <div className="flex items-center">
               <span>{post.frontmatter.author}</span>
               <span>·</span>
-              <span>{formatDistance(subDays(new Date(), 3), new Date(), { locale: es, addSuffix: true })}</span>
+              <span>{formatDistance(subDays(new Date(post.frontmatter.date), 0), new Date(), { locale: es, addSuffix: true })}</span>
               <span>·</span>
               <span>
                 {post.timeToRead} {post.timeToRead > 1 ? 'minutos' : 'minuto'}
