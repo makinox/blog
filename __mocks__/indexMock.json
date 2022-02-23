@@ -1,0 +1,301 @@
+{
+  "allMarkdownRemark": {
+    "edges": [
+      {
+        "node": {
+          "fields": {
+            "slug": "article/Lo_valioso_de_ver_a_la gente_de_tu_alrededor_emprender"
+          },
+          "frontmatter": {
+            "title": "Lo valioso de ver a la gente de tu alrededor emprender",
+            "date": "2021-08-20",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQF/9oADAMBAAIQAxAAAAGOsrzsAl//xAAZEAACAwEAAAAAAAAAAAAAAAABAgADIjH/2gAIAQEAAQUCpOVZ4e//xAAXEQADAQAAAAAAAAAAAAAAAAAAATED/9oACAEDAQE/AdaxQ//EABYRAQEBAAAAAAAAAAAAAAAAAAEQIf/aAAgBAgEBPwEMn//EABcQAAMBAAAAAAAAAAAAAAAAAAABMRD/2gAIAQEABj8ChFn/xAAaEAEBAQADAQAAAAAAAAAAAAABEQAxQWFx/9oACAEBAAE/ISgqneVy59maKpfN/9oADAMBAAIAAwAAABBzz//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAgmbAQ3//EABYRAAMAAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCyMh//xAAZEAEAAwEBAAAAAAAAAAAAAAABABEhMaH/2gAIAQEAAT8QFsBc2SvsmKYeSqsniaJ//9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/418317e59f9abe1d16036a78a23d86e1/c562c/0.jpg",
+                      "srcSet": "/static/418317e59f9abe1d16036a78a23d86e1/cb4bc/0.jpg 225w,\n/static/418317e59f9abe1d16036a78a23d86e1/5d7f5/0.jpg 450w,\n/static/418317e59f9abe1d16036a78a23d86e1/c562c/0.jpg 900w,\n/static/418317e59f9abe1d16036a78a23d86e1/48713/0.jpg 1800w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/418317e59f9abe1d16036a78a23d86e1/19cfa/0.avif 225w,\n/static/418317e59f9abe1d16036a78a23d86e1/02108/0.avif 450w,\n/static/418317e59f9abe1d16036a78a23d86e1/149b6/0.avif 900w,\n/static/418317e59f9abe1d16036a78a23d86e1/f724c/0.avif 1800w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/418317e59f9abe1d16036a78a23d86e1/d2d5a/0.webp 225w,\n/static/418317e59f9abe1d16036a78a23d86e1/f01e1/0.webp 450w,\n/static/418317e59f9abe1d16036a78a23d86e1/6e5c7/0.webp 900w,\n/static/418317e59f9abe1d16036a78a23d86e1/a0b4e/0.webp 1800w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 1,
+          "excerpt": "Hace un par de semanas me vengo viendo una serie sobre gente que se detiene en una habitación a hablar de los emprendimientos que están…"
+        }
+      },
+      {
+        "node": {
+          "fields": {
+            "slug": "article/No_quiero_cumplir_mis_metas"
+          },
+          "frontmatter": {
+            "title": "No quiero cumplir mis metas",
+            "date": "2021-08-12",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAHFuC4Ef//EABkQAAIDAQAAAAAAAAAAAAAAAAABAhESIf/aAAgBAQABBQJdM0NRZ//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/Aaf/xAAXEAEAAwAAAAAAAAAAAAAAAAAAARFB/9oACAEBAAY/AqQ1/8QAGBABAAMBAAAAAAAAAAAAAAAAAQARIUH/2gAIAQEAAT8hOCbNAvLyI2Wn/9oADAMBAAIAAwAAABDz/wD/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQMBAT8QAyy//8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EGxYf//EABsQAQACAgMAAAAAAAAAAAAAAAEAETFRQcHR/9oACAEBAAE/ELpVubiTYzKujp9gBtyLuf/Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/c562c/0.jpg",
+                      "srcSet": "/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/cb4bc/0.jpg 225w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/5d7f5/0.jpg 450w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/c562c/0.jpg 900w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/48713/0.jpg 1800w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/19cfa/0.avif 225w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/02108/0.avif 450w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/149b6/0.avif 900w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/f724c/0.avif 1800w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/d2d5a/0.webp 225w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/f01e1/0.webp 450w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/6e5c7/0.webp 900w,\n/static/ee2d0b8aa61d55b1e6f0d022fa0ec643/a0b4e/0.webp 1800w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 1,
+          "excerpt": "He escuchado mucha gente exclamando que quiere independizarse, quiere tener su casa, carro, lujos. Programas de televisión sobre viajes…"
+        }
+      },
+      {
+        "node": {
+          "fields": {
+            "slug": "article/5_consejos_que_te_mejoran_la_vida"
+          },
+          "frontmatter": {
+            "title": "5 consejos que te mejoran la vida",
+            "date": "2021-07-14",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAYMCW8H/xAAYEAADAQEAAAAAAAAAAAAAAAABAhEDEv/aAAgBAQABBQLkMI1GLT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAgMBAAAAAAAAAAAAAAAAADEBIUGR/9oACAEBAAY/AsKQo6f/xAAZEAEBAQADAAAAAAAAAAAAAAABEQAhUXH/2gAIAQEAAT8hUFid4BM5C4PM/9oADAMBAAIAAwAAABAIH//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EIh//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8QV//EABoQAQEAAgMAAAAAAAAAAAAAAAERADGBkaH/2gAIAQEAAT8QUQNqnWVoDVIPGFhQWQPHP//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/d216b307ce55133dbe00e470cfe9ca33/c562c/0.jpg",
+                      "srcSet": "/static/d216b307ce55133dbe00e470cfe9ca33/cb4bc/0.jpg 225w,\n/static/d216b307ce55133dbe00e470cfe9ca33/5d7f5/0.jpg 450w,\n/static/d216b307ce55133dbe00e470cfe9ca33/c562c/0.jpg 900w,\n/static/d216b307ce55133dbe00e470cfe9ca33/48713/0.jpg 1800w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/d216b307ce55133dbe00e470cfe9ca33/19cfa/0.avif 225w,\n/static/d216b307ce55133dbe00e470cfe9ca33/02108/0.avif 450w,\n/static/d216b307ce55133dbe00e470cfe9ca33/149b6/0.avif 900w,\n/static/d216b307ce55133dbe00e470cfe9ca33/f724c/0.avif 1800w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/d216b307ce55133dbe00e470cfe9ca33/d2d5a/0.webp 225w,\n/static/d216b307ce55133dbe00e470cfe9ca33/f01e1/0.webp 450w,\n/static/d216b307ce55133dbe00e470cfe9ca33/6e5c7/0.webp 900w,\n/static/d216b307ce55133dbe00e470cfe9ca33/a0b4e/0.webp 1800w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 4,
+          "excerpt": "Pues si otro blog contándote lo que deberías hacer, pero más que todo quiero invitar a conversar, me gustaría contarte sobre las cosas que…"
+        }
+      },
+      {
+        "node": {
+          "fields": {
+            "slug": "article/GitHub_copilot_me_quito_mi_trabajo"
+          },
+          "frontmatter": {
+            "title": "GitHub copilot me quito mi trabajo",
+            "date": "2021-07-10",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3klEQVQoz41S2w7BUBA8H0HRHlVFXRJ3DS2R+AkPHhohIUREQkjFgz8f2Wqbo+ryMJmdTXbPzu5himYgRK4UQhZiUctq8ZkT6wSwt4aaAe5rLsT/gsUlJSUPSdGRlDUkMpqvn0hnC2Esx0zKoknSnf4Iza4F0xqjP5qgbdpodAdo9WxU6h2P2+YQPF9+aUoxizbLFWtwFivMl2ucLlcczy7c2x2b3QHTmYP1do+ze/NYLVSRoZ3+mpCYrJFlAtlLcd1jmiqwHWv524KpmCDqoImY/37l4NXIt3nDhys/AH355kE8W2f/AAAAAElFTkSuQmCC"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/76249e283b48dc0e3128d756f529518e/a7eba/0.png",
+                      "srcSet": "/static/76249e283b48dc0e3128d756f529518e/eca3f/0.png 225w,\n/static/76249e283b48dc0e3128d756f529518e/bb1ae/0.png 450w,\n/static/76249e283b48dc0e3128d756f529518e/a7eba/0.png 900w,\n/static/76249e283b48dc0e3128d756f529518e/fc71d/0.png 1800w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/76249e283b48dc0e3128d756f529518e/19cfa/0.avif 225w,\n/static/76249e283b48dc0e3128d756f529518e/02108/0.avif 450w,\n/static/76249e283b48dc0e3128d756f529518e/149b6/0.avif 900w,\n/static/76249e283b48dc0e3128d756f529518e/f724c/0.avif 1800w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/76249e283b48dc0e3128d756f529518e/d2d5a/0.webp 225w,\n/static/76249e283b48dc0e3128d756f529518e/f01e1/0.webp 450w,\n/static/76249e283b48dc0e3128d756f529518e/6e5c7/0.webp 900w,\n/static/76249e283b48dc0e3128d756f529518e/a0b4e/0.webp 1800w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 3,
+          "excerpt": "En los últimos días, salió al aire una nueva herramienta para desarrollo llamada GitHub copilot; la cual es una acompañante que te escribe…"
+        }
+      },
+      {
+        "node": {
+          "fields": {
+            "slug": "article/Porque_hacer_aplicaciones_de_escritorio"
+          },
+          "frontmatter": {
+            "title": "¿Por qué hacer aplicaciones de escritorio en 2021?",
+            "date": "2021-06-19",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVQozx3Ly04aYQBAYd6mibsmXdgmTTXWJjVWLQoyM8A/MDPAcJGLAqKi3IyCWFBAtDaKWNBGEbWXd+iij9HnOE1dfKuTY5mTdKySht3uZEHWsTkE9v8UHbvNhez2o3jCKGoIye1jdt711D7aBXM28fRMWxWskveJxSsMVC3M5M4jXqETzrcI5xr4hI67/IihR9mMKGxGXYT1EMO9PQynSqvR5qh1guYW3F+XCfr8eIWGJRPwsWaarCRb5Hwq5VSWSjJLMSDI7tTJh/zUwwq1sJN8JMjw/Jh8QKNTKXC+t03W7+Xu8wH5iJ91vwfLYUSlsexh9V7nwj9Ls62xf2rSiXj4dlPlIq5SOClSOC3RN2V+iEXaIYXBboZ+LUEzZtBudWgs6zRjAks/JtGL26i2dAYJB2dVjeNagF7SoFuJ0fZN0S5qHG6bXIQdXC656a4IbnfWuNpN0V/Vuf5U4OuqRi+tYrlLzfM9LfFXhBhuSjzEj7gN1qjoo8yMvWDf9gxzbATnxEu2tGmmJl5T9c/wuybx58BJL+PlRlgZbAgGW24srfgCX9IKv1IGVzk33Y0kdZ9CaXGE6PRz8sobEo53JOdfURLjpORJtuVROktvGRYVujmVy4zO6bqbRkrBkjBcpE1BuZxl1bDx8yzDw8kK0cVZTMcSa/J70gGZpPqBojpJPhVkyzlOPWPQLCXJRgX3VwdsRFRCHpl/WlV4w/tq904AAAAASUVORK5CYII="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/f1ba759fa6a23eec7323720b4247faf3/a7eba/0.png",
+                      "srcSet": "/static/f1ba759fa6a23eec7323720b4247faf3/eca3f/0.png 225w,\n/static/f1ba759fa6a23eec7323720b4247faf3/bb1ae/0.png 450w,\n/static/f1ba759fa6a23eec7323720b4247faf3/a7eba/0.png 900w,\n/static/f1ba759fa6a23eec7323720b4247faf3/fc71d/0.png 1800w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/f1ba759fa6a23eec7323720b4247faf3/19cfa/0.avif 225w,\n/static/f1ba759fa6a23eec7323720b4247faf3/02108/0.avif 450w,\n/static/f1ba759fa6a23eec7323720b4247faf3/149b6/0.avif 900w,\n/static/f1ba759fa6a23eec7323720b4247faf3/f724c/0.avif 1800w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/f1ba759fa6a23eec7323720b4247faf3/d2d5a/0.webp 225w,\n/static/f1ba759fa6a23eec7323720b4247faf3/f01e1/0.webp 450w,\n/static/f1ba759fa6a23eec7323720b4247faf3/6e5c7/0.webp 900w,\n/static/f1ba759fa6a23eec7323720b4247faf3/a0b4e/0.webp 1800w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 3,
+          "excerpt": "En un mundo cada vez más conectado y con acceso a un navegador resulta impensable tener una aplicación de escritorio incluso una nativa en…"
+        }
+      },
+      {
+        "node": {
+          "fields": {
+            "slug": "article/5_cosas_que_deberías_saber_sobre_ReactJS"
+          },
+          "frontmatter": {
+            "title": "5 cosas que deberías saber sobre ReactJS",
+            "date": "2020-08-17",
+            "timage": {
+              "postImage": {
+                "gatsbyImageData": {
+                  "layout": "constrained",
+                  "placeholder": {
+                    "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAC4jAAAuIwF4pT92AAAB70lEQVQoz02SSU8TARiGubF0uk47e2faQiQSgyxqS2dKW7oQAZVEK2qFyMFGJUFNBCKm1iVqJE3cPaAGo3U5GU08Gf/bYzqF4O07PXne9/26IrpNWEujWpPIhkNYt1FiRdR4CTVWwhycQzNyiMdX8a28QJy7iTh7A+/Kc8TyFXQ9jajbuBzdpmsPGGnDNBvZzKHGy8hWAfPADBeqT+jXs/iqDZSDJxDuthDqn1GGTuI/u4kUGCFsOETajA4wTVB1SI5MkhxOEzIKaG27eBE1UUa3CshHziPc+0Jf8xfetW286+/c29NoETp8CkWbQIpmXDHXUFTTROMZVDODbHXi6gPTqEYOKXUR7/JjxPxlPA++09P8Q8+bvwiNFmL5Gr6l+/jHThMIjnYMw7uqbWg78l5/StvSnMI3OIt+9RnhpYf0bv3Ec+cbnsZX+p7+IHDpEb2VDYaLNSbsRQJKar/DPbBiFTqDJEqEtCyN+ivefvhN9633+K6/Rqh/cjt07/VtgmaWfsth9GgFUds1dBeOOi5UimZdoBSb5tBQno8vm1TmV+meX0MZX0C4vYOwuYM8toD/zAYRcZyQ7hCQju1HlqMZJMP5z3IKOVYiNlDEtNIEIw5SZhl/rUkktYiUrOKrbRFKnkOSk+67GIk8kmHzD6gdCgdAUCpSAAAAAElFTkSuQmCC"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/44114702db4ade350d4892a04d6961d2/a7eba/0.png",
+                      "srcSet": "/static/44114702db4ade350d4892a04d6961d2/eca3f/0.png 225w,\n/static/44114702db4ade350d4892a04d6961d2/bb1ae/0.png 450w,\n/static/44114702db4ade350d4892a04d6961d2/a7eba/0.png 900w",
+                      "sizes": "(min-width: 900px) 900px, 100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/44114702db4ade350d4892a04d6961d2/19cfa/0.avif 225w,\n/static/44114702db4ade350d4892a04d6961d2/02108/0.avif 450w,\n/static/44114702db4ade350d4892a04d6961d2/149b6/0.avif 900w",
+                        "type": "image/avif",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      },
+                      {
+                        "srcSet": "/static/44114702db4ade350d4892a04d6961d2/d2d5a/0.webp 225w,\n/static/44114702db4ade350d4892a04d6961d2/f01e1/0.webp 450w,\n/static/44114702db4ade350d4892a04d6961d2/6e5c7/0.webp 900w",
+                        "type": "image/webp",
+                        "sizes": "(min-width: 900px) 900px, 100vw"
+                      }
+                    ]
+                  },
+                  "width": 900,
+                  "height": 350
+                }
+              }
+            }
+          },
+          "timeToRead": 2,
+          "excerpt": "En algún momento de nuestra carrera de desarrollo habremos escuchado de ReactJS, siempre diciendo de que React es lo mejor, si quieres hacer…"
+        }
+      }
+    ]
+  },
+  "preview": {
+    "childImageSharp": {
+      "gatsbyImageData": {
+        "layout": "constrained",
+        "placeholder": {
+          "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACOElEQVQoz4WR30tTYRzGdxMpCytrdZFBdWE33hSViBpqZIT9C90FShIZ7KKiKyEKSi+UKFNDRVPTuaZnZ86Zc9hq4TADqRvFikjEi8LtzHO2nfOJ99VFPxZ94eHL932f53kfvq/Nskz0ZIqPa9/QUyks08Q0TZKpTWBZchYluOm0ibV1lulf4hrfdUNybZqWQCAh+wbv3i/R4X5Fvy9CY+cUDa1BhiejdLunCczMogSmGVIm6B70EAi9wTAMEpq2pU9gi8c1BGIxjaSu0+ubo/buCJ3PQ7SPham56aHuvsKNVjdtz/x4XgToGhqho2cAjzopDYU24yMTZgZjYwNvZBE1vEBfYI6mkdfUtQS51BxAfRllYHyKXsVL36jK4z4Xw2qIpGH81MuEGUPxSjqZ5IknTP29QQYmI6yurdCmzON8FKKl38/l2+04mzu5eKuF8/V3aOoaI51KEYvFsxiKhIaBfyZK44NeeoYVlpaX+fR1jc8rq7z9sIgSjOCamOGpOs3DQZVgZB5D1/9OmIE4BItMiV/8X4l0v3r8tkNdN5iNzuFyj+JV/aiqH8U7vgnFx9gWRhUfLrdHcoUm6w7X12Pyxdr6q9i22cnfV4A9z0GOPZ/t9nxyd+yRyMnby+79ByVHcEUJbXZDC645r7PLUcCRo0WcLK2gsrqGqnMXKKusprTiLCXlZzhcWCQ5gis0/zYErjQ4yc1zcOBQIUXHiikpr5JGJ0pOc6q0kuPFZfIud6dDcv9M+AODaMmRKsb8kwAAAABJRU5ErkJggg=="
+        },
+        "images": {
+          "fallback": {
+            "src": "/static/046051447564f5d44e1e3a7aaa8f759d/dc152/preview.png",
+            "srcSet": "/static/046051447564f5d44e1e3a7aaa8f759d/6b904/preview.png 300w,\n/static/046051447564f5d44e1e3a7aaa8f759d/64aac/preview.png 600w,\n/static/046051447564f5d44e1e3a7aaa8f759d/dc152/preview.png 1200w,\n/static/046051447564f5d44e1e3a7aaa8f759d/d91d0/preview.png 2400w",
+            "sizes": "(min-width: 1200px) 1200px, 100vw"
+          },
+          "sources": [
+            {
+              "srcSet": "/static/046051447564f5d44e1e3a7aaa8f759d/eb0d4/preview.avif 300w,\n/static/046051447564f5d44e1e3a7aaa8f759d/c5fbd/preview.avif 600w,\n/static/046051447564f5d44e1e3a7aaa8f759d/da3d0/preview.avif 1200w,\n/static/046051447564f5d44e1e3a7aaa8f759d/2876f/preview.avif 2400w",
+              "type": "image/avif",
+              "sizes": "(min-width: 1200px) 1200px, 100vw"
+            },
+            {
+              "srcSet": "/static/046051447564f5d44e1e3a7aaa8f759d/055fb/preview.webp 300w,\n/static/046051447564f5d44e1e3a7aaa8f759d/8cd24/preview.webp 600w,\n/static/046051447564f5d44e1e3a7aaa8f759d/b8340/preview.webp 1200w,\n/static/046051447564f5d44e1e3a7aaa8f759d/12035/preview.webp 2400w",
+              "type": "image/webp",
+              "sizes": "(min-width: 1200px) 1200px, 100vw"
+            }
+          ]
+        },
+        "width": 1200,
+        "height": 630
+      }
+    }
+  }
+}

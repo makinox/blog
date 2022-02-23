@@ -6,6 +6,7 @@ import { BlogListQuery } from '../../graphql-types';
 import { BlogContext } from '../context/context';
 
 function IndexPage({ data }: { data: BlogListQuery }) {
+  console.log({ data });
   const { isDark } = useContext(BlogContext);
   return (
     <>
