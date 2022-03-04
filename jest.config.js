@@ -10,6 +10,7 @@ module.exports = {
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+  testEnvironment: 'jest-environment-jsdom',
   globals: {
     __PATH_PREFIX__: ``,
   },

@@ -58,7 +58,7 @@
     "compress": "sh ./compress.sh",
     "deploy:remote": "sh ./downloadBackup.sh && npm run build && firebase deploy",
     "deploy": "npm run build && firebase deploy",
-    "test": "jest"
+    "test": "jest --updateSnapshot"
   },
   "repository": {
     "type": "git",

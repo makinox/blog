@@ -12,7 +12,7 @@ import { TopBar, FluidContainer } from '@makinox/makinox-ui';
 
 function Navbar() {
   const { placeholderImage } = useNavbarQuery();
-  console.log({ placeholderImage });
+
   const { changeTheme, isDark } = useBlog();
   const [searchView, setSearchView] = useState(false);
 
