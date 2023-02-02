@@ -8,7 +8,7 @@
     "@makinox/makinox-ui": "^1.5.1",
     "babel-plugin-styled-components": "^1.13.2",
     "date-fns": "^2.23.0",
-    "gatsby": "^3.12.1",
+    "gatsby": "^3.15.0",
     "gatsby-plugin-graphql-codegen": "^3.0.0",
     "gatsby-plugin-image": "^1.12.0",
     "gatsby-plugin-manifest": "^3.12.0",
